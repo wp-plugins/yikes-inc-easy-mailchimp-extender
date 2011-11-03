@@ -1,1 +1,0 @@
-<p>There was an error calling the mailchimp list.</p>
