@@ -31,6 +31,21 @@
 		margin: 15px auto 15px auto;
 		text-align: center;
 		}
+	.yks-status .yks-notice
+		{
+		color: #000;
+		width: 80%;
+		height: auto;
+		border: 2px solid #0033AA;
+		background: #CCDDFF;
+		clear: both;
+		margin: 15px auto 15px auto;
+		text-align: center;
+		}
+		.yks-status .yks-notice p
+			{
+			padding: 5px;
+			}
 		
 .yks-mailchimp-fields-td
 	{
@@ -77,6 +92,41 @@
 	{
 	border-bottom: 0px dashed #DEDEDE !important;
 	}
+
+.yks-mailchimp-fields-list
+	{
+	background-color: #F9F9F9;
+	border: 1px solid #EEE;
+	}
+.yks-mailchimp-fields-list .yks-mailchimp-fields-list-row:nth-child(even)
+	{
+	background-color: #EEE;
+	}
+.yks-mailchimp-fields-list .yks-mailchimp-fields-list-row:nth-child(odd)
+	{
+	}
+	.yks-mailchimp-fields-list .yks-mailchimp-fields-list-row
+		{
+		display: block;
+		}
+		.yks-mailchimp-fields-list .yks-mailchimp-fields-list-row label
+			{
+			display: inline-block;
+			}
+	
+.yks-mailchimp-field-name
+	{
+	display:	inline-block;
+	width:		200px;
+	}
+.yks-mailchimp-field-merge
+	{
+	display:	inline-block;
+	}
+	.yks-mailchimp-field-merge .yks-mailchimp-field-merge
+		{
+		width:		100px;
+		}
 	
 .yks-mailchimpFormTable
 	{
