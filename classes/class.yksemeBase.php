@@ -3,8 +3,7 @@ if(!class_exists("yksemeBase"))
 	{
   class yksemeBase
 		{
-		
-		
+			
 		
 /**
  *	Variables
