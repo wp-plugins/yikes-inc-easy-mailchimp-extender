@@ -1,4 +1,8 @@
+
+<script type='text/javascript' src='<?php echo YKSEME_URL; ?>js/jquery.1.7.1.min.js'></script>
 <script type="text/javascript">
+$.noConflict(true);
+jQuery.noConflict(true);
 	jQuery(document).ready(function($){
 		function blankFieldCheck()
 			{
@@ -52,7 +56,7 @@
 			changeMonth:	true,
 			changeYear:		true,
 			yearRange:		((new Date).getFullYear()-100)+':'+((new Date).getFullYear()),
-			altFormat:		'yy-mm-dd'
+			dateFormat: 	'yy-mm-dd'
 		});
 		$('#ui-datepicker-div').addClass('yks-mailchimpFormDatepickerContainer');
 	});
@@ -63,6 +67,7 @@
 	
 	<div class="yks-mailchimpFormContainerInner" id="yks-mailchimpFormContainerInner_<?php echo $list['id']; ?>">
 		<form method="post" name="yks-mailchimp-form" id="yks-mailchimp-form_<?php echo $list['id']; ?>" rel="<?php echo $list['id']; ?>">
+			<input type="hidden" name="yks-mailchimp-list-ct" id="yks-mailchimp-list-ct_<?php echo $list['id']; ?>" value="<?php echo $listCt; ?>" />
 			<input type="hidden" name="yks-mailchimp-list-id" id="yks-mailchimp-list-id_<?php echo $list['id']; ?>" value="<?php echo $list['list-id']; ?>" />
 			<?php echo $this->getFrontendFormDisplay($list); ?>
 		</form>
