@@ -1,16 +1,16 @@
 <?php
 /*
 #_________________________________________________ PLUGIN
-Plugin Name: YIKES, Inc Easy Mailchimp Extender
-Plugin URI: http://www.yikesinc.com
+Plugin Name: Easy MailChimp Forms
+Plugin URI: http://www.yikesinc.com/services/yikes-inc-easy-mailchimp-extender/
 Description: Mailchimp API integration in the form of a shortcode or php snippet
-Version: 2.1.0
-Author: Yikes, Inc, Sean Kennedy, Tracy Levesque, Carlos Zuniga
-Author URI: http://www.yikesinc.com
+Version: 2.2.0
+Author: YIKES Inc, Carlos Zuniga, Tracy Levesque, Sean Kennedy
+Author URI: http://yikesinc.com
 License: GPL2
 
 #_________________________________________________ LICENSE
-Copyright 2012 Yikes, Inc (email : tech@yikesinc.com)
+Copyright 2012-13 YIKES, Inc (email : tech@yikesinc.com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as 
@@ -29,9 +29,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #_________________________________________________ CONSTANTS
 /** Configuration **/
 if(!defined('YKSEME_DEBUG'))						define('YKSEME_DEBUG',		         true);
-if(!defined('YKSEME_VERSION_CURRENT'))				define('YKSEME_VERSION_CURRENT',	'2.1.0');
+if(!defined('YKSEME_VERSION_CURRENT'))				define('YKSEME_VERSION_CURRENT',	'2.2.0');
 if(!defined('YKSEME_REQ_PHP'))						define('YKSEME_REQ_PHP',			'5.0');
-if(!defined('YKSEME_AUTHOR'))						define('YKSEME_AUTHOR',				'Yikes, Inc, Sean Kennedy, Tracy Levesque, Carlos Zuniga');
+if(!defined('YKSEME_AUTHOR'))						define('YKSEME_AUTHOR',				'YIKES Inc, Carlos Zuniga, Tracy Levesque, Sean Kennedy');
 if(!defined('YKSEME_SITE'))							define('YKSEME_SITE',				site_url().'/');
 if(!defined('YKSEME_PREFIX'))						define('YKSEME_PREFIX',				'ykseme_');
 if(!defined('YKSEME_PATH'))							define('YKSEME_PATH',				ABSPATH.'wp-content/plugins/yikes-inc-easy-mailchimp-extender/');
@@ -57,9 +57,9 @@ require_once YKSEME_PATH.'lib/lib.func.php';
 $yksemeBase			= new yksemeBase();
 
 /** Activation Hooks **/
-register_activation_hook(__FILE__,					array(&$yksemeBase, 'activate'));
-register_deactivation_hook(__FILE__,				array(&$yksemeBase, 'deactivate'));
-register_uninstall_hook(__FILE__,					array(&$yksemeBase, 'uninstall'));
+register_activation_hook(__FILE__,		array(&$yksemeBase, 'activate'));
+register_deactivation_hook(__FILE__,	array(&$yksemeBase, 'deactivate'));
+register_uninstall_hook(__FILE__,		array('yksemeBase', 'uninstall'));
 
 
 // Output jquery
