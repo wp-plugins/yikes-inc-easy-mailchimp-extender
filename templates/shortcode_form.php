@@ -26,9 +26,9 @@ $ymce = jQuery.noConflict();
 					data: {
 								action:				'yks_mailchimp_form',
 								form_action:		'frontend_submit_form',
-								form_data:			$ymce(this).serialize()
+								form_data:			$ymce(this).serialize(),
 								},
-					dataType: 'json',
+					dataType: 'text',
 					success: function(MAILCHIMP)
 						{
 						if(MAILCHIMP == '1')
@@ -41,7 +41,7 @@ $ymce = jQuery.noConflict();
 						else
 							{
 							$ymce('#ykfmc-submit_<?php echo $list['id']; ?>').removeAttr('disabled');
-							$ymce('#yks-status-<?php echo $list['id']; ?>').html('<div class="yks-error"><p>Sorry the email address you entered was previously submitted.</p></div>');
+							$ymce('#yks-status-<?php echo $list['id']; ?>').html('<div class="yks-error"><p>'+ MAILCHIMP +'</p></div>');
 							$ymce('#yks-status-<?php echo $list['id']; ?>').slideDown('fast');
 							}
 						}
@@ -60,9 +60,12 @@ $ymce = jQuery.noConflict();
 </script>
 
 <div class="yks-mailchimpFormContainer">
-	<div class="yks-status" id="yks-status-<?php echo $list['id']; ?>"></div>
+	<div class="yks-status" id="yks-status-<?php echo $list['id']; ?>"></div>	
+	<div class="yks-require-description">
+			<span class='yks-required-label'>*</span> = required field
+	</div>
 	
-	<div class="yks-mailchimpFormContainerInner" id="yks-mailchimpFormContainerInner_<?php echo $list['id']; ?>">
+	<div class="yks-mailchimpFormContainerInner" id="yks-mailchimpFormContainerInner_<?php echo $list['id']; ?>">	
 		<form method="post" name="yks-mailchimp-form" id="yks-mailchimp-form_<?php echo $list['id']; ?>" rel="<?php echo $list['id']; ?>">
 			<input type="hidden" name="yks-mailchimp-list-ct" id="yks-mailchimp-list-ct_<?php echo $list['id']; ?>" value="<?php echo $listCt; ?>" />
 			<input type="hidden" name="yks-mailchimp-list-id" id="yks-mailchimp-list-id_<?php echo $list['id']; ?>" value="<?php echo $list['list-id']; ?>" />
