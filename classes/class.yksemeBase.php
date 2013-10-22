@@ -92,6 +92,7 @@ public function getOptionValue()
 									'version'	=> YKSEME_VERSION_CURRENT,
 									'api-key'	=> '',
 									'flavor'	=> '0',
+									'debug'	=> '0',
 									'lists'		=> array()
 								);
 	$ov	= get_option(YKSEME_OPTION, $defaultVals);
@@ -307,6 +308,7 @@ public function updateOptions($p)
 		parse_str($p['form_data'], $fd);
 		$this->optionVal['api-key']	= $fd['yks-mailchimp-api-key'];
 		$this->optionVal['flavor']	= $fd['yks-mailchimp-flavor'];
+		$this->optionVal['debug']	= $fd['yks-mailchimp-debug'];
 		return update_option(YKSEME_OPTION, $this->optionVal);
 		}
 	return false;
@@ -323,12 +325,158 @@ public function updateVersion($k)
 	}
 
 
+/********Mailchimp Error Codes
+*****************************************************************************************************/
+
+public function YksMCErrorCodes ($error) 
+{
+//Server Errors	
+$errorcode['-32601'][1] = 'ServerError_MethodUnknown';
+$errorcode['-32602'][1] = 'ServerError_InvalidParameters';
+$errorcode['-99'][1] = 'Unknown_Exception';
+$errorcode['-98'][1] = 'Request_TimedOut';
+$errorcode['-92'][1] = 'Zend_Uri_Exception';
+$errorcode['-91'][1] = 'PDOException';
+$errorcode['-91'][1] = 'Avesta_Db_Exception';
+$errorcode['-90'][1] = 'XML_RPC2_Exception';
+$errorcode['-90'][1] = 'XML_RPC2_FaultException';
+$errorcode['-50'][1] = 'Too_Many_Connections';
+$errorcode['0'][1] = 'Parse_Exception';
+
+$errormessage[1] = "Sorry, we can't connect to MailChimp at this time. Please come back later and try again.";
+
+//API User or API Key error
+$errorcode['100'][2] = 'User_Unknown';
+$errorcode['101'][2] = 'User_Disabled';
+$errorcode['102'][2] = 'User_DoesNotExist';
+$errorcode['103'][2] = 'User_NotApproved';
+$errorcode['104'][2] = 'Invalid_ApiKey';
+$errorcode['105'][2] = 'User_UnderMaintenance';
+$errorcode['106'][2] = 'Invalid_AppKey';
+$errorcode['107'][2] = 'Invalid_IP';
+$errorcode['108'][2] = 'User_DoesExist';
+$errorcode['109'][2] = 'User_InvalidRole';
+$errorcode['120'][2] = 'User_InvalidAction';
+$errorcode['121'][2] = 'User_MissingEmail';
+$errorcode['122'][2] = 'User_CannotSendCampaign';
+$errorcode['123'][2] = 'User_MissingModuleOutbox';
+$errorcode['124'][2] = 'User_ModuleAlreadyPurchased';
+$errorcode['125'][2] = 'User_ModuleNotPurchased';
+$errorcode['126'][2] = 'User_NotEnoughCredit';
+$errorcode['127'][2] = 'MC_InvalidPayment';
+
+$errormessage[2] = "Sorry, this MailChimp account does not exist.";
+
+// List errors 
+$errorcode['200'][3] = 'List_DoesNotExist';
+$errorcode['210'][3] = 'List_InvalidInterestFieldType';
+$errorcode['211'][3] = 'List_InvalidOption';
+$errorcode['212'][3] = 'List_InvalidUnsubMember';
+$errorcode['213'][3] = 'List_InvalidBounceMember';
+
+$errormessage[3] = "Sorry,  this list does not exist.";
+
+//Already subscribed or unsubscribed
+$errorcode['214'][4] = 'List_AlreadySubscribed';
+$errorcode['215'][4] = 'List_NotSubscribed';
+$errorcode['220'][4] = 'List_InvalidImport';
+$errorcode['221'][4] = 'MC_PastedList_Duplicate';
+$errorcode['222'][4] = 'MC_PastedList_InvalidImport';
+$errorcode['230'][4] = 'Email_AlreadySubscribed';
+$errorcode['231'][4] = 'Email_AlreadyUnsubscribed';
+$errorcode['232'][4] = 'Email_NotExists';
+$errorcode['233'][4] = 'Email_NotSubscribed';
+
+$errormessage[4] = "Sorry, you are already subscribed to this list.";
+
+// General Message 
+$errorcode['250'][5] = 'List_MergeFieldRequired';
+$errorcode['251'][5] = 'List_CannotRemoveEmailMerge';
+$errorcode['252'][5] = 'List_Merge_InvalidMergeID';
+$errorcode['253'][5] = 'List_TooManyMergeFields';
+$errorcode['254'][5] = 'List_InvalidMergeField';
+$errorcode['270'][5] = 'List_InvalidInterestGroup';
+$errorcode['271'][5] = 'List_TooManyInterestGroups';
+$errorcode['300'][5] = 'Campaign_DoesNotExist';
+$errorcode['301'][5] = 'Campaign_StatsNotAvailable';
+$errorcode['310'][5] = 'Campaign_InvalidAbsplit';
+$errorcode['311'][5] = 'Campaign_InvalidContent';
+$errorcode['312'][5] = 'Campaign_InvalidOption';
+$errorcode['313'][5] = 'Campaign_InvalidStatus';
+$errorcode['314'][5] = 'Campaign_NotSaved';
+$errorcode['315'][5] = 'Campaign_InvalidSegment';
+$errorcode['316'][5] = 'Campaign_InvalidRss';
+$errorcode['317'][5] = 'Campaign_InvalidAuto';
+$errorcode['318'][5] = 'MC_ContentImport_InvalidArchive';
+$errorcode['319'][5] = 'Campaign_BounceMissing';
+$errorcode['330'][5] = 'Invalid_EcommOrder';
+$errorcode['350'][5] = 'Absplit_UnknownError';
+$errorcode['351'][5] = 'Absplit_UnknownSplitTest';
+$errorcode['352'][5] = 'Absplit_UnknownTestType';
+$errorcode['353'][5] = 'Absplit_UnknownWaitUnit';
+$errorcode['354'][5] = 'Absplit_UnknownWinnerType';
+$errorcode['355'][5] = 'Absplit_WinnerNotSelected';
+
+$errormessage[5] = 'Sorry, MailChimp could not process your signup.';
+
+// Validation errors
+$errorcode['500'][6] = 'Invalid_Analytics';
+$errorcode['503'][6] = 'Invalid_SendType';
+$errorcode['504'][6] = 'Invalid_Template';
+$errorcode['505'][6] = 'Invalid_TrackingOptions';
+$errorcode['506'][6] = 'Invalid_Options';
+$errorcode['507'][6] = 'Invalid_Folder';
+$errorcode['550'][6] = 'Module_Unknown';
+$errorcode['551'][6] = 'MonthlyPlan_Unknown';
+$errorcode['552'][6] = 'Order_TypeUnknown';
+$errorcode['553'][6] = 'Invalid_PagingLimit';
+$errorcode['554'][6] = 'Invalid_PagingStart';
+$errorcode['555'][6] = 'Max_Size_Reached';
+$errorcode['556'][6] = 'MC_SearchException';
+
+$errormessage[6] = "Sorry, MailChimp doesn't like the data you are trying to send.";
+
+// Validate date and time field
+$errorcode['501'][7] = 'Invalid_DateTimel';
+
+$errormessage[7] = "Sorry, that date and time is invalid. Please try again.";
+
+//Validate Email
+$errorcode['502'][8] = 'Invalid_Email';
+
+$errormessage[8] = "Sorry, that email address is invalid. Please try again.";
+
+// Validate URL fields
+$errorcode['508'][9] = 'Invalid_URL';
+
+$errormessage[9] = "Sorry, that URL is invalid. Please try again.";
+
+// Get error message
+
+foreach ($errorcode as $eid => $value )
+	{
+	if ($eid == $error)
+		{
+		foreach ($value as  $key => $mssg)
+			{
+				$Message = $errormessage[$key];
+				if ( $this->optionVal['debug']	== '1')
+					{
+					$Message .= '<br /><strong>Error Code: '.$error.' - '.$mssg.'</strong><br />';
+					$Message .= 'For more info, <a href="http://apidocs.mailchimp.com/api/1.3/exceptions.field.php">visit the MailChimp website</a> or <a href="http://kb.mailchimp.com/home">contact MailChimp</a>';	
+					}
+			}			
+		}
+	}	
+	return $Message;
+
+}
 
 
 
 /***** LIST ACTIONS
  ****************************************************************************************************/
-public function addList($lid='')
+public function addList($lid='' , $name='')
 	{
 	if($lid == '' || isset($this->optionVal['lists'][$list['id']])) return false;
 	$api	= new wpyksMCAPI($this->optionVal['api-key']);
@@ -338,6 +486,7 @@ public function addList($lid='')
 		$list	= array(
 						'id'			=> $lid,
 						'list-id'	=> $lid,
+						'name'	=> $name,
 						'fields'	=> $this->getImportedFieldsArray($lid, $mv)
 					);
 		$this->optionVal['lists'][$list['id']]	= $list;
@@ -348,6 +497,54 @@ public function addList($lid='')
 		}
 	return false;
 	}
+public function getLists()
+	{
+	$api	= new wpyksMCAPI($this->optionVal['api-key']);
+	$lists	= $this->getListsData();
+	$listArr	= ($listArr == false ? $this->optionVal['lists'] : $listArr);
+	$theusedlist = array();
+	if(count($listArr) > 0)
+		{
+		foreach($listArr as $list)
+			{
+				$theusedlist[] = $list['id'];
+			}
+		}
+	if($lists)
+		{
+		echo "<select id='yks-list-select' name='yks-list-select'>";
+		echo "<option value=''> Select List</option>";
+		foreach ($lists as  $lkey => $lvalue)
+			{
+				if (!in_array($lkey, $theusedlist))
+					{
+						echo "<option value='".$lkey."'>".$lvalue."</option>";		
+					}
+			}
+		echo "</select>";
+		}
+	return false;
+	}	
+public function getListsData()
+	{
+	$theListItems = get_transient('yks-mcp-listdata-retrieved');
+	if (!$theListItems)
+		{
+		$api	= new wpyksMCAPI($this->optionVal['api-key']);
+		$lists	= $api->lists();
+		if($lists)
+			{
+			foreach ($lists['data'] as $list)
+				{
+
+					$theListItems[$list['id']] =  $list['name'];		
+					
+				}
+			}
+			set_transient( 'yks-mcp-listdata-retrieved', $theListItems, 60*5 ); //cache lists for 5 minutes 
+		}
+	return $theListItems;
+	}	
 public function sortList($p)
 	{
 	if(empty($p['update_string'])
@@ -415,6 +612,7 @@ public function importList($i=false)
 	else
 		{
 		$lid	= $this->optionVal['lists'][$i]['list-id'];
+		$name	= $this->optionVal['lists'][$i]['name'];
 		$api	= new wpyksMCAPI($this->optionVal['api-key']);
 		$mv	= $api->listMergeVars($lid);
 		if($mv)
@@ -533,8 +731,9 @@ public function processSnippet($list=false)
 public function addAdministrationMenu()
 	{
 	// Top Level Menu
-	add_menu_page('Mailchimp Forms', 'Mailchimp Forms', 'manage_options', 'yks-mailchimp-form', array(&$this, 'generatePageOptions'), YKSEME_URL.'images/ykseme_16px.png', 400);
+	add_menu_page('MailChimp Forms', 'MailChimp Forms', 'manage_options', 'yks-mailchimp-form', array(&$this, 'generatePageOptions'), YKSEME_URL.'images/ykseme_16px.png', 400);
 	// Sub Items
+	add_submenu_page('yks-mailchimp-form', 'MailChimp Forms', 'MailChimp Settings', 'manage_options', 'yks-mailchimp-form', array(&$this, 'generatePageOptions'));
 	add_submenu_page('yks-mailchimp-form', 'Manage List Forms', 'Manage List Forms', 'manage_options', 'yks-mailchimp-form-lists', array(&$this, 'generatePageLists'));
 	add_submenu_page('yks-mailchimp-form', 'About YIKES, Inc.', 'About YIKES, Inc.', 'manage_options', 'yks-mailchimp-about-yikes', array(&$this, 'generatePageAboutYikes'));
 	}
@@ -607,7 +806,8 @@ public function addUserToMailchimp($p)
 			endif; endforeach;
 			
 			// If no email, fail
-			if($email === false) return false;
+			$noemail = "The email address is blank";
+			if($email === false) return $noemail;
 			
 			// By default this sends a confirmation email - you will not see new members
 			// until the link contained in it is clicked!
@@ -615,12 +815,12 @@ public function addUserToMailchimp($p)
 		
 			if($api->errorCode)
 				{
-				return false;
+				return $this->YksMCErrorCodes ($api->errorCode);
 				}
-			else return true;
+			else return "done";
 			}
 		}
-	return false;
+	return "One or more fields are empty";
 	}
 	
 private function getFieldMergeVar($fn, $lid)
@@ -651,6 +851,7 @@ private function getFieldMergeVar($fn, $lid)
 public function generateListContainers($listArr=false)
 	{
 	$listArr	= ($listArr == false ? $this->optionVal['lists'] : $listArr);
+	$thelistdata = $this->getListsData(); //Get list names from API
 	if(count($listArr) > 0)
 		{
 		ob_start();
@@ -661,22 +862,59 @@ public function generateListContainers($listArr=false)
 				<div class="yks-status" id="yks-status_<?php echo $list['id']; ?>"></div>
 				<form method="post" name="yks-mailchimp-form" id="yks-mailchimp-form_<?php echo $list['id']; ?>" rel="<?php echo $list['id']; ?>">
 					<input type="hidden" name="yks-mailchimp-unique-id" id="yks-mailchimp-unique-id_<?php echo $list['id']; ?>" value="<?php echo $list['id']; ?>" />
-					<table class="form-table">
+					<table class="form-table  yks-admin-form">
 						<tbody>
 							<tr valign="top">
+								<th scope="row"><label for="yks-mailchimp-api-key">MailChimp List name</label></th>
+								<td class="yks-mailchimp-listname"><?php
+								if ($list['name'])
+									{
+										$thename = $list['name'];
+										echo $thename;
+									}
+								else
+									{
+										foreach ($thelistdata as $lkey => $lval)
+											{
+											if ($lkey == $list['id'])
+												{
+												$thename = $lval;
+												echo $thename;
+												}
+											}
+									}
+									?></td>
+							</tr>		
+							<tr valign="top">
+								<th scope="row"><label for="yks-mailchimp-api-key">MailChimp List ID</label></th>
+								<td><?php echo $list['list-id'];  ?>
+								</td>
+							</tr>				
+							<tr valign="top">
 								<th scope="row"><label for="yks-mailchimp-api-key">Shortcode</label></th>
-								<td><strong>[yks-mailchimp-list id="<?php echo $list['id']; ?>"]</strong></td>
+								<td>
+									[yks-mailchimp-list id="<?php echo $list['id']; ?>"]
+									<span class="description yks-margin-left">Paste this shortcode into whatever page or post you want to add this form to</span>
+								</td>
 							</tr>
 							<tr valign="top">
-								<th scope="row"><label for="yks-mailchimp-api-key">Snippet</label></th>
-								<td><strong><?php echo htmlentities('<?php echo yksemeProcessSnippet(\''.$list['id'].'\'); ?>'); ?></strong></td>
+								<th scope="row"><label for="yks-mailchimp-api-key">PHP Snippet</label></th>
+								<td>
+									<?php echo htmlentities('<?php echo yksemeProcessSnippet(\''.$list['id'].'\'); ?>'); ?>
+									<span class="description yks-margin-left">Use this code to add this form to a template file</span>
+								</td>
 							</tr>
 							<tr valign="top">
-								<th scope="row"><label for="yks-mailchimp-api-key">Mailchimp List Id</label></th>
-								<td><strong><?php echo $list['list-id']; ?></strong></td>
-							</tr>
-							<tr valign="top">
-								<th scope="row"><label for="api-key">Active Fields</label></th>
+								<td scope="row">
+									<label for="api-key"><strong>Form Fields</strong></label>
+									<p class="description">
+										Check the fields you want included in your form (Email Address is required).
+									</p> 
+									<p class="description">
+										Use the green arrows to drag-and-drop the fields and rearrange their order.
+										<span class="yks-mailchimp-sorthandle-img"></span>
+									</p>
+								</th>
 								<td class="yks-mailchimp-fields-td" id="yks-mailchimp-fields-td_<?php echo $list['id']; ?>">
 									<fieldset class="yks-mailchimp-fields-container" id="yks-mailchimp-fields-container_<?php echo $list['id']; ?>">
 										<legend class="screen-reader-text"><span>Active Fields</span></legend>
@@ -687,23 +925,27 @@ public function generateListContainers($listArr=false)
 													<span class="yks-mailchimp-sorthandle">Drag &amp; drop</span>
 													<input type="checkbox" name="<?php echo $field['name']; ?>" id="<?php echo $field['id']; ?>" value="1" <?php echo ($field['active'] == 1 ? 'checked="checked"' : ''); ?><?php echo ($field['require'] == 1 ? 'disabled="disabled"' : ''); ?> />
 													&nbsp;
-													<span class="yks-mailchimp-field-name"><?php echo $field['label']; ?></span>
+													<div class="yks-mailchimp-field-name"><?php echo $field['label']; ?></div>
 												</label>
-												<span class="yks-mailchimp-field-merge">*|<input type="text" name="<?php echo $field['name']; ?>-merge" id="<?php echo $field['id']; ?>-merge" value="<?php echo $field['merge']; ?>"<?php echo (($field['locked'] == 1 || $field['merge'] == false) ? ' disabled="disabled"' : ''); ?> />|*</span>
+												<span class="yks-mailchimp-field-merge"><span class="description">Merge field:</span> &nbsp; *|<input type="text" name="<?php echo $field['name']; ?>-merge" id="<?php echo $field['id']; ?>-merge" value="<?php echo $field['merge']; ?>"<?php echo (($field['locked'] == 1 || $field['merge'] == false) ? ' disabled="disabled"' : ''); ?> />|*</span>
 											</div>
 											<?php } ?>
 										</div>
 									</fieldset>
 								</td>
 							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<input type="submit" name="submit" class="yks-mailchimp-list-update button-primary" value="Save Form Settings" rel="<?php echo $list['id']; ?>" />
+									<input type="button" name="delete" class="yks-mailchimp-delete button-primary" value="Delete Form" rel="<?php echo $list['id']; ?>" data-title="<?php echo $thename; ?>" />
+									<input type="button" name="import" class="yks-mailchimp-import button-primary" value="Re-Import Form Fields from MailChimp" rel="<?php echo $list['id']; ?>" />
+								</td>
+							</tr>
 						</tbody>
 					</table>
 			
-					<p class="submit">
-						<input type="submit" name="submit" class="yks-mailchimp-list-update button-primary" value="Update List Options" rel="<?php echo $list['id']; ?>" />
-						<input type="button" name="delete" class="yks-mailchimp-delete button-primary" value="Delete List" rel="<?php echo $list['id']; ?>" />
-						<input type="button" name="import" class="yks-mailchimp-import button-primary" value="Import List Data" rel="<?php echo $list['id']; ?>" />
-					</p>
+					
 				</form>
 			</div>
 			<?php
@@ -722,13 +964,15 @@ public function getFrontendFormJavascript($list='')
 	foreach($list['fields'] as $field) : if($field['active'] == 1) :	
 		// Setup javascript
 		if($field['require'] == '1') :
-		$prefix = "ymce";
+		$prefix = "$ymce";
 			$js .= "\n";
 			switch($field['type'])
 				{
 				default:
+				$prefixa = "ymce";
+					$js .= "if ($".$prefixa."('#{$field[id]}').val() == '')";
 					$js .= <<<JSC
-if($$prefix('#{$field[id]}').val() == '')
+
 	{
 	msg += '* {$field[label]}'+"\\n";
 	err++;
@@ -737,22 +981,22 @@ JSC;
 					break;
 				case 'address':
 					$js .= <<<JSC
-if($$prefix('#{$field[id]}').val() == '')
+if($prefix('#{$field[id]}').val() == '')
 	{
 	msg += '* {$field[label]}: Street Address'+"\\n";
 	err++;
 	}
-if($$prefix('#{$field[id]}-city').val() == '')
+if($prefix('#{$field[id]}-city').val() == '')
 	{
 	msg += '* {$field[label]}: City'+"\\n";
 	err++;
 	}
-if($$prefix('#{$field[id]}-state').val() == '')
+if($prefix('#{$field[id]}-state').val() == '')
 	{
 	msg += '* {$field[label]}: State'+"\\n";
 	err++;
 	}
-if($$prefix('#{$field[id]}-zip').val() == '')
+if($prefix('#{$field[id]}-zip').val() == '')
 	{
 	msg += '* {$field[label]}: Zip Code'+"\\n";
 	err++;
@@ -761,7 +1005,7 @@ JSC;
 					break;
 				case 'radio':
 					$js .= <<<JSC
-if($$prefix('.{$field[name]}:checked').length <= 0)
+if($prefix('.{$field[name]}:checked').length <= 0)
 	{
 	msg += '* {$field[label]}'+"\\n";
 	err++;
@@ -787,29 +1031,55 @@ public function getFrontendFormDisplay($list='')
 			<table class="yks-mailchimpFormTable">
 				<tbody>
 					<?php foreach($list['fields'] as $field) : if($field['active'] == 1) : ?>
-						<tr class="yks-mailchimpFormTableRow">
-							<td class="prompt yks-mailchimpFormTableRowLabel"><label class="yks-mailchimpFormTdLabel" for="<?php echo $field['name']; ?>"><?php echo $field['label']; ?></label></td>
-							<td class="yks-mailchimpFormTableRowField">
-								<?php echo $this->getFrontendFormDisplay_field($field); ?>
-							</td>
-						</tr>
+					<?php 
+					if ($field['require'] == 1) 
+						{ 
+							$reqindicator 	= " <span class='yks-required-label'>*</span>";
+							$reqlabel		= " yks-mailchimpFormDivRowLabel-required";
+						}
+					else
+						{
+							$reqindicator  = "";
+							$reqlabel		= "";
+						}
+						?>
+					<tr class="yks-mailchimpFormTableRow">
+						<td class="prompt yks-mailchimpFormTableRowLabel"><label class="yks-mailchimpFormTdLabel<?php echo $reqlabel; ?>" for="<?php echo $field['name']; ?>"><?php echo $field['label']; ?></label><?php echo $reqindicator; ?></td>
+						<td class="yks-mailchimpFormTableRowField">
+							<?php echo $this->getFrontendFormDisplay_field($field); ?>
+						</td>
+					</tr>
 					<?php endif; endforeach; ?>
 					<tr>
 						<td colspan="2" class="yks-mailchimpFormTableSubmit">
-							<p><input type="submit" class="ykfmc-submit" id="ykfmc-submit_<?php echo $list['id']; ?>" value="Submit" /></p>
+							<p>
+								<input type="submit" class="ykfmc-submit" id="ykfmc-submit_<?php echo $list['id']; ?>" value="Submit" />
+							</p>
 						</td>
 					</tr>
 				</tbody>
 			</table>
 			<?php
-			break;
-			
-		case '1':
+				break;
+				
+				case '1':
 			?>
 			<div class="yks-mailchimpFormDiv">
 				<?php foreach($list['fields'] as $field) : if($field['active'] == 1) : ?>
+					<?php 
+					if ($field['require'] == 1) 
+						{ 
+							$reqindicator 	= " <span class='yks-required-label'>*</span>";
+							$reqlabel		= " yks-mailchimpFormDivRowLabel-required";
+						}
+					else
+						{
+							$reqindicator  = "";
+							$reqlabel		= "";
+						}
+						?>
 					<div class="yks-mailchimpFormDivRow">
-						<label class="prompt yks-mailchimpFormDivRowLabel" for="<?php echo $field['name']; ?>"><?php echo $field['label']; ?></label>
+						<label class="prompt yks-mailchimpFormDivRowLabel<?php echo $reqlabel; ?>" for="<?php echo $field['name']; ?>"><?php echo $field['label']; ?><?php echo $reqindicator; ?></label>
 						<div class="yks-mailchimpFormDivRowField">
 							<?php echo $this->getFrontendFormDisplay_field($field); ?>
 						</div>
@@ -1027,6 +1297,7 @@ private function runUpdateTasks_1_2_0()
 private function runUpdateTasks_1_3_0()
 	{
 	$this->optionVal['flavor']	= '0';
+	$this->optionVal['debug']	= '0';
 	if($this->optionVal['lists'])
 		{
 		foreach($this->optionVal['lists'] as $uid => $list)
