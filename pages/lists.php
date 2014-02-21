@@ -38,7 +38,12 @@
                                                                 {
                                                                 alert('Oops.. The list ID you entered appears to be incorrect.');
                                                                 }
-                                                        }
+                                                        },
+												error: function(MAILCHIMP) {
+													alert('There was an error!');
+													var mailChimpError = $(MAILCHIMP);
+													console.log(mailChimpError);
+												}
                                         });
                                         }
                                                 
@@ -99,6 +104,8 @@
                         }
                 noListsCheck();
                 initializeScrollableLists();
+				// lists page form submission
+				// ajax retreive all lists from user MC account
                 $('#yks-lists-dropdown').submit(function(e) {
                         e.preventDefault();
                         var lid = $("select#yks-list-select option:selected").val();
@@ -109,10 +116,9 @@
                                                 $('#yks-submit-list-add').attr("disabled", true);
                                                 $("select#yks-list-select option[value='']").prop('selected',true);
                                                 $("select#yks-list-select option[value='" + lid + "']").remove();
-                                                setInterval(function()
-                                                        {
-                                                                $('#yks-submit-list-add').removeAttr("disabled");
-                                                        },3000);
+                                                setInterval(function() {
+                                                     $('#yks-submit-list-add').removeAttr("disabled");
+                                                  },3000);
                                         }
                                 else 
                                         {
@@ -124,6 +130,7 @@
                 $('.yks-mailchimp-list-update').live('click', function(e){
                         var i       = $(this).attr('rel');
                         var f       = '#yks-mailchimp-form_'+i;
+						var theButton = $(this);
                         $.ajax({
                                 type:   'POST',
                                 url:    ajaxurl,
@@ -141,7 +148,7 @@
                                                 }
                                         else
                                                 {
-                                                
+                                                theButton.parents('.yks-list-container').find('.yks-status').slideDown().delay(3000).fadeOut();
                                                 }
                                         }
                         });
@@ -167,7 +174,9 @@
                                                 {
                                                 if(MAILCHIMP == '1')
                                                         {
-                                                        $('#yks-list-container_'+i).remove();
+                                                        $('#yks-list-container_'+i).fadeOut('fast',function() {
+															$(this).remove();
+														});
                                                         noListsCheck();
                                                         scrollToElement($('#yks-list-wrapper'));
                                                         }
@@ -244,9 +253,19 @@
             Easy Mailchimp Forms by YIKES, Inc.
         </h2>
     <?php  if (!$this->optionVal['api-key']) { ?>    
-		<p>
-            Before you can add MailChimp forms to your site, you need to <a href="admin.php?page=yks-mailchimp-form" class="yks-mailchimp-list-add">go to the MailChimp Settings page</a> and add your API Key.
-        </p>
+		<div class="error">	
+			<p>
+				Before you can add MailChimp forms to your site, you need to <a href="admin.php?page=yks-mailchimp-form" class="yks-mailchimp-list-add">go to the MailChimp Settings page</a> and add your API Key.
+			</p>
+		</div>	
+	<?php } else if ( get_option('api_validation') == 'invalid_api_key' ) { ?>
+			<p>
+				<div class="error">
+					<p>
+						You must enter a valid API key to import and manage your lists.
+					</p>
+				</div>
+			</p>
 	<?php } else {  //end if statement if no api key ?>
         <h3>Add Forms</h3>
         	<form id="yks-lists-dropdown" name="yks-lists-dropdown">

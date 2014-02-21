@@ -3,7 +3,7 @@ if(!class_exists("yksemeBase"))
 	{
   class yksemeBase
 		{
-		
+
 		
 		
 /**
@@ -38,14 +38,22 @@ public function __destruct()
  */
 public function activate()
 	{
+		// check if our option is already set
+		if( get_option( 'api_validation' ) ) {
+			return;
+		} else {
+			add_option('api_validation' , 'invalid_api_key');
+		}
+		
 	}
 public function deactivate()
 	{
-	delete_option(YKSEME_OPTION);
+	// delete_option(YKSEME_OPTION);
 	}
 public function uninstall()
 	{
 	delete_option(YKSEME_OPTION);
+	delete_option('api_validation');
 	}
 
 /***** INITIAL SETUP
@@ -156,31 +164,35 @@ public function getBlankFieldsArray($lid='')
 	
 public function getImportedFieldsArray($lid, $mv)
 	{
-	if(empty($mv)) return false;
-	$fields		= array();
-	
-	foreach($mv as $field)
-		{
-		// Add Field
-		$name	= $this->slugify($field['label'].'-'.$field['tag']);
-		$addField	= array(
-							'id'		=> $lid.'-'.$name,
-							'name'		=> $lid.'-'.$field['tag'],
-							'merge'		=> $field['tag'],
-							'label'		=> $field['name'],
-							'require'	=> $field['req'],
-							'active'	=> '1',
-							'locked'	=> '1',
-							'sort'		=> $field['order'],
-							'type'		=> $field['field_type'],
-							'help'		=> $field['helptext'],
-							'defalt'	=> $field['default'],
-							'choices'	=> (isset($field['choices']) ? $field['choices'] : '')
-							);
-		$fields[$addField['id']]	= $addField;
+		if(empty($mv)) {
+			return false;
+		} else {
+			$fields = array();
+			
+			// Problem adding and storing fields
+			// TODO
+			foreach($mv['data'][0]['merge_vars'] as $field)
+				{
+				// Add Field
+				$name	= $this->slugify($field['label'].'-'.$field['tag']);
+				$addField	= array(
+								'id'		=> $lid.'-'.$name,
+								'name'		=> $lid.$field['tag'],
+								'merge'		=> $field['tag'],
+								'label'		=> $field['name'],
+								'require'	=> $field['req'],
+								'active'	=> '1',
+								'locked'	=> '1',
+								'sort'		=> $field['order'],
+								'type'		=> $field['field_type'],
+								'help'		=> $field['helptext'],
+								'defalt'	=> $field['default'],
+								'choices'	=> (isset($field['choices']) ? $field['choices'] : '')
+								);
+				$fields[$addField['id']] = $addField;
+				}
+			return $fields;
 		}
-		
-	return $fields;
 	}
 public function getBrowser()
 	{ 
@@ -472,11 +484,22 @@ foreach ($errorcode as $eid => $value )
 
 /***** LIST ACTIONS
  ****************************************************************************************************/
+ // update list/merge-vars to 2.0
+ // now get the fields correct for 2.0
+ // fields not populated correctly
 public function addList($lid='' , $name='')
 	{
 	if($lid == '' || isset($this->optionVal['lists'][$list['id']])) return false;
 	$api	= new wpyksMCAPI($this->optionVal['api-key']);
-	$mv	= $api->listMergeVars($lid);
+	
+	// test
+	// $fields = $api->call('lists/list', '');
+	
+	$mv = $api->call('lists/merge-vars', array(
+ 				'id' => array($lid)
+			)
+		);		
+				
 	if($mv)
 		{
 		$list	= array(
@@ -492,7 +515,9 @@ public function addList($lid='' , $name='')
 			}
 		}
 	return false;
+
 	}
+	
 public function getLists()
 	{
 	$api	= new wpyksMCAPI($this->optionVal['api-key']);
@@ -521,23 +546,22 @@ public function getLists()
 		}
 	return false;
 	}	
+	
 public function getListsData()
 	{
 	$theListItems = get_transient('yks-mcp-listdata-retrieved');
 	if (!$theListItems)
 		{
 		$api	= new wpyksMCAPI($this->optionVal['api-key']);
-		$lists	= $api->lists();
+		$lists	= $api->call('lists/list', array( 'limit' => 100 ));
 		if($lists)
 			{
 			foreach ($lists['data'] as $list)
 				{
-
-					$theListItems[$list['id']] =  $list['name'];		
-					
+					$theListItems[$list['id']] =  $list['name'];			
 				}
 			}
-			set_transient( 'yks-mcp-listdata-retrieved', $theListItems, 60*5 ); //cache lists for 5 minutes 
+			set_transient( 'yks-mcp-listdata-retrieved', $theListItems, 60/4 ); //cache lists for 15 seconds for testing, originally 5 mins 60*5 
 		}
 	return $theListItems;
 	}	
@@ -562,6 +586,7 @@ public function sortList($p)
 		}
 	return false;
 	}
+	
 private function sortListfields($a,$b)
 	{
 	$a	= $a['sort'];
@@ -593,6 +618,7 @@ public function updateList($p)
 		}
 	return false;
 	}
+	
 public function deleteList($i=false)
 	{
 	if($i == false) return false;
@@ -610,7 +636,10 @@ public function importList($i=false)
 		$lid	= $this->optionVal['lists'][$i]['list-id'];
 		$name	= $this->optionVal['lists'][$i]['name'];
 		$api	= new wpyksMCAPI($this->optionVal['api-key']);
-		$mv	= $api->listMergeVars($lid);
+		$mv	= $api->call('lists/merge-vars', array(
+ 				'id' => array( $lid )
+			)
+		);
 		if($mv)
 			{
 			$mv	= $this->getImportedFieldsArray($lid, $mv);
@@ -647,15 +676,14 @@ public function addStyles_frontend()
 	{
 	// Register Styles
 	wp_register_style('ykseme-css-base', 				YKSEME_URL.'css/style.ykseme.css', 											array(), '1.0.0', 'all');
-	wp_register_style('ykseme-css-smoothness', 	YKSEME_URL.'css/jquery-ui-1.8.16.smoothness.css', 			array(), '1.0.0', 'all');
+	wp_register_style('ykseme-css-smoothness', 	YKSEME_URL.'css/jquery-ui-1.10.4.smoothness.css', 			array(), '1.0.0', 'all');
 	// Enqueue Styles
 	wp_enqueue_style('ykseme-css-base');
 	wp_enqueue_style('ykseme-css-smoothness');
 	}
 	
 public function addScripts()
-	{
-	wp_enqueue_script('jquery');
+	{		
 	// Everything else
 	wp_enqueue_script('jquery-ui-core');
 	wp_enqueue_script('thickbox');
@@ -666,13 +694,22 @@ public function addScripts()
 	
 public function addScripts_frontend()
 	{
-	wp_enqueue_script('jquery');
+		global $wp_scripts;
+        $version ='1.9.0';
+        if ( ( version_compare( $wp_scripts -> registered[jquery] -> ver, $version ) >= 0 ) && jQuery && !is_admin() )
+         {   
+            wp_enqueue_script( 'jquery' );
+        }
+        else
+        {	
+			wp_deregister_script('jquery');
+            wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/'.$version.'/jquery.min.js', false, $version );
+            wp_enqueue_script( 'jquery' );		
+        }
 	// Everything else
 	wp_enqueue_script('jquery-ui-core');
-	wp_enqueue_script('jquery-ui-datepicker',			YKSEME_URL.'js/jquery-ui-1.8.16.datepicker.min.js',		array('jquery'), '1.8.16');
+	wp_enqueue_script('jquery-ui-datepicker');
 	}
-
-
 
 
 
@@ -759,6 +796,35 @@ public function generatePageAboutYikes()
 
 /***** FORM DATA
  ****************************************************************************************************/	
+ 
+public function validateAPIkeySettings()
+	{		
+		$apiKey = $_POST['api_key'];
+		$dataCenter = $_POST['data_center'];	
+		
+		$api	= new wpyksMCAPI($apiKey);
+		
+		
+		// if there is an error with the $resp variable
+		// display the error
+		
+		// need to add an exception for mailchimp HTTP error
+		// not sur ehow to yet.
+		try {
+			//First try getting our user numero uno
+			$resp = $api->call('helper/ping', array('apikey' => $apiKey));
+			echo $resp['msg'];
+			update_option('api_validation', 'valid_api_key');
+		} catch( Exception $e ) {
+			$errorMessage = str_replace('API call to helper/ping failed:', '', $e->getMessage());
+			echo $errorMessage;
+			update_option('api_validation', 'invalid_api_key');
+		}
+		
+		
+		wp_die();
+ }
+ 
 public function addUserToMailchimp($p)
 	{
 	if(!empty($p['form_data']))
@@ -770,6 +836,8 @@ public function addUserToMailchimp($p)
 			$lid		= $fd['yks-mailchimp-list-id'];
 			$api		= new wpyksMCAPI($this->optionVal['api-key']);
 			$mv 		= array();
+			
+			
 			
 			foreach($this->optionVal['lists'][$lid]['fields'] as $field) : if($field['active'] == '1') :
 			
@@ -807,8 +875,12 @@ public function addUserToMailchimp($p)
 			
 			// By default this sends a confirmation email - you will not see new members
 			// until the link contained in it is clicked!
-			$retval = $api->listSubscribe($lid, $email, $mv);
-		
+			$retval = $api->call('lists/subscribe', array(
+				  'id'              => $lid,
+				  'email'             => array( 'email' => $email ),
+				  'merge_vars'        => $mv
+			));
+			
 			if($api->errorCode)
 				{
 				return $this->YksMCErrorCodes ($api->errorCode);
@@ -848,14 +920,19 @@ public function generateListContainers($listArr=false)
 	{
 	$listArr	= ($listArr == false ? $this->optionVal['lists'] : $listArr);
 	$thelistdata = $this->getListsData(); //Get list names from API
+
 	if(count($listArr) > 0)
 		{
+		
 		ob_start();
 		foreach($listArr as $list)
 			{
 			?>
 			<div class="yks-list-container" id="yks-list-container_<?php echo $list['id']; ?>">
-				<div class="yks-status" id="yks-status_<?php echo $list['id']; ?>"></div>
+				<div class="yks-status" id="yks-status" style="display: none;">
+					<div class="yks-success" style="padding:.25em;">Your List Was Successfully Saved!</div>
+				</div>
+				<span class="yikes-lists-error" style="display:none;">I'm sorry there was an error with your request.</span>
 				<form method="post" name="yks-mailchimp-form" id="yks-mailchimp-form_<?php echo $list['id']; ?>" rel="<?php echo $list['id']; ?>">
 					<input type="hidden" name="yks-mailchimp-unique-id" id="yks-mailchimp-unique-id_<?php echo $list['id']; ?>" value="<?php echo $list['id']; ?>" />
 					<table class="form-table  yks-admin-form">
@@ -915,7 +992,10 @@ public function generateListContainers($listArr=false)
 									<fieldset class="yks-mailchimp-fields-container" id="yks-mailchimp-fields-container_<?php echo $list['id']; ?>">
 										<legend class="screen-reader-text"><span>Active Fields</span></legend>
 										<div class="yks-mailchimp-fields-list" id="yks-mailchimp-fields-list_<?php echo $list['id']; ?>" rel="<?php echo $list['id']; ?>">
-											<?php foreach($list['fields'] as $field){ ?>
+											
+											<!-- create sortable rows populated with mailchimp data -->
+											<?php foreach($list['fields'] as $field) { ?>
+											
 											<div class="yks-mailchimp-fields-list-row">
 												<label title="<?php echo $field['name']; ?>" rel="<?php echo $field['id']; ?>">
 													<span class="yks-mailchimp-sorthandle">Drag &amp; drop</span>
