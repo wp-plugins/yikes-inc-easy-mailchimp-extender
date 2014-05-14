@@ -1,15 +1,4 @@
 <?php
-
-// TO DO
-
-// Go through and check that all methods are update to MC API 2.0
-// Confirm all functionality works correctly
-// Check form embed into new posts/pages
-// --------------------------------------------------------------------------------------- //
-// --------------------------------------------------------------------------------------- //
-// Double check all methods are MC API 2.0 appropriate
-// Remove PHPDebug tool and comments
-
 require_once YKSEME_PATH.'/Mailchimp/Folders.php';
 require_once YKSEME_PATH.'/Mailchimp/Templates.php';
 require_once YKSEME_PATH.'/Mailchimp/Users.php';
@@ -23,7 +12,6 @@ require_once YKSEME_PATH.'/Mailchimp/Vip.php';
 require_once YKSEME_PATH.'/Mailchimp/Reports.php';
 require_once YKSEME_PATH.'/Mailchimp/Gallery.php';
 require_once YKSEME_PATH.'/Mailchimp/Exceptions.php';
-
 
 if(!class_exists("wpyksMCAPI"))
 	{
@@ -269,7 +257,7 @@ class wpyksMCAPI {
         curl_setopt($this->ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($this->ch, CURLOPT_HEADER, false);
         curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($this->ch, CURLOPT_CONNECTTIMEOUT, 30);
+        curl_setopt($this->ch, CURLOPT_CONNECTTIMEOUT, 45);
         curl_setopt($this->ch, CURLOPT_TIMEOUT, $opts['timeout']);
 
 		
