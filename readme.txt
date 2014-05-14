@@ -15,6 +15,7 @@ Easy MailChimp Forms allows you to painlessly add MailChimp signup forms to your
 
 
 **Features**
+
 1. Easily Import MailChimp Forms
 1. Interest Group/Segment Support
 1. Custom Widget
