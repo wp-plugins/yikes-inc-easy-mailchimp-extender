@@ -85,15 +85,20 @@ Due to the code overhaul required for the features of the new version, the struc
 You can adjust the width of the forms on your site by changing the width of the element with the class .yks-mailchimpFormContainer. This is the parent container that houses the form. Adjusting this width will control the width of the input fields inside of it as well.
 
 = I input a valid MailChimp API key, but it returns invalid every time. I've already tried a new API key, but no dice. What's up? =
-Step 1) Ensure that cURL is enabled at the server level ( You will see an error at the top of the settings page if cURL is disabled. If you see no error, continue to step 2 )
-Step 2) If you have entered your MailChimp API key and still find that it is returning the error "<em>Error: Please enter a valid Mail Chimp API Key</em>", please check the developer console inside your browser for further information as to why it's not validating. 
-	- You can do this, by right clicking in the API Key input field, and selecting 'Inpsect Element'
-	- Once the developer console is open, select the 'Console' tab, where you should see a more specific error.
-	
-	<strong>Possible Errors And Resolutions</strong>
-		* Could not resolve host: xxxx.api.mailchimp.com  -
 
-For information on how to check your browsers developer console, <a href="http://codex.wordpress.org/Using_Your_Browser_to_Diagnose_JavaScript_Errors" target="_blank">read here</a>.
+Step 1) Ensure that cURL is enabled at the server level ( You will see an error at the top of the settings page if cURL is disabled. If you see no error, continue to step 2.
+
+Step 2) If you have entered your MailChimp API key and still find that it is returning the error "<em>Error: Please enter a valid Mail Chimp API Key</em>", please check the developer console inside your browser for further information as to why it's not validating. 
+	
+- You can do this, by right clicking in the API Key input field, and selecting 'Inpsect Element'
+- Once the developer console is open, select the Console tab, where you should see a more specific error.
+- (For information on how to check your browsers developer console, <a href="http://codex.wordpress.org/Using_Your_Browser_to_Diagnose_JavaScript_Errors" target="_blank">read here</a>.)
+	
+<strong>Possible Errors And Resolutions</strong>
+
+* Could not resolve host: xxxx.api.mailchimp.com  - the host you have provided is incorrect. The host is the string after the last dash (example: us2)
+* Invalid Mailchimp API Key: xxxxxxxxxxxxxxxxxx-xxx - Your API key is invalid. You can confirm a valid key by logging into <a href="http://mailchimp.com" target="_blank">MailChimp</a> and checking the active API key registered to your account.
+		
 
 = Do you provide any hooks, or filters for me to take advantage of? =
 Yes! With the latest release we have added a few places for you to hook into, to add or manipulate existing data. Check out the <a href="http://wordpress.org/plugins/yikes-inc-easy-mailchimp-extender/other_notes/">Other Notes</a> tab  for more information.
