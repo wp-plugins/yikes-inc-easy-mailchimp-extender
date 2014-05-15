@@ -13,8 +13,10 @@
                         {
                         if($('#yks-list-wrapper .yks-list-container').size() <= 0)
                                 {
-                                $('#yks-list-wrapper').html('<p><?php _e('No forms have been added yet.','yikes-inc-easy-mailchimp-extender'); ?></p>');
-                                }
+								var plugin_directory_url = '<?php echo plugin_dir_url( $file ); ?>';
+								 $('#yks-lists-dropdown').next().css('opacity',0);
+								 $('#yks-list-wrapper').css({ 'background' : 'url("'+plugin_directory_url+'yikes-inc-easy-mailchimp-extender/images/yks_mc_lets_get_started.png")', 'height' : '175px' , 'width' : '400px' , 'background-repeat' : 'no-repeat' , 'background-position' : 'center', 'margin-top' : '-6em' });
+								}
                         }
                 function EnterListID (lid, name)
                         {
@@ -39,6 +41,8 @@
                                                                         $('#yks-list-wrapper').html('');
                                                                         }
                                                                 $('#yks-list-wrapper').append(MAILCHIMP);
+																$('#yks-lists-dropdown').next().css('opacity',1);
+																$('#yks-list-wrapper').css({ 'background' : 'transparent', 'height' : 'auto' , 'width' : 'auto', 'margin-top' : '0' });
                                                                 scrollToElement($('#yks-list-wrapper .yks-list-container').last());
                                                                 initializeScrollableLists();
                                                                 }
@@ -226,13 +230,11 @@
                                                 {
                                                 if(MAILCHIMP == '1')
                                                         {
-                                                        $('#yks-list-container_'+i).fadeOut('fast',function() {
-															$(this).remove();
-														});
-                                                        scrollToElement($('#yks-list-wrapper'));
-															setTimeout(function() {
+															$('#yks-list-container_'+i).fadeOut('fast',function() {
+																$(this).remove();
+																scrollToElement($('#yks-list-wrapper'));
 																noListsCheck();
-															}, 800);
+															});
                                                         }
                                                 }
 									});
