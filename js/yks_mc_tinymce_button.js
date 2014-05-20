@@ -73,7 +73,7 @@
 					// if no lists have been imported
 					// lets alert the user
 				} else {
-					tinyMCE.activeEditor.windowManager.alert("Error: You need to import some MailChimp lists before you can add any! Head over to the Manage List Forms page to get started.");	
+					tinyMCE.activeEditor.windowManager.alert("Error: You need to import some MailChimp lists before you can add any! Head over to 'MailChimp Forms > Manage List Forms' to get started.");	
 				}
 				
             }

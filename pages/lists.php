@@ -252,6 +252,8 @@
 				// function which imports a specified list from MailChimp
                 $('.yks-mailchimp-import').live('click', function(e){
                         var i       = $(this).attr('rel');
+						var form_name = $(this).parents('tbody').find('tr:first-child').find('.yks-mailchimp-listname').text();
+						console.log(form_name);
                  						
 						$("<div id='yks_mc_reset_plugin_settings'><div class='yks-mc-icon-yks-mc-warning yks-mc-delete-form-warning-icon'></div><p><?php _e("Are you sure you want to re-import this form and its fields from MailChimp?",'yikes-inc-easy-mailchimp-extender'); ?></p></div>").dialog({
 							 title : "Re-Import Form?",
@@ -273,12 +275,23 @@
                                                         {
                                                         $($('#yks-list-container_'+i)).replaceWith(MAILCHIMP);
                                                         $('#yks-list-container_'+i).yksYellowFade();
+															// alert the user that it was a success
+															$("<div id='yks_mc_reset_plugin_settings'><div class='dashicons dashicons-yes yks-mc-success-icon'></div><p>Your MailChimp form \"<strong>"+form_name+"</strong>\"<?php _e(' was successfully updated', 'yikes-inc-easy-mailchimp-extender' ); ?></p></div>").dialog({
+															 title : "Form Successfully Updated",
+															 buttons : {
+																"Ok" : function() {
+																	$(this).dialog("close");
+																}
+															  },
+															  modal: true,
+															  resizable: false
+															});
                                                         initializeScrollableLists();
                                                         }
                                                 else
                                                         {
                                                         $("<div id='yks_mc_reset_plugin_settings'><div class='dashicons dashicons-yes yks-mc-success-icon'></div><p><?php _e("It looks like this form is already up to date!", "yikes-inc-easy-mailchimp-extender" ); ?></p></div>").dialog({
-														 title : "Reset MailChimp Settings?",
+														 title : "Form Up To Date",
 														 buttons : {
 															"Ok" : function() {
 																$(this).dialog("close");
