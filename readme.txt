@@ -544,6 +544,10 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 * Initial Release
 
 == Upgrade Notice ==
+= 4.2.2 =
+* Added open_basedir conditional check to toggle CURLOPT_FOLLOWLOCATION based on users server settings
+* Prevents warning being thrown for users on shared hosts with an open_basedir set.
+
 = 3.0 =
 * Update Mail Chimp API to v2.0
 * Added API Key Validation Check
