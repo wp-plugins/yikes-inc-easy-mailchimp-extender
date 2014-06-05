@@ -43,10 +43,10 @@ jQuery(document).ready(function ($) {
 					dataType: 'json',
 					success: function (MAILCHIMP) {
 						if (MAILCHIMP == '1') {	
-							$('#yks-status').html('<div class="updated"><p><?php _e('The options were saved successfully!', 'yikes-inc-easy-mailchimp-extender'); ?></p></div>');
+							$('#yks-status').html('<div class=updated><p><?php _e('The options were saved successfully!', 'yikes-inc-easy-mailchimp-extender'); ?></p></div>');
 							$('#yks-status').slideDown('fast');
 						} else {
-							$('#yks-status').html('<div class="error"><p><?php _e('The options could not be saved (or you did not change them).', 'yikes-inc-easy-mailchimp-extender'); ?></p></div>');
+							$('#yks-status').html("<div class=error><p><?php _e("The options could not be saved (or you did not change them).", "yikes-inc-easy-mailchimp-extender"); ?></p></div>");
 							$('#yks-status').slideDown('fast');
 							console.log(MAILCHIMP);
 						}
@@ -107,13 +107,13 @@ jQuery(document).ready(function ($) {
 								// if our response contains 'Invalid MailChimp API Key' - display an error	
 								} else if (response.indexOf('Invalid Mailchimp API Key') > -1) {
 									jQuery('.mailChimp_api_key_preloader').fadeOut('fast', function() {
-										jQuery('.mailChimp_api_key_validation_message').html('<img src="<?php echo plugins_url().'/yikes-inc-easy-mailchimp-extender/images/yikes-mc-error-icon.png'; ?>" alt=message > <?php _e('Sorry, that is an invalid MailChimp API key.','yikes-inc-easy-mailchimp-extender'); ?>').css("color", "red").fadeIn();
+										jQuery('.mailChimp_api_key_validation_message').html("<img src=<?php echo plugins_url().'/yikes-inc-easy-mailchimp-extender/images/yikes-mc-error-icon.png'; ?> alt=message > <?php _e("Sorry, that is an invalid MailChimp API key.","yikes-inc-easy-mailchimp-extender"); ?>").css("color", "red").fadeIn();
 									});
 									console.log('MailChimp API Response : '+response);
 								} else {
 								// if our response contains anything else, other than whats above, just let them know its invalid
 									jQuery('.mailChimp_api_key_preloader').fadeOut('fast', function() {
-										jQuery('.mailChimp_api_key_validation_message').html('<img src="<?php echo plugins_url().'/yikes-inc-easy-mailchimp-extender/images/yikes-mc-error-icon.png'; ?>" alt=message > <?php _e('Sorry, that is an invalid MailChimp API key. Please check the console for further information.','yikes-inc-easy-mailchimp-extender'); ?>').css("color", "red").fadeIn();
+										jQuery('.mailChimp_api_key_validation_message').html("<img src=<?php echo plugins_url().'/yikes-inc-easy-mailchimp-extender/images/yikes-mc-error-icon.png'; ?> alt=message > <?php _e("Sorry, that is an invalid MailChimp API key. Please check the console for further information.","yikes-inc-easy-mailchimp-extender"); ?>").css("color", "red").fadeIn();
 									});	
 									console.log('MailChimp API Response : '+response);
 								};
@@ -122,7 +122,7 @@ jQuery(document).ready(function ($) {
 			} else {
 				// if the length of the API input value is less than 1 (aka 0)
 				jQuery('.mailChimp_api_key_preloader').fadeOut('fast', function() {
-					jQuery('.mailChimp_api_key_validation_message').html('<img src="<?php echo plugins_url().'/yikes-inc-easy-mailchimp-extender/images/yikes-mc-error-icon.png'; ?>" alt=message > <?php _e('Error: Please enter a valid Mail Chimp API Key.','yikes-inc-easy-mailchimp-extender'); ?>').css("color", "red").fadeIn();
+					jQuery('.mailChimp_api_key_validation_message').html("<img src=<?php echo plugins_url().'/yikes-inc-easy-mailchimp-extender/images/yikes-mc-error-icon.png'; ?> alt=message > <?php _e("Error: Please enter a valid Mail Chimp API Key.", "yikes-inc-easy-mailchimp-extender"); ?>").css("color", "red").fadeIn();
 				});	
 			}
 		}, 1);
