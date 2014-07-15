@@ -24,6 +24,14 @@ Features
 1. Easily add forms to pages and posts with a button in the page/post editor
 1. Use cURL error detection to troubleshoot MailChimp connection issues
 
+Features
+===========
+
+1. ReCaptcha for spam prevention
+1. MailChimp Campaign statistic tracking
+1. Track list growth, campaign opens, un-subscribes, user interactivity and much more!
+1. View further MailChimp account details such as account level, emails left for the month etc.
+
 Installation
 ===========
 
