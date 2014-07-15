@@ -1883,12 +1883,14 @@ public function getFrontendFormDisplay($list='', $submit_text)
 							var formRedirectPage = '<?php echo $redirect_url ?>';
 							var formID = '<?php echo $form_id[1] ?>';
 							jQuery('#yks-mailchimp-form_0-'+formID).submit(function() {
-								 setInterval(function(){
+								var interval = setInterval(function() {
 									if ( jQuery('.yks-success').is(':visible') ) {
 										window.location.replace(formRedirectPage);	
-										clearInterval();
+										clearInterval(interval);
+										return;
 									}
-								 }, 1000);
+									//do whatever here..
+								}, 2000); 
 							});
 						});
 				</script>
@@ -1967,12 +1969,14 @@ public function getFrontendFormDisplay($list='', $submit_text)
 							var formRedirectPage = '<?php echo $redirect_url ?>';
 							var formID = '<?php echo $form_id[1] ?>';
 							jQuery('#yks-mailchimp-form_0-'+formID).submit(function() {
-								 setInterval(function(){
+								var interval = setInterval(function() {
 									if ( jQuery('.yks-success').is(':visible') ) {
 										window.location.replace(formRedirectPage);	
-										clearInterval();
+										clearInterval(interval);
+										return;
 									}
-								 }, 1000);
+									//do whatever here..
+								}, 2000); 
 							});
 						});
 				</script>
