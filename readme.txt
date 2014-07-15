@@ -33,7 +33,8 @@ Easy MailChimp Forms allows you to painlessly add MailChimp signup forms to your
 * Use cURL error detection to troubleshoot MailChimp connection issues
 
 
-** Coming to v.4.4 **
+**Coming to v.4.4**
+
 * ReCaptcha for spam prevention
 * MailChimp Campaign statistic tracking
 * Track list growth, campaign opens, un-subscribes, user interactivity and much more!
