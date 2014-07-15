@@ -32,7 +32,8 @@ Easy MailChimp Forms allows you to painlessly add MailChimp signup forms to your
 * Easily add forms to pages and posts with a button in the page/post editor
 * Use cURL error detection to troubleshoot MailChimp connection issues
 
-** Coming to v.4.4 : **
+**Coming to v.4.4**
+
 * ReCaptcha for spam prevention
 * MailChimp Campaign statistic tracking
 * Track list growth, campaign opens, un-subscribes, user interactivity and much more!
