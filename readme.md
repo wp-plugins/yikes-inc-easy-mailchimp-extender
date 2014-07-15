@@ -410,6 +410,10 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 Changes
 ===========
+### 4.3.1 
+* Removed the_content filter, added custom filter to prevent other plugins from hooking in
+* Re-work redirect function to prevent infinite loop (and no redirect) issue
+
 ### 4.3
 * Updated radio button fields
 * Re-worked related JS and PHP functions

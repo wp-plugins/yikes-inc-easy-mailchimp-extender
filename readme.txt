@@ -4,7 +4,7 @@ Donate link: http://yikesinc.com
 Tags: mailchimp, marketing, email, mailing lists, newsletter, signup, forms, signup form
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 4.3
+Stable tag: 4.3.1
 License: GPLv2 or later
 
 Easy MailChimp Forms allows you to painlessly add MailChimp signup forms to your WordPress site.
@@ -439,6 +439,10 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 == Changelog ==
 
+= 4.3.1 =
+* Removed the_content filter, added custom filter to prevent other plugins from hooking in
+* Re-work redirect function to prevent infinite loop (and no redirect) issue
+
 = 4.3 =
 * Updated radio button fields
 * Re-worked related JS and PHP functions
@@ -548,6 +552,10 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 * Initial Release
 
 == Upgrade Notice ==
+= 4.3.1 =
+* Removed the_content filter, added custom filter to prevent other plugins from hooking in
+* Re-work redirect function to prevent infinite loop (and no redirect) issue
+
 = 3.0 =
 * Update Mail Chimp API to v2.0
 * Added API Key Validation Check

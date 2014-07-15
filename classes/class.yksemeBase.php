@@ -74,6 +74,10 @@ public function initialize()
 	add_action('admin_print_styles',		array(&$this, 'addStyles'));
 	add_action('admin_print_scripts',		array(&$this, 'addScripts'));
 	add_action('admin_init', array( &$this, 'yks_easy_mc_plugin_activation_redirect' ) );
+	// adding our custom content action
+	// used to prevent other plugins from hooking
+	// into the_content (such as jetpack sharedadddy, sharethis etc.)
+	add_action( 'init', array( &$this, 'yks_mc_content' ), 1 );
 	// tinymce buttons
 	// only add filters and actions on wp 3.9 and above
 	if ( get_bloginfo( 'version' ) >= '3.9' ) {
@@ -1879,13 +1883,10 @@ public function getFrontendFormDisplay($list='', $submit_text)
 							var formRedirectPage = '<?php echo $redirect_url ?>';
 							var formID = '<?php echo $form_id[1] ?>';
 							jQuery('#yks-mailchimp-form_0-'+formID).submit(function() {
-								var i = 0;
 								 setInterval(function(){
 									if ( jQuery('.yks-success').is(':visible') ) {
-										i++;
-										if ( i == 1 ) {
-											window.location.replace(formRedirectPage);	
-										}
+										window.location.replace(formRedirectPage);	
+										clearInterval();
 									}
 								 }, 1000);
 							});
@@ -1966,15 +1967,12 @@ public function getFrontendFormDisplay($list='', $submit_text)
 							var formRedirectPage = '<?php echo $redirect_url ?>';
 							var formID = '<?php echo $form_id[1] ?>';
 							jQuery('#yks-mailchimp-form_0-'+formID).submit(function() {
-								var i = 0;
 								 setInterval(function(){
 									if ( jQuery('.yks-success').is(':visible') ) {
-										i++;
-										if ( i == 1 ) {
-											window.location.replace(formRedirectPage);	
-										}
+										window.location.replace(formRedirectPage);	
+										clearInterval();
 									}
-								 }, 1000);	
+								 }, 1000);
 							});
 						});
 				</script>
@@ -2331,6 +2329,27 @@ private function runUpdateTasks_1_3_0()
 			}
 		}
 
+		/****
+		**
+		** Custom The_Content filter
+		** used to prevent other plugins from hooking here
+		**
+		****/
+		function yks_mc_content() {
+			//Create our own version of the_content so that others can't accidentally loop into our output - Taken from default-filters.php, shortcodes.php, and media.php
+			if ( !has_filter( 'yks_mc_content', 'wptexturize' ) ) {
+				add_filter( 'yks_mc_content', 'wptexturize'        );
+				add_filter( 'yks_mc_content', 'convert_smilies'    );
+				add_filter( 'yks_mc_content', 'convert_chars'      );
+				add_filter( 'yks_mc_content', 'wpautop'            );
+				add_filter( 'yks_mc_content', 'shortcode_unautop'  );
+				add_filter( 'yks_mc_content', 'prepend_attachment' );
+				$vidembed = new WP_Embed();
+				add_filter( 'yks_mc_content', array( &$vidembed, 'run_shortcode'), 8 );
+				add_filter( 'yks_mc_content', array( &$vidembed, 'autoembed'), 8 );
+				add_filter( 'yks_mc_content', 'do_shortcode', 11);
+			} //end has_filter
+		} //end yks_mc_content
 		
 		// Check if cURL is enabled at the server level
 		// used on the options.php page

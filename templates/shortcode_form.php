@@ -26,8 +26,8 @@ $ymce = jQuery.noConflict();
 			return (err > 0 ? false : true);
 			}
 		$ymce('#yks-mailchimp-form_<?php echo $list['id']; ?>').submit(function(e){
-			var singleOptinMessage = '<?php echo preg_replace("/\r?\n/", "\\n", apply_filters('the_content' , $this->optionVal['single-optin-message'])); ?>';
-			var doubleOptinMessage = '<?php echo preg_replace("/\r?\n/", "\\n", apply_filters('the_content' , $this->optionVal['double-optin-message'])); ?>';
+			var singleOptinMessage = '<?php echo str_replace( '\'' , '"' , preg_replace('/\r?\n/', '\\n', apply_filters('yks_mc_content' , $this->optionVal['single-optin-message']))); ?>';
+			var doubleOptinMessage = '<?php echo str_replace( '\'' , '"' , preg_replace('/\r?\n/', '\\n', apply_filters('yks_mc_content' , $this->optionVal['double-optin-message']))); ?>';
 			var optinValue = '<?php echo $this->optionVal['optin']; ?>';
 			e.preventDefault();
 			// Make sure the api key exists
