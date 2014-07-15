@@ -33,6 +33,12 @@ Easy MailChimp Forms allows you to painlessly add MailChimp signup forms to your
 * Use cURL error detection to troubleshoot MailChimp connection issues
 
 
+** Coming to v.4.4 **
+* ReCaptcha for spam prevention
+* MailChimp Campaign statistic tracking
+* Track list growth, campaign opens, un-subscribes, user interactivity and much more!
+* View further MailChimp account details such as account level, emails left for the month etc.
+
 Instructions on how to use the plugin can be [found in the FAQ](http://wordpress.org/plugins/yikes-inc-easy-mailchimp-extender/faq/). If you experience any problems, please submit a New Issue on our [Github Issue Tracker](https://github.com/yikesinc/yikes-inc-easy-mailchimp-extender/issues) and we'll look in to it as soon as possible.
 
 
