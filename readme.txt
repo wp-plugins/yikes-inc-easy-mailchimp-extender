@@ -453,12 +453,9 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 == Changelog ==
 
 = 5.0 =
-* Added reCAPTCHA support to prevent bots and spammers from submitting forms
-* Split settings page into three seperate sections
 * Custom content filter to prevent other plugins from accidentally hooking in
 * Updated translation files with new text and translations
-* Update existing screen shots and added new screen shots
-* Update FAQ
+* Added new screen shots
 * Updated plugin activation hooks
 * base64_encoded MailChimp API Key for privacy on multi-admin sites
 * Added an entirely new "My MailChimp" section
@@ -467,11 +464,10 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 * Added ability to track Campaign Click/Opens with geo-data and interactive charts including world map
 * Added account /listgrowth section with interactive bar chart
 * Added "Chimp Chatter" feed to track account activity
-* Ability to export interactive charts to png,jpg,svg
+* Ability to export interactive charts to png, jpg, svg
 * Printable Campaign Reports
 * View campaign
 * Re-Branded entire Plugin
-
 
 = 4.4 =
 * Added reCAPTCHA support to prevent bots and spammers from submitting forms
@@ -480,7 +476,6 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 * Updated translation files with new strings
 * Update existing screen shots and add new screen shot
 * Update FAQ
-* Added "loaded server modules" to the debug page, to better aid in support requests
 
 = 4.3 =
 * Updated radio button fields
