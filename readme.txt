@@ -7,11 +7,11 @@ Tested up to: 3.9.1
 Stable tag: 5.0
 License: GPLv2 or later
 
-Easy MailChimp Forms allows you to painlessly add MailChimp signup forms to your WordPress site and track campaign statistics with interactive and printable reports.
+Easy MailChimp Forms allows you to easily add MailChimp signup forms to your site and track campaign stats with interactive and printable reports.
 
 == Description ==
 
-Easy MailChimp Forms allows you to painlessly add MailChimp signup forms to your WordPress site. You can add forms to posts, pages or sidebars with shortcodes, widgets or template tags. Simply copy and paste your MailChimp API Key into the plugin admin settings and it will pull in all your MailChimp lists. From there you can choose the lists you want to make forms for. For a single list you can check off the fields you want to include on your form and order them via an easy drag-and-drop interface. This plugin adds plenty of CSS selectors to the form code allowing you to completely customize the look of your forms. Now with the ability to track sent campaigns, you can view and print interactive reports from based on previously sent campaigns.
+Easy MailChimp Forms allows you to easily add MailChimp signup forms to your WordPress site. You can add forms to posts, pages or sidebars with shortcodes, widgets or template tags. Simply copy and paste your MailChimp API Key into the plugin admin settings and it will pull in all your MailChimp lists. From there you can choose the lists you want to make forms for. For a single list you can check off the fields you want to include on your form and order them via an easy drag-and-drop interface. This plugin adds plenty of CSS selectors to the form code allowing you to completely customize the look of your forms. Now with the ability to track sent campaigns, you can view and print interactive reports from based on previously sent campaigns.
 
 **Note:** You will need a MailChimp API key to allow this plugin to communicate with your MailChimp account. For help on retrieving your API key, check out [question #4 of the FAQ](http://wordpress.org/plugins/yikes-inc-easy-mailchimp-extender/faq/). You can also read the MailChimp knowledge base article [Where can I find my API key and how can I use the API](http://kb.mailchimp.com/article/where-can-i-find-my-api-key/).
 
