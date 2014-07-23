@@ -7,7 +7,7 @@ Tested up to: 3.9.1
 Stable tag: 5.0
 License: GPLv2 or later
 
-Easy MailChimp Forms allows you to painlessly add MailChimp signup forms to your WordPress site and track user activity with interactive reports.
+Easy MailChimp Forms allows you to painlessly add MailChimp signup forms to your WordPress site and track campaign statistics with interactive and printable reports.
 
 == Description ==
 
