@@ -9,28 +9,24 @@ Instructions on how to use the plugin can be [found on the FAQ](http://wordpress
 Features
 ===========
 
-1. Easily import MailChimp forms from a MailChimp account
+1. Complete Integration of MailChimp into WordPress
+1. Easily import MailChimp forms from an active MailChimp account
+1. View/Print Interactive Account Growth Reports and Campaign Reports (Statistics Tracking)
+1. reCaptcha spam prevention baked in
+1. Monitor MailChimp account activity
 1. Use MailChimp Interest Group/Segments
 1. Add MailChimp forms sidebars/widgetized areas with widgets
 1. Set forms to single or double opt-in
 1. Customize the success message
 1. Customize the submit button text
 1. Redirect users to a page on submission
-1. Unsubscribe users from MailChimp lists
+1. Un-subscribe users from MailChimp lists
 1. View subscriber MailChimp profiles
 1. View individual form subscriber count
 1. Display multiple forms on a single page
-1. Add commenters to your MailChimp lists with a comment form opt-in check box 
+1. Add commenter's to your MailChimp lists with a comment form opt-in check box 
 1. Easily add forms to pages and posts with a button in the page/post editor
 1. Use cURL error detection to troubleshoot MailChimp connection issues
-
-Features
-===========
-
-1. ReCaptcha for spam prevention
-1. MailChimp Campaign statistic tracking
-1. Track list growth, campaign opens, un-subscribes, user interactivity and much more!
-1. View further MailChimp account details such as account level, emails left for the month etc.
 
 Installation
 ===========
@@ -418,9 +414,13 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 Changes
 ===========
-### 4.3.1 
-* Removed the_content filter, added custom filter to prevent other plugins from hooking in
-* Re-work redirect function to prevent infinite loop (and no redirect) issue
+* Added reCAPTCHA support to prevent bots and spammers from submitting forms
+* Split settings page into three seperate sections
+* Removed Jetpack sharing icons from appearing in the success messages (removed sharedaddy filter)
+* Updated translation files with new strings
+* Update existing screen shots and add new screen shot
+* Update FAQ
+* Added "loaded server modules" to the debug page, to better aid in support requests
 
 ### 4.3
 * Updated radio button fields
