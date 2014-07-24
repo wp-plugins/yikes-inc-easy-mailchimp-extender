@@ -452,6 +452,9 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 == Changelog ==
 
+= 5.0.1 =
+* Remove global box-sizing CSS declaration
+
 = 5.0 =
 * Custom content filter to prevent other plugins from accidentally hooking in
 * Updated translation files with new text and translations
