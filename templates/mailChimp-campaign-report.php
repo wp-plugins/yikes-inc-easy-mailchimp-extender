@@ -6,6 +6,9 @@ add_thickbox();
 ?>
 
 <style>
+*, *:before, *:after {
+	box-sizing: border-box;
+}
 .midnight-blue-flat-button {
   position: relative;
   vertical-align: top;

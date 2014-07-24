@@ -4,7 +4,7 @@ Donate link: http://yikesinc.com
 Tags: mailchimp, marketing, email, mailing lists, newsletter, signup, forms, signup form
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 5.0.2
+Stable tag: 5.0.3
 License: GPLv2 or later
 
 Easy MailChimp Forms allows you to easily add MailChimp signup forms to your site and track campaign stats with interactive and printable reports.
@@ -451,6 +451,12 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 12. About YIKES page
 
 == Changelog ==
+
+= 5.0.3 =
+* Re-Apply missing styles to new 'My MailChimp' Section
+
+= 5.0.2 =
+* Remove extra spacing in provided short code, which caused parsing issues
 
 = 5.0.1 =
 * Remove global box-sizing CSS declaration
