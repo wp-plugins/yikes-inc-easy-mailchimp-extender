@@ -2533,7 +2533,7 @@ public function generateListContainers($listArr=false)
 							<tr valign="top">
 								<th scope="row"><label for="yks-mailchimp-api-key"><?php _e( 'Shortcode' , 'yikes-inc-easy-mailchimp-extender' ); ?></label></th>
 								<td>
-									[ yks-mailchimp-list id="<?php echo $list['id']; ?>" submit_text="Submit" ]
+									[yks-mailchimp-list id="<?php echo $list['id']; ?>" submit_text="Submit"]
 									<span class="description yks-margin-left"><?php _e( 'Paste this shortcode into whatever page or post you want to add this form to' , 'yikes-inc-easy-mailchimp-extender' ); ?></span>
 								</td>
 							</tr>
