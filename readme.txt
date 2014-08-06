@@ -4,14 +4,14 @@ Donate link: http://yikesinc.com
 Tags: mailchimp, marketing, email, mailing lists, newsletter, signup, forms, signup form
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 5.0.3
-License: GPLv2 or later 
+Stable tag: 5.0.4
+License: GPLv2 or later
 
-Easy MailChimp Forms allows you to easily add MailChimp signup forms to your site and track campaign stats with interactive and printable reports.
+Easy MailChimp Forms allows you to painlessly add MailChimp signup forms to your WordPress site and track user activity with interactive reports.
 
 == Description ==
 
-Easy MailChimp Forms allows you to easily add MailChimp signup forms to your WordPress site. You can add forms to posts, pages or sidebars with shortcodes, widgets or template tags. Simply copy and paste your MailChimp API Key into the plugin admin settings and it will pull in all your MailChimp lists. From there you can choose the lists you want to make forms for. For a single list you can check off the fields you want to include on your form and order them via an easy drag-and-drop interface. This plugin adds plenty of CSS selectors to the form code allowing you to completely customize the look of your forms. Now with the ability to track sent campaigns, you can view and print interactive reports from based on previously sent campaigns.
+Easy MailChimp Forms allows you to painlessly add MailChimp signup forms to your WordPress site. You can add forms to posts, pages or sidebars with shortcodes, widgets or template tags. Simply copy and paste your MailChimp API Key into the plugin admin settings and it will pull in all your MailChimp lists. From there you can choose the lists you want to make forms for. For a single list you can check off the fields you want to include on your form and order them via an easy drag-and-drop interface. This plugin adds plenty of CSS selectors to the form code allowing you to completely customize the look of your forms. Now with the ability to track sent campaigns, you can view and print interactive reports from based on previously sent campaigns.
 
 **Note:** You will need a MailChimp API key to allow this plugin to communicate with your MailChimp account. For help on retrieving your API key, check out [question #4 of the FAQ](http://wordpress.org/plugins/yikes-inc-easy-mailchimp-extender/faq/). You can also read the MailChimp knowledge base article [Where can I find my API key and how can I use the API](http://kb.mailchimp.com/article/where-can-i-find-my-api-key/).
 
@@ -449,8 +449,22 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 10. Optional opt-in checkbox on the comment forms, easily add commenter's to your email list
 11. Custom tinyMCE button allows you to easily add imported forms to pages and posts at the click of a button
 12. About YIKES page
+13. *New* Admin Dashboard Widget - Account Activity ( With Live Updating )
 
 == Changelog ==
+
+= 5.0.4 =
+* Update SSL conditional in main plugin file
+* Added mcrypt module check, for API encryption
+* Conditionally loaded scripts and styles in admin ( prevent conflicts )
+* Included NONCE security checks on form submissions ( helps prevent CSRF and other attacks )
+* Added proper update task function to add missing settings to the options page ( prevents undefined variables for new settings )
+* Added missing styles to post page ( added missing icon to tinyMCE button )
+* Added missing styles to widget page
+* Adjusted Chimp Chatter activity time formatting to return correct time based on user time zone
+* New Feature : Real time updates to Account Activity ( utilizing the heartbeat API )
+* New Feature : Added account activity widget to dashboard ( with live updates using heartbeat API )
+* Added screenshot of admin dashboard account activity widget
 
 = 5.0.3 =
 * Re-Apply missing styles to new 'My MailChimp' Section
@@ -478,6 +492,7 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 * View campaign
 * Re-Branded entire Plugin
 
+
 = 4.4 =
 * Added reCAPTCHA support to prevent bots and spammers from submitting forms
 * Split settings page into three seperate sections
@@ -485,6 +500,7 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 * Updated translation files with new strings
 * Update existing screen shots and add new screen shot
 * Update FAQ
+* Added "loaded server modules" to the debug page, to better aid in support requests
 
 = 4.3 =
 * Updated radio button fields
@@ -596,6 +612,19 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 == Upgrade Notice ==
 
+= 5.0.4 =
+* Update SSL conditional in main plugin file
+* Added mcrypt module check, for API encryption
+* Conditionally loaded scripts and styles in admin ( prevent conflicts )
+* Included NONCE security checks on form submissions ( helps prevent CSRF and other attacks )
+* Added proper update task function to add missing settings to the options page ( prevents undefined variables for new settings )
+* Added missing styles to post page ( added missing icon to tinyMCE button )
+* Added missing styles to widget page
+* Adjusted Chimp Chatter activity time formatting to return correct time based on user time zone
+* New Feature : Real time updates to Account Activity ( utilizing the heartbeat API )
+* New Feature : Added account activity widget to dashboard ( with live updates using heartbeat API )
+* Added screenshot of admin dashboard account activity widget
+
 = 4.5 =
 * Added reCAPTCHA support to prevent bots and spammers from submitting forms
 * Split settings page into three seperate sections
@@ -630,12 +659,3 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 = 1.2.0 =
 * First Name and Last Name fields are no longer required
-
-
-
-
-// To Do 
- - Click Pie Chart visualization twice throws an error and doesn't re-draw the chart
- - Style arrow before chimp chatter messages
- - Time returned from MailChimp is wrong by 4 hours, something to do with the timezone or something
- - Need 4 icons ( Regular, Plain-text, A/B-split, RSS-driven )

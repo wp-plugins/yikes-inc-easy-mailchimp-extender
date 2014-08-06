@@ -6,9 +6,6 @@ add_thickbox();
 ?>
 
 <style>
-*, *:before, *:after {
-	box-sizing: border-box;
-}
 .midnight-blue-flat-button {
   position: relative;
   vertical-align: top;
@@ -57,6 +54,9 @@ add_thickbox();
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+*, *:before, *:after {
+box-sizing: border-box;
 }
 </style>
 
@@ -148,7 +148,7 @@ jQuery( '.yks_mc_clicked_data' ).off().on( 'click' , function() {
 
 			// smooth scroll down to click chart
 			 jQuery('html, body').animate({
-				scrollTop: jQuery("#click_tracking_info").offset().top
+				scrollTop: jQuery("#yks-admin-link-data-table").offset().top - 220
 			}, 800);
 
 });
