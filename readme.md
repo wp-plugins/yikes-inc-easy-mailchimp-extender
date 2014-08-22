@@ -417,6 +417,9 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 Changes
 ===========
+### 5.0.6 - August 22, 2014
+* fix bug with nonce security check when using table 'Preferred Form Layout' setting
+
 ### 5.0.5 - August 21, 2014
 * added `stripslashes()` to the following settings fields :
 	- Single Opt-in Confirmation Message
