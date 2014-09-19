@@ -459,19 +459,16 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 = 5.0.7 - September 19, 2014 =
 
 **Fixes**
-
 * Security Vulnerability patched - props @g0blinResearch for privately disclosing the issue
 
 = 5.0.6 - August 22, 2014 =
 
 **Fixes**
-
 * fix bug with nonce security check when using table 'Preferred Form Layout' setting
 
 = 5.0.5 - August 21, 2014 =
 
 **Fixes**
-
 - added `stripslashes()` to the following settings fields :
 	- Single Opt-in Confirmation Message
 	- Double Opt-in Confirmation Message
@@ -641,16 +638,19 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 == Upgrade Notice ==
 
+= 5.0.7 - September 19, 2014 =
+
+**Fixes**
+* Security Vulnerability patched - props @g0blinResearch for privately disclosing the issue
+
 = 5.0.6 - August 22, 2014 =
 
 **Fixes**
-
 * fix bug with nonce security check when using table 'Preferred Form Layout' setting
 
 = 5.0.5 - August 21, 2014 =
 
 **Fixes**
-
 - added `stripslashes()` to the following settings fields :
 	- Single Opt-in Confirmation Message
 	- Double Opt-in Confirmation Message
@@ -658,7 +658,6 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 	- Opt-in Checkbox Text
 
 **Updates**
-
 - Updated readme FAQ section
 
 = 5.0.4 - August 6, 2014 =
