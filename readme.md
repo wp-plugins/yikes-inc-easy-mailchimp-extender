@@ -417,6 +417,9 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 Changes
 ===========
+### 5.0.7 - September 19, 2014
+* Security Vulnerability patched - props @g0blinResearch for privately disclosing the issue
+
 ### 5.0.6 - August 22, 2014
 * fix bug with nonce security check when using table 'Preferred Form Layout' setting
 

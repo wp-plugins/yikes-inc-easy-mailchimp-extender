@@ -4,7 +4,7 @@ Donate link: http://yikesinc.com
 Tags: mailchimp, marketing, email, mailing lists, newsletter, sign up, forms, sign up form
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 5.0.6
+Stable tag: 5.0.7
 License: GPLv2 or later
 
 Easy MailChimp Forms allows you to painlessly add MailChimp sign up forms to your WordPress site and track user activity with interactive reports.
@@ -455,6 +455,12 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 13. *New* Admin Dashboard Widget - Account Activity ( With Live Updating )
 
 == Changelog ==
+
+= 5.0.7 - September 19, 2014 =
+
+**Fixes**
+
+* Security Vulnerability patched - props @g0blinResearch for privately disclosing the issue
 
 = 5.0.6 - August 22, 2014 =
 
