@@ -417,6 +417,10 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 Changes
 ===========
+
+### 5.0.8 - September 23, 2014
+* Band-aid fix for the -1 response returned from ajax.php
+
 ### 5.0.7 - September 19, 2014
 * Security Vulnerability patched - props @g0blinResearch for privately disclosing the issue
 
