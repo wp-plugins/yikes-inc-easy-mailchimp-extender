@@ -459,26 +459,32 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 = 5.0.9 - October 3rd, 2014 =
 
 **Fixes**
+
 * Added autocomplete="false" to API input field
+* Added event listener to form submission (forms can now be placed in modals/slideout menus)
 
 = 5.0.8 - September 23, 2014 =
 
 **Fixes**
+
 * Band-aid fix for the -1 response returned from ajax.php
 
 = 5.0.7 - September 19, 2014 =
 
 **Fixes**
+
 * Security Vulnerability patched - props @g0blinResearch for privately disclosing the issue
 
 = 5.0.6 - August 22, 2014 =
 
 **Fixes**
+
 * fix bug with nonce security check when using table 'Preferred Form Layout' setting
 
 = 5.0.5 - August 21, 2014 =
 
 **Fixes**
+
 - added `stripslashes()` to the following settings fields :
 	- Single Opt-in Confirmation Message
 	- Double Opt-in Confirmation Message
