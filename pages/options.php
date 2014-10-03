@@ -390,7 +390,7 @@ jQuery(document).ready(function() {
 		</div>
 	<?php } ?>	
 	
-	<form method="post" name="yks-mailchimp-form" id="yks-mailchimp-form">
+	<form method="post" name="yks-mailchimp-form" id="yks-mailchimp-form" autocomplete="off" >
 		<table class="form-table yks-admin-form">
 			<tbody>
 	
