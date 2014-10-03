@@ -420,6 +420,7 @@ Changes
 
 ### 5.0.9 - October 3rd, 2014
 * Added autocomplete="false" to API input field
+* Added event listener to form submission (forms can now be placed in modals/slideout menus)
 
 ### 5.0.8 - September 23, 2014
 * Band-aid fix for the -1 response returned from ajax.php

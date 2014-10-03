@@ -24,7 +24,7 @@ $ymce = jQuery.noConflict();
 				}
 			return (err > 0 ? false : true);
 			}
-		$ymce('#yks-mailchimp-form_<?php echo $list['id']; ?>').submit(function(e){	
+		$ymce(document).on( 'submit' , '#yks-mailchimp-form_<?php echo $list['id']; ?>' , function(e) {
 			// remove sharedaddy if the user has it activated
 			// it shouldn't be here :) 
 			// maybe include a checkbox and give the user
