@@ -398,7 +398,7 @@ jQuery(document).ready(function() {
 				<tr valign="top">
 					<th scope="row"><label for="yks-mailchimp-api-key"><?php _e('Your Mailchimp API Key','yikes-inc-easy-mailchimp-extender'); ?></label></th>
 					<td>
-						<input name="yks-mailchimp-api-key" type="password" id="yks-mailchimp-api-key" value="<?php echo $this->yikes_mc_encryptIt($this->optionVal['api-key']); ?>" class="regular-text" /><span class="mailChimp_api_key_validation_message"></span><img class="mailChimp_api_key_preloader" src="<?php echo admin_url().'/images/wpspin_light.gif'; ?>" alt="preloader" ><span class="mailChimp_api_key_validation"></span>
+						<input name="yks-mailchimp-api-key" type="password" id="yks-mailchimp-api-key" value="<?php echo $this->yikes_mc_encryptIt($this->optionVal['api-key']); ?>" class="regular-text" autocomplete="off" /><span class="mailChimp_api_key_validation_message"></span><img class="mailChimp_api_key_preloader" src="<?php echo admin_url().'/images/wpspin_light.gif'; ?>" alt="preloader" ><span class="mailChimp_api_key_validation"></span>
 					</td>
 				</tr>
 				<!-- MailChimp API Key Description -->
