@@ -3,8 +3,8 @@ Contributors: yikesinc, hiwhatsup, liljimmi, eherman24, seriouslysean
 Donate link: http://yikesinc.com
 Tags: mailchimp, marketing, email, mailing lists, newsletter, sign up, forms, sign up form
 Requires at least: 3.0
-Tested up to: 4.0
-Stable tag: 5.0.9
+Tested up to: 3.9.2
+Stable tag: 5.1
 License: GPLv2 or later
 
 Easy MailChimp Forms allows you to painlessly add MailChimp sign up forms to your WordPress site and track user activity with interactive reports.
@@ -17,6 +17,8 @@ Easy MailChimp Forms allows you to painlessly add MailChimp sign up forms to you
 
 **Features**
 
+* Create your own signup form templates ( *new* )
+* Style your forms without writing a single line of code ( *new* )
 * Complete Integration of MailChimp into WordPress
 * Easily import MailChimp forms from an active MailChimp account
 * View/Print Interactive Account Growth Reports and Campaign Reports (Statistics Tracking)
@@ -135,6 +137,21 @@ Yes! Since version 4.4 of Easy MailChimp Extender, we have added [reCAPTCHA](htt
 
 = When I input my API key and hit save, it immediately reverts to a much shorter string of text and returns invalid. What's going on? =
 You most likely have a password manager installed and active (LastPass, OnePass, TeamPassword etc.). The API key input field is set to type="password" for security reasons. Most password managers auto-fill password fields based on the URL of the current page. So, what happens when you click save is that the password manager auto fills in the field with the password that you have saved for your site, and thus returning 'invalid API key'. To resolve the issue you'll need to temporarily disable any active password manager and re-enter and save your API key. Once the key has been successfully saved, you can re-enable your password manager.
+
+= How do I create my own custom MailChimp template? =
+**Step 1:** 
+First you'll want to import the boilerplate template files bundled with the plugin. These are files that were created for easy customization. You can import the boilerplate files by going to the manage list forms page and clicking 'import boilerplate templates'. 
+
+<em>Note :</em> Alternatively, you can manually import the template files by copying the 'yikes-mailchimp-user-templates' directory inside of the plugin root ( 'yikes-inc-easy-mailchimp-extender/templates/' ) over to your theme root. ( ie: /wp-content/themes/twentyfourteen/ ).
+
+**Step 2:** 
+Once imported you'll find the boilerplate files in your theme root. Each boilerplate template file comes with an associated .css file located inside of the styles directory. To get started on your first template, we recommend that you duplicate one of the existing boilerplate tempalate files and its associated .css file, and changing the name.
+
+**Step 3:** 
+Finally, change the MailChimp template, author and description headers at the top of each template file. The 'MailChimp Template' header dictates the name of your template, and what will appear in the drop down field. You'll also want to make sure that the correct .css file is properly being enqueued at the top of the template file.
+
+**Step 4:**
+Once setup, you can assign the template to your form from the 'Manage List' page. Make sure to select the checkbox 'use custom form' and then in the drop down select your newly created template.
 
 == Developer Docs. ==
 
@@ -346,6 +363,104 @@ This example will catch the user submitted data, *of all forms*, store the users
 <br />
 
 **Filter Name:**
+`yikes_mc_user_already_subscribed`
+
+**Accepted Parameters:** 
+`$errorMessage` , `$update_user_link` and `$email`
+
+**Parameter Info:**	
+
+`$errorMessage` = the error message returned by the MailChimp API. By Default : "email@domain.com is already subscribed to the list."
+
+`$update_user_link` = the link that will re-submit the form to update the current users info. Default link text : "Update My Info"
+
+`$email` = the email address provided in the Email field
+
+**Description:**
+Used to display a custom error message back to the user, when a user attempts to subscribe to a list they already exist on.
+
+**Example:**
+The following example will alter the error returned from the MailChimp API. Useful when you would like to provide a more custom error message. The 'Update' link will re-submit the form using the 'update_existing' parameter to update the current users profile.
+
+`
+<?php
+	/**
+	* This example will return a custom error message to the user when they attempt to subscribe to 
+	* a list they already exist on. The following will show something similar "Sorry, John@johnsmith.com is already subscribed to this list. Please Update My Information."
+	*/
+	function custom_user_already_subscribed_error( $errorMessage , $update_user_link , $email ) {
+		$errorMessage = 'Sorry, ' . $email . ' is already subscribed to this list.';
+		$errorMessage .= str_replace( 'Update My Info.' , 'Please Update My Information' , $update_user_link );
+		return $errorMessage;
+	}
+	add_filter( 'yikes_mc_user_already_subscribed' , 'custom_user_already_subscribed_error' , 10 , 3 );
+?>
+`
+<br />
+
+**Filter Name:**
+`yikes_mc_subscriber_update_message`
+
+**Accepted Parameters:** 
+`$success_message`
+
+**Parameter Info:**	
+
+`$success_message` = the success message to be displayed to the user, defaults to "Thanks, your information has been successfuly updated."
+
+**Description:**
+Used to alter the success message returned when a user updates their account information for a given list
+
+**Example:**
+The following example will alter success message displayed back to the user after they have updated their account information for a given list. Defualts to : "Thanks, your information has been successfuly updated."
+
+`
+<?php
+	/**
+	* The following example will alter the success message when a user re-submits 
+	* the form data to update their information for a given form
+	*/
+	function custom_resubmit_info_message( $success_message ) {
+		$success_message = "Thanks for updating your info! You're so awesome!";
+		return $success_message;
+	}
+	add_filter( 'yikes_mc_subscriber_update_message' , 'custom_resubmit_info_message' , 10 );
+?>
+`
+<br />
+
+**Filter Name:**
+`yks_redirect_add_post_types`
+
+**Accepted Parameters:** 
+`$post_array `
+
+**Parameter Info:**	
+
+`$post_array` = an array of post type names that you would like to be included into the drop down as a redirect option on the manage list page
+
+**Description:**
+Use this filter to add any number of custom post types to the redirect dropdown
+
+**Example:**
+The following example will add any and all posts with the custom post type 'portfolio' to the redirect dropdown 
+
+`
+<?php
+	/**
+	* This example will add the custom post type 'portfolio' to the
+    * redirect dropdown on the manage list forms page	
+	*/
+	function add_portfolio_post_type_to_yikes_redirect_dropdown( $post_array ) {
+		$post_array[] = 'portfolio';
+		return $post_array;
+	}
+	add_filter( 'yks_redirect_add_post_types' , 'add_portfolio_post_type_to_yikes_redirect_dropdown' );
+?>
+`
+<br />
+
+**Filter Name:**
 `yikes_mc_get_form_data_$formID`
 
 **Accepted Parameters:**  
@@ -445,16 +560,37 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 3. YIKES Easy MailChimp Account Activity Overview
 4. YIKES Easy MailChimp Campaign Overview
 5. YIKES Easy MailChimp Campaign Statistics Reports
-6. Yikes Easy MailChimp Form Listing Page
+6. *New* Yikes Easy MailChimp Redesigned Form Listing Page
 7. View all subscribers of a given list, click to reveal individual subscriber info
 8. Custom widget to easily add forms to sidebars and widgets
 9. Form rendered on the front end of the site
 10. Optional opt-in checkbox on the comment forms, easily add commenter's to your email list
 11. Custom tinyMCE button allows you to easily add imported forms to pages and posts at the click of a button
 12. About YIKES page
-13. *New* Admin Dashboard Widget - Account Activity ( With Live Updating )
+13. Admin Dashboard Widget - Account Activity ( With Live Updating )
+14. *New* Form customizer, with simple UI including color pickers
 
 == Changelog ==
+
+= 5.1 - November 3, 2014 =
+
+**Updates**
+
+* Release v5.1
+* Added brand new templating framework, to allow users to create custom form templates for use with any MailChimp List
+* Re-style Manage List page
+* Added missing label to radio buttons inside the form
+* Added missing closing parentheses on subscriber count inside view subscribers page
+* Added custom color picker to easily stylize forms without writing a single line of code
+* Added ability to specify a custom class names for each field of the form ( easily add custom class names to MailChimp form fields for further customization )
+* Only run API Key check when a new key is entered ( not on each page load )
+* Added new Welcome page with features+update notifications for users
+* Security vulnerability re-patched - props @g0blinResearch for privately disclosing the potential vulnerability
+* Added `yks_redirect_add_post_types` filter, to allow custom post types to be added to the redirect drop down (view [docs](https://wordpress.org/plugins/yikes-inc-easy-mailchimp-extender/other_notes/) for example)
+* Added `yikes_mc_user_already_subscribed` filter to allow users to alter the message displayed to the user when they are already subscribed to a given list (view [docs](https://wordpress.org/plugins/yikes-inc-easy-mailchimp-extender/other_notes/) for example)
+* Added `yikes_mc_subscriber_update_message` filter, to alter the success message when a user updates their account information for a given list (view [docs](https://wordpress.org/plugins/yikes-inc-easy-mailchimp-extender/other_notes/) for example)
+* Added a new link to allow users to update profile information if previously subscribed to a given list
+* Added 5 bundled templates, and 2 boilerplate files for users to use as a starting point for new templates
 
 = 5.0.9 - October 3rd, 2014 =
 
@@ -478,13 +614,11 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 = 5.0.6 - August 22, 2014 =
 
 **Fixes**
-
 * fix bug with nonce security check when using table 'Preferred Form Layout' setting
 
 = 5.0.5 - August 21, 2014 =
 
 **Fixes**
-
 - added `stripslashes()` to the following settings fields :
 	- Single Opt-in Confirmation Message
 	- Double Opt-in Confirmation Message
@@ -492,7 +626,6 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 	- Opt-in Checkbox Text
 
 **Updates**
-
 - Updated readme FAQ section
 
 = 5.0.4 - August 6, 2014 =
@@ -654,29 +787,39 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 == Upgrade Notice ==
 
+= 5.1 - November 3, 2014 =
+
+We have added brand new functionality, allowing users to easily customize forms on the fly, through a familiar UI as well as a templating framework to allow users to design and implement their own custom forms. A minor security bug was patched in this release as well. We fixed an issue with the API key check running on each page load, and added a few new filters to allow users to alter text (please view the [docs](https://wordpress.org/plugins/yikes-inc-easy-mailchimp-extender/other_notes/) for example)
+
 = 5.0.9 - October 3rd, 2014 =
 
 **Fixes**
+
 * Added autocomplete="false" to API input field
+* Added event listener to form submission (forms can now be placed in modals/slideout menus)
 
 = 5.0.8 - September 23, 2014 =
 
 **Fixes**
+
 * Band-aid fix for the -1 response returned from ajax.php
 
 = 5.0.7 - September 19, 2014 =
 
 **Fixes**
+
 * Security Vulnerability patched - props @g0blinResearch for privately disclosing the issue
 
 = 5.0.6 - August 22, 2014 =
 
 **Fixes**
+
 * fix bug with nonce security check when using table 'Preferred Form Layout' setting
 
 = 5.0.5 - August 21, 2014 =
 
 **Fixes**
+
 - added `stripslashes()` to the following settings fields :
 	- Single Opt-in Confirmation Message
 	- Double Opt-in Confirmation Message
@@ -684,6 +827,7 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 	- Opt-in Checkbox Text
 
 **Updates**
+
 - Updated readme FAQ section
 
 = 5.0.4 - August 6, 2014 =

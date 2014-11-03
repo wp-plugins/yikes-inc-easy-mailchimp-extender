@@ -15,18 +15,6 @@ default:
 	echo '-1';
 	break;
 	
-// temporary solution to the issue - v5.0.8 repair	
-	// should be properly fixed in v5.1
-case 'frontend_submit_form':
-	$action	= $yksemeBase->addUserToMailchimp($_POST);
-	if($action == "done")
-		{
-			echo '1';
-		} else {
-			echo $action;
-		}
-	break;	
-	
 case 'update_options':
 	$action	= $yksemeBase->updateOptions($_POST);
 	if($action)
