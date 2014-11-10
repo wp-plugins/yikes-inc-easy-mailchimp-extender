@@ -301,13 +301,13 @@ body.admin_page_yks-mailchimp-welcome {
 		  <div class="col-md-4">
 			<h2>Custom Classes</h2>
 			<p>We've now added the ability to attach custom class names to specific form inputs for greater style control.</p>
-			<p><img class="new_feature_image" src="<?php echo YKSEME_URL; ?>images/welcome_page/Custom_Class_Names.jpg" alt="New Form Customizer" title="New Form Customizer" ></p>
+			<p><img class="new_feature_image" src="<?php echo YKSEME_URL; ?>images/welcome_page/custom_class_names.jpg" alt="New Form Customizer" title="New Form Customizer" ></p>
 		  </div>
 		  
 		  <div class="col-md-4">
 			<h2>New Manage List Page Styles</h2>
 			<p>All new styles for the manage list page, allowing you to collapse forms that you don't immediatly need.</p>
-			<p><img class="new_feature_image" src="<?php echo YKSEME_URL; ?>images/welcome_page/Manage_List_styles.jpg" alt="New Form Customizer" title="New Form Customizer" ></p>
+			<p><img class="new_feature_image" src="<?php echo YKSEME_URL; ?>images/welcome_page/Manage_List_Styles.jpg" alt="New Form Customizer" title="New Form Customizer" ></p>
 		  </div>
 
 		  <div class="col-md-4">
