@@ -17,7 +17,7 @@ Easy MailChimp Forms allows you to painlessly add MailChimp sign up forms to you
 
 **Features**
 
-* Add interest groups and new fields to forms directly from the dashboard without ever leaving your site (*new*)
+* Add interest groups and new fields to forms directly from the dashboard without leaving your site (*new*)
 * Error log for diagnosing user issues (*new*)
 * All new No-Captcha Re-Captcha in place (*new*)
 * Design your own sign up form templates
