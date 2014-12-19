@@ -61,7 +61,7 @@ Instructions on how to use the plugin can be [found in the FAQ](http://wordpress
 == Frequently Asked Questions ==
 
 = Do I need to have a MailChimp Account? =
-Yes, you can register for one for free at [MailChimp](https://mailchimp.com/sign up/ "MailChimp").
+Yes, you can register for one for free at [MailChimp](https://login.mailchimp.com/signup? "MailChimp").
 
 = Do I need to have lists already set up in MailChimp? =
 Yes, you have to have at least 1 list set up in MailChimp. 
