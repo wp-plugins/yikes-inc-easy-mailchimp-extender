@@ -3,7 +3,7 @@ Contributors: yikesinc, hiwhatsup, liljimmi, eherman24, seriouslysean
 Donate link: http://yikesinc.com
 Tags: mailchimp, marketing, email, mailing lists, newsletter, sign up, forms, sign up form
 Requires at least: 3.0
-Tested up to: 4.0.1
+Tested up to: 4.1
 Stable tag: 5.2
 License: GPLv2 or later
 
@@ -17,7 +17,7 @@ Easy MailChimp Forms allows you to painlessly add MailChimp sign up forms to you
 
 **Features**
 
-* Add interest groups and new fields to forms directly from the dashboard without ever leaving your site (*new*)
+* Add interest groups and new fields to forms directly from the dashboard without leaving your site (*new*)
 * Error log for diagnosing user issues (*new*)
 * All new No-Captcha Re-Captcha in place (*new*)
 * Design your own sign up form templates
