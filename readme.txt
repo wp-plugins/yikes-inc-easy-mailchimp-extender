@@ -353,7 +353,7 @@ N/A
 `$capability = the lowest capability allowed to access the administration pages. defaults to 'manage_options' (admins).`
 
 **Description:**
-The
+The following example will allow editors to access the YIKES MailChimp administration pages on the dashboard.
 
 **Example:**
 The following example will allow editors to access the YIKES MailChimp administration pages on the dashboard.
