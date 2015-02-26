@@ -4,7 +4,7 @@ Donate link: http://yikesinc.com
 Tags: mailchimp, marketing, email, mailing lists, newsletter, sign up, forms, sign up form
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 5.3.2
+Stable tag: 5.3.3
 License: GPLv2 or later
 
 Easy MailChimp Forms allows you to painlessly add MailChimp sign up forms to your WordPress site and track user activity with interactive reports.
@@ -341,6 +341,46 @@ N/A
 <br />
 
 **Filters**
+
+**Filter Name:**
+`yikes_mc_field_label`
+
+**Accepted Parameters:** 
+`$label`
+
+**Parameter Info:**	
+
+`$label = the text of the field label you would like to alter.`
+
+**Description:**
+The following example will change the default 'Email Address' label to 'Email!'
+
+**Example:**
+This example will alter the 'Email Address' field label, and return 'Email!'
+
+`
+<?php
+	/**
+	* This example will alter the 'Email Address' field label, and return a 
+	* new custom label name ('Email!')
+	* anything else falls under 'default' and returns the un-altered label
+	*/
+	function alter_mailchimp_field_labels( $label ) {
+
+		switch ( $label ) {
+			default :
+				echo $label;
+			break;
+			
+			case 'Email Address': // text of the existing label
+				echo 'Email!'; // new email label text
+			break;
+		}
+	}
+	add_filter( 'yikes_mc_field_label' , 'alter_mailchimp_field_labels' );
+?>
+`
+<br />
 
 **Filter Name:**
 `yks_mailchimp_user_role`
@@ -795,6 +835,10 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 
 == Changelog ==
 
+= 5.3.3 - February 26th, 2015 =
+
+* Enhancement: Added a new filter to alter field labels. Very helpful when you want to alter the default 'Email Address' field label to something else. (`yikes_mc_field_label`) (see 'filters' section in 'Other Notes')
+
 = 5.3.2 - February 17th, 2015 =
 
 * Fixed: Patched the error displayed below the opt-in forms when `display_yikes_mc_form_messages` is not defined.
@@ -1068,6 +1112,9 @@ These functions should be used in conjunction with the `yikes_mc_get_form_data` 
 * Initial Release
 
 == Upgrade Notice ==
+
+= 5.3.3 - February 26th, 2015 =
+* Enhancement: Added a new filter to alter field labels. Very helpful when you want to alter the default 'Email Address' field label to something else. (`yikes_mc_field_label`) (see 'filters' section in 'Other Notes')
 
 = 5.3.2 - February 17th, 2015 =
 * Fixed: Patched the error displayed below the opt-in forms when `display_yikes_mc_form_messages` is not defined.
