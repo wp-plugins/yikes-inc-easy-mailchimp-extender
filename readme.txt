@@ -3,7 +3,7 @@ Contributors: yikesinc, hiwhatsup, liljimmi, eherman24, seriouslysean
 Donate link: http://yikesinc.com
 Tags: mailchimp, marketing, email, mailing lists, newsletter, sign up, forms, sign up form
 Requires at least: 3.0
-Tested up to: 4.1.1
+Tested up to: 4.2
 Stable tag: 5.4.3
 License: GPLv2 or later
 
