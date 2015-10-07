@@ -1,1418 +1,2653 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Yikes Inc. Easy MailChimp Plugin\n"
-"POT-Creation-Date: 2014-07-22 13:08-0500\n"
-"PO-Revision-Date: 2014-07-22 13:09-0500\n"
-"Last-Translator: Evan <Evan@yikesinc.com>\n"
-"Language-Team: Yikes Inc. <evan@yikesinc.com>\n"
-"Language: en\n"
+"Project-Id-Version: Easy Forms for MailChimp by YIKES Inc.\n"
+"POT-Creation-Date: 2015-10-04 13:06-0400\n"
+"PO-Revision-Date: 2015-10-04 13:06-0400\n"
+"Last-Translator: Evan Herman <evan.m.herman@gmail.com>\n"
+"Language-Team: YIKES Inc. <http://www.yikesinc.com>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.6\n"
-"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-SearchPath-0: ../.\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: admin/js/min/jquery.qtip.min.js\n"
 
-#: .././classes/class.yksemeBase.php:130
-#: .././classes/class.yksemeBase.php:1456
-msgid "Thank You for subscribing!"
-msgstr "Gracias por suscribirse!"
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:172
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:748
+#, fuzzy
+msgid "Settings"
+msgstr "Configuración adicional"
 
-#: .././classes/class.yksemeBase.php:131
-#: .././classes/class.yksemeBase.php:1457
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:173
+msgid "More plugins by YIKES"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:191
+msgid ""
+"Disclaimer: <strong>YIKES Inc. Easy Forms for MailChimp</strong> is in no "
+"way endorsed, affiliated or backed by MailChimp, or its parent company "
+"Rocket Science Group."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:191
+msgid "Thanks :)"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:274
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:299
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:322
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2200
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2302
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2331
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2455
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2515
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2536
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2560
+msgid ""
+"We've run into an error. The security check didn't pass. Please try again."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:274
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:299
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:322
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2302
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2331
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2455
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2515
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2536
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2560
+msgid "Failed nonce validation"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:344
+msgid "We encountered an error. Please contact the YIKES Inc. support team."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:481
+#, php-format
+msgid ""
+"Hi, %s, you've been using %s for 2 weeks now. We hope you're enjoying the "
+"features included with the free version. If so, please consider leaving us a "
+"review. Reviews provide us with feedback to grow and improve the plugin. If "
+"you're really enjoying the plugin, consider buying an add-on or developer "
+"license for some really awesome features and premium support."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:481
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:485
+msgid "Leave A Review"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:481
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:485
+msgid "View Addons"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:481
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:485
+msgid "Dismiss"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:485
+#, php-format
+msgid ""
+"It looks like you've been using %s for 2 weeks now. We hope you're enjoying "
+"the features included with the free version. If so, please consider leaving "
+"us a review. Reviews only help to catch other users attention as well as "
+"provide us with feedback to grow and improve upon. If you're really enjoying "
+"the plugin, consider buying an add-on or developer license for some really "
+"awesome features and premium support."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:514
+msgid ""
+"YIKES Inc. Easy Forms for MailChimp requires a minimum of PHP 5.3. The "
+"plugin will not function properly until you update. Reach out to your host "
+"provider for assistance."
+msgstr ""
+"YIKES Inc. Easy Forms for MailChimp requiere un mínimo de PHP 5.3. El plugin "
+"no funcionará correctamente hasta que actualizas. Llegar a su proveedor de "
+"host para obtener ayuda."
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:568
+msgid "Please Import Some MailChimp Lists"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:579
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:580
+#, fuzzy
+msgid "Easy Forms for MailChimp by Yikes Inc."
+msgstr "Easy Forms for MailChimp"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:581
+#, fuzzy
+msgid "MailChimp List"
+msgstr "MailChimp Hecha Correctamente"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:582
+msgid "Display Form Title"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:583
+msgid "Display Form Description"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:584
+msgid "Submit Button Text"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:587
+#, fuzzy, php-format
+msgid ""
+"You need to <a href=\"%s\" title=\"%s\">create a form</a> before you can add "
+"one to a page or post."
+msgstr ""
+"Necesita para <a href=\"%s\" title=\"Créate a form\">crear un formulario</a> "
+"antes de agregar uno a una página o post."
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:587
+#: admin/partials/front-end-widgets/front-end-widget-form.php:78
+msgid "Create a form"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:689
+msgid "Easy Forms"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:705
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:706
+msgid "Opt-in Forms"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:715
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:716
+#, fuzzy
+msgid "Mailing Lists"
+msgstr "MailChimp Hecha Correctamente"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:735
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:736
+msgid "Account"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:747
+#, fuzzy
+msgid "Settings."
+msgstr "Configuración adicional"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:757
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:758
+#: admin/partials/menu/support.php:11
+msgid "Support"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:767
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:768
+#: admin/partials/menu/add-ons.php:13
+msgid "Add-Ons"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:779
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:780
+#: public/partials/shortcodes/process_form_shortcode.php:94
+msgid "Edit Form"
+msgstr "Editar Formulario"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:789
+msgid "YIKES Inc. Easy Forms for MailChimp Upgrade Options Structure"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:799
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:800
+msgid "Welcome"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:809
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:810
+#: admin/partials/view-user.php:122
+msgid "View List"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:819
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:820
+msgid "View User"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:930
+msgid "API Connection"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:939
+#: admin/partials/menu/options-sections/general-settings.php:20
+#: admin/partials/menu/options-sections/general-settings.php:22
+msgid "MailChimp API Key"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:960
+msgid "Select Checkboxes to Generate"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:982
+msgid "Enter reCaptcha Site Key"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:989
+msgid "Enter reCaptcha Secret Key"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:996
+msgid "Enable ReCaptcha"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1016
+#: admin/partials/menu/options-sections/debug-settings.php:16
+msgid "Enable Debugging"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1047
+msgid "Connecting to MailChimp"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1047
+#, fuzzy
+msgid "Settings Page/General Settings"
+msgstr "Configuración General"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1146
+#, php-format
+msgid ""
+"The previously stored options for %s have been cleared from the database. "
+"You should update the plugin options on the <a href='%s' title='Settings "
+"Page'>settings page</a> before continuing. You should also update the "
+"shortcodes used to generate your forms, and any widgets you may have "
+"previously set-up."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1152
+#, php-format
+msgid "It looks like you're upgrading from a previous version of %s."
+msgstr "Parece que usted está actualizando desde una versión anterior de %s."
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1152
+#, fuzzy, php-format
+msgid ""
+"In the newest version of %s, the options data structure has changed. We've "
+"also moved the mailing lists into its own database table to allow for some "
+"higher level customization. Now you can easily create multiple forms and "
+"assign them to the same mailing list."
+msgstr ""
+"En la versión %s ha cambiado la estructura de datos de opciones. También nos "
+"hemos movido las listas de correo en su propia tabla de la base de datos "
+"para permitir cierta personalización de nivel superior. Ahora puede "
+"fácilmente crear múltiples formas y asignar a la misma lista de correo."
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1153
+#, fuzzy
+msgid ""
+"Before you continue, it's strongly recommended you the perform the migration "
+"to ensure the plugin continues to function properly."
+msgstr ""
+"Antes de continuar, se recomienda se realice la migración para el plugin "
+"sigue funcionando correctamente."
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1154
+msgid "It's also strongly recommended that you take a backup of your database."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1159
+msgid "Perform Migration"
+msgstr "Realizar la migración"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1163
+msgid "Dismiss Notice"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1268
+msgid "Additional Settings"
+msgstr "Configuración adicional"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1271
+#: admin/partials/menu/options-sections/general-settings.php:5
+#: admin/partials/menu/options-sections/integration-settings.php:97
+#: admin/partials/menu/options.php:30
+msgid "General Settings"
+msgstr "Configuración General"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1272
+#: admin/partials/menu/options-sections/integration-settings.php:78
+msgid "Integration Settings"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1273
+#: public/partials/shortcodes/process_form_shortcode.php:42
+#: public/partials/shortcodes/process_form_shortcode.php:45
+msgid "ReCaptcha Settings"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1274
+#: admin/partials/menu/options-sections/api-cache-settings.php:6
+msgid "API Cache Settings"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1275
+#: admin/partials/menu/options-sections/debug-settings.php:7
+msgid "Debug Settings"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1276
+msgid "Import/Export"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1283
+#, fuzzy
+msgid "Addon Settings"
+msgstr "Configuración adicional"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1317
+msgid "Create a New Signup Form"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1321
+msgid ""
+"Give your form a name, select a MailChimp list to assign users to, then "
+"click 'Create'."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1326
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1327
+#: admin/partials/edit-form.php:125 admin/partials/menu/lists.php:65
+#: admin/partials/menu/manage-forms.php:95
+#: admin/partials/menu/manage-forms.php:110
+msgid "Form Name"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1330
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1331
+#: admin/partials/edit-form.php:131 admin/partials/menu/manage-forms.php:96
+#: admin/partials/menu/manage-forms.php:111
+msgid "Form Description"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1334
+#: admin/partials/edit-form.php:372
+#: admin/partials/menu/options-sections/integration-settings.php:137
+msgid "Associated List"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1346
+msgid "Please enter a valid API key."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1350
+msgid "No lists were found on the account."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1362
+#, php-format
+msgid ""
+"Head over to <a href=\"http://www.MailChimp.com\" title=\"%s\">MailChimp</a> "
+"to create a new list."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1362
+msgid "Create a list"
+msgstr "Crear una lista"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1371
+msgid "Create"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1373
+msgid "Please enter a valid MailChimp API key to get started."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1375
+msgid "general settings"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1392
+msgid "Select A Page or Post"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1441
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1480
+msgid "About YIKES Inc."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1441
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1480
+msgid "Show YIKES Inc. Some Love"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1445
+msgid "Leave a review"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1457
+msgid "Tweet about it"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1463
+msgid "Vote that the plugin works"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1466
+msgid "Vote for Compatibility"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1471
+#, php-format
+msgid "This plugin made with %s by %s"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1477
+msgid ""
+"is a web design and development company located in Philadelphia, "
+"Pennsylvania, US. YIKES specializes in custom WordPress theme and plugin "
+"development, site maintenance, eCommerce, custom-built web-based "
+"applications and more."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1487
+msgid "Easy Forms for MailChimp Add-Ons"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1489
+msgid "Check out available add-ons for some seriously enhanced features."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1490
+msgid "View Add-Ons"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1509
+msgid "We've encountered an error. No list ID was sent."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1513
+msgid ""
+"We've encountered an error. Reload the page and try again. If the error "
+"persists, please reach out to support."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1555
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1861
+msgid "Field no longer exists."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1557
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1863
+#: admin/partials/ajax/add_field_to_form.php:17
+#: admin/partials/ajax/add_interest_group_to_form.php:26
+#: admin/partials/ajax/process_ajax.php:24
+msgid "type"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1563
+msgid ""
+"This field no longer exists in this list. Delete this field from the form to "
+"prevent issues on your website."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1585
+#: admin/partials/ajax/add_field_to_form.php:40
+msgid "Merge Tag"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1609
+#: admin/partials/ajax/add_field_to_form.php:66
+#: admin/partials/ajax/process_ajax.php:46
+msgid "Placeholder"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1614
+#: admin/partials/ajax/add_field_to_form.php:71
+#: admin/partials/ajax/process_ajax.php:51
+msgid "Assign a placeholder value to this field."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1655
+#: admin/partials/ajax/add_field_to_form.php:112
+#: admin/partials/ajax/process_ajax.php:63
+msgid "Default Value"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1660
+#: admin/partials/ajax/add_field_to_form.php:117
+#: admin/partials/ajax/process_ajax.php:68
+msgid ""
+"Assign a default value to populate this field with on initial page load."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1665
+#: admin/partials/ajax/add_field_to_form.php:122
+msgid "View Pre-Defined Tags"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1679
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1702
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1892
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1923
+#: admin/partials/ajax/add_field_to_form.php:136
+#: admin/partials/ajax/add_field_to_form.php:159
+#: admin/partials/ajax/add_interest_group_to_form.php:53
+#: admin/partials/ajax/add_interest_group_to_form.php:77
+#: admin/partials/ajax/add_interest_group_to_form.php:101
+#: admin/partials/ajax/process_ajax.php:79
+#: admin/partials/ajax/process_ajax.php:100
+msgid "Default Selection"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1690
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1911
+#: admin/partials/ajax/add_field_to_form.php:147
+#: admin/partials/ajax/add_interest_group_to_form.php:65
+#: admin/partials/ajax/add_interest_group_to_form.php:89
+#: admin/partials/ajax/process_ajax.php:88
+msgid "Select the option that should be selected by default."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1711
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1932
+#: admin/partials/ajax/add_field_to_form.php:170
+#: admin/partials/ajax/add_interest_group_to_form.php:112
+#: admin/partials/ajax/process_ajax.php:111
+msgid "Which option should be selected by default?"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1731
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1946
+#: admin/partials/ajax/add_field_to_form.php:184
+#: admin/partials/ajax/add_interest_group_to_form.php:126
+msgid "Description"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1736
+msgid ""
+"Enter the description for the form field. This will be displayed to the user "
+"and will provide some direction on how the field should be filled out or "
+"selected."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1743
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1959
+#: admin/partials/ajax/add_field_to_form.php:196
+#: admin/partials/ajax/add_interest_group_to_form.php:139
+#: admin/partials/ajax/process_ajax.php:125
+msgid "Additional Classes"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1748
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1964
+#: admin/partials/ajax/add_field_to_form.php:201
+#: admin/partials/ajax/add_interest_group_to_form.php:144
+#: admin/partials/ajax/process_ajax.php:130
+msgid "Assign additional classes to this field."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1755
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1971
+#: admin/partials/ajax/add_field_to_form.php:208
+#: admin/partials/ajax/add_interest_group_to_form.php:151
+#: admin/partials/ajax/process_ajax.php:137
+msgid "Field Required?"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1760
+#: admin/partials/ajax/add_field_to_form.php:212
+#: admin/partials/ajax/process_ajax.php:141
+msgid "Email is a required field."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1761
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1977
+#: admin/partials/ajax/add_field_to_form.php:213
+#: admin/partials/ajax/add_interest_group_to_form.php:156
+#: admin/partials/ajax/process_ajax.php:142
+msgid "Require this field to be filled in before the form can be submitted."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1768
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1984
+#: admin/partials/ajax/add_field_to_form.php:220
+#: admin/partials/ajax/add_interest_group_to_form.php:163
+#: admin/partials/ajax/process_ajax.php:149
+msgid "Hide Field"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1773
+#: admin/partials/ajax/add_field_to_form.php:224
+#: admin/partials/ajax/process_ajax.php:153
+msgid "Cannot toggle email field visibility."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1774
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1990
+#: admin/partials/ajax/add_field_to_form.php:225
+#: admin/partials/ajax/add_interest_group_to_form.php:168
+#: admin/partials/ajax/process_ajax.php:154
+msgid "Hide this field from being displayed on the front end."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1781
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1997
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2010
+#: admin/partials/ajax/add_field_to_form.php:232
+#: admin/partials/ajax/add_interest_group_to_form.php:175
+msgid "Hide Label"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1787
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2003
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2016
+#: admin/partials/ajax/add_field_to_form.php:237
+#: admin/partials/ajax/add_interest_group_to_form.php:180
+msgid "Toggle field label visibility."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1804
+#: admin/partials/ajax/add_field_to_form.php:255
+#, fuzzy
+msgid "Date Format"
+msgstr "Editar Formulario"
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1809
+#: admin/partials/ajax/add_field_to_form.php:260
+msgid "Phone Format"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1810
+#: admin/partials/ajax/add_field_to_form.php:261
+msgid "International"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1820
+#: admin/partials/ajax/add_field_to_form.php:271
+#, php-format
+msgid ""
+"To change the %s please head over to <a href=\"%s\" title=\"MailChimp\" "
+"target=\"_blank\">MailChimp</a>. If you alter the format, you should re-"
+"import this field."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1839
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2026
+#: admin/partials/ajax/add_field_to_form.php:290
+#: admin/partials/ajax/add_interest_group_to_form.php:190
+#: admin/partials/ajax/process_ajax.php:164
+msgid "Close"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1840
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2027
+#: admin/partials/ajax/add_field_to_form.php:291
+#: admin/partials/ajax/add_interest_group_to_form.php:191
+#: admin/partials/ajax/process_ajax.php:165
+msgid "Remove Field"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1870
+msgid ""
+"This field no longer exists in this list. Delete this field from the form to "
+"prevent issues on the front end."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:1951
+#: admin/partials/ajax/add_field_to_form.php:189
+#: admin/partials/ajax/add_interest_group_to_form.php:131
+msgid ""
+"Enter the description for the form field. This will be displayed to the user "
+"and provide some direction on how the field should be filled out or selected."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2041
+msgid ""
+"No fields are assigned to this form. Select fields from the right hand "
+"column to add to this form."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2052
+msgid ""
+"Pre-populate the field with the current page or post title that the user is "
+"on when opting in to your mailing list."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2057
+msgid ""
+"Pre-populate the field with the current page or post ID that the user is on "
+"when opting in to your mailing list."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2062
+msgid ""
+"Pre-populate the field with the current page URL that the user is on when "
+"opting in to your mailing list."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2067
+msgid ""
+"Pre-populate the field with the current blog name that the user is on when "
+"opting in to your mailing list. This is especially helpful for multi-site "
+"networks."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2072
+msgid ""
+"Detects if a user is logged in and pre-populates the field with an "
+"appropriate value."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2100
+msgid "Pre Defined Tags"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2101
+msgid ""
+"You can use any of the following tags to populate a MailChimp text field "
+"with dynamic content. This can be used to determine which page the user "
+"signed up on, if the user was logged in and more."
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2142
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2177
+msgid "Already assigned to your form"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2142
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2146
+msgid "required field"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2151
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2186
+msgid "Add to Form Builder"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2279
+msgid "Creating a new form"
+msgstr ""
+
+#: admin/class-yikes-inc-easy-mailchimp-extender-admin.php:2279
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:15
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:9
+#, fuzzy
+msgid "Forms"
+msgstr "Editar Formulario"
+
+#: admin/partials/ajax/add_field_to_form.php:16
+#: admin/partials/ajax/add_interest_group_to_form.php:25
+msgid "Expand Field"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/class.list-activity-widget.php:25
+msgid "Preloader"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/class.list-activity-widget.php:45
+msgid "MailChimp List Stats"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/class.list-activity-widget.php:51
+msgid "MailChimp Account Activity"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/class.list-activity-widget.php:74
+msgid "Select a list"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/class.list-activity-widget.php:82
+msgid ""
+"Select a list from the dropdown above. View statistics related to this list "
+"below."
+msgstr ""
+
+#: admin/partials/dashboard-widgets/class.list-activity-widget.php:94
+msgid ""
+"Whoops, you don't have any lists set up. Head over to MailChimp to set up "
+"lists."
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:5
+msgid "view List"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:5
+msgid "view list"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:10
+msgid "Subscribers"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:11
+msgid "Unsubscribed"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:12
+msgid "New Since Send"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:13
+msgid "Avg. Sub. Rate"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:18
+msgid "Number of active subscribers."
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:20
+msgid "subscribers"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:22
+msgid "Number of users who have unsusbscribed."
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:24
+msgid "unsubscribed"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:28
+msgid "Number of new subscribers since the last campaign was sent."
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:30
+msgid "new since send"
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:32
+msgid "Average number of subscribers per month."
+msgstr ""
+
+#: admin/partials/dashboard-widgets/templates/stats-list-template.php:34
+msgid "avg. sub. rate"
+msgstr ""
+
+#: admin/partials/edit-form.php:9 admin/partials/edit-form.php:11
+msgid "Error Creating Form"
+msgstr ""
+
+#: admin/partials/edit-form.php:11
+msgid ""
+"Please try again. If the error persists please get in contact with the YIKES "
+"Inc. support team."
+msgstr ""
+
+#: admin/partials/edit-form.php:27
+#, php-format
+msgid ""
+"Whoops! It looks like this form doesn't exist. If this error persists you "
+"may want to toggle on debugging on the <a href='%s'>%s</a> "
+msgstr ""
+
+#: admin/partials/edit-form.php:27
+msgid "debug settings page"
+msgstr ""
+
+#: admin/partials/edit-form.php:27 admin/partials/edit-form.php:58
+#: admin/partials/edit-form.php:70 admin/partials/edit-form.php:76
+#: public/partials/shortcodes/process/process_form_submission_ajax.php:48
+msgid "Error"
+msgstr ""
+
+#: admin/partials/edit-form.php:59
+msgid ""
+"Uh Oh...It looks like we ran into an error! Please reload the page and try "
+"again. If the error persists, please contact the YIKES Inc. support team."
+msgstr ""
+
+#: admin/partials/edit-form.php:65
+msgid "No Interest Groups Found"
+msgstr ""
+
+#: admin/partials/edit-form.php:70
+msgid "Oh No!"
+msgstr ""
+
+#: admin/partials/edit-form.php:76
+msgid ""
+"We've encountered an error. Please try again. If the error persists, please "
+"contact support."
+msgstr ""
+
+#: admin/partials/edit-form.php:93 admin/partials/menu/account-details.php:33
+#: admin/partials/menu/add-ons.php:11 admin/partials/menu/lists.php:30
+#: admin/partials/menu/manage-forms.php:29
+#: admin/partials/menu/manage-lists.php:17 admin/partials/menu/options.php:28
+#: admin/partials/view-list.php:75 admin/partials/view-user.php:114
+msgid "Freddie - MailChimp Mascot"
+msgstr ""
+
+#: admin/partials/edit-form.php:95 admin/partials/menu/manage-forms.php:131
+#: public/partials/shortcodes/process_form_shortcode.php:94
+msgid "Edit"
+msgstr ""
+
+#: admin/partials/edit-form.php:98
+msgid "Update this MailChimp form's fields, styles and settings below."
+msgstr ""
+
+#: admin/partials/edit-form.php:104
+msgid "Opt-in form successfully updated."
+msgstr ""
+
+#: admin/partials/edit-form.php:127
+msgid "The title of this signup form."
+msgstr ""
+
+#: admin/partials/edit-form.php:133
+msgid ""
+"Descriptions are optional and you may choose to display it to visitors to "
+"your site."
+msgstr ""
+
+#: admin/partials/edit-form.php:148 admin/partials/edit-form.php:175
+msgid "Form Builder"
+msgstr ""
+
+#: admin/partials/edit-form.php:152 admin/partials/edit-form.php:261
+msgid "Custom Messages"
+msgstr ""
+
+#: admin/partials/edit-form.php:176
+msgid ""
+"Select fields from the right to add to this form, you can click a field to "
+"reveal advanced options, or drag it to re-arrange its position in the form."
+msgstr ""
+
+#: admin/partials/edit-form.php:192
+msgid "Form Fields &amp; Interest Groups"
+msgstr ""
+
+#: admin/partials/edit-form.php:196 admin/partials/view-list.php:270
+msgid "Form Fields"
+msgstr ""
+
+#: admin/partials/edit-form.php:198 admin/partials/edit-form.php:200
+msgid "Interest Groups"
+msgstr ""
+
+#: admin/partials/edit-form.php:200
+msgid "No Interest Groups Exist"
+msgstr ""
+
+#: admin/partials/edit-form.php:211
+msgid "Select a field below to add to the form builder."
+msgstr ""
+
+#: admin/partials/edit-form.php:224
+msgid "Select an interest group below to add to the form builder."
+msgstr ""
+
+#: admin/partials/edit-form.php:267
 msgid ""
 "Thank You for subscribing! Check your email for the confirmation message."
 msgstr ""
-"Gracias por suscribirse! Revise su correo electrónico para el mensaje de "
-"confirmación."
 
-#: .././classes/class.yksemeBase.php:132
-msgid "Select Your Area of Interest"
-msgstr "Seleccione su área de interés"
+#: admin/partials/edit-form.php:268
+#: admin/partials/upgrade-helpers/upgrade-migrate-options.php:20
+msgid "Whoops! It looks like something went wrong. Please try again."
+msgstr ""
 
-#: .././classes/class.yksemeBase.php:824
-msgid "Create a Form For This List"
-msgstr "Crear un formulario para esta lista"
+#: admin/partials/edit-form.php:269
+#: admin/partials/upgrade-helpers/upgrade-migrate-options.php:21
+msgid "Please provide a valid email address."
+msgstr ""
 
-#: .././classes/class.yksemeBase.php:826
+#: admin/partials/edit-form.php:270
+#: admin/partials/upgrade-helpers/upgrade-migrate-options.php:22
+msgid "The provided email is already subscribed to this list."
+msgstr ""
+
+#: admin/partials/edit-form.php:274
 msgid ""
-"Error - No Lists Found On Your Account. Please create at least one list on "
-"your MailChimp account."
-msgstr ""
-"Error - No hay listas conocer en su cuenta. Por favor, cree al menos una "
-"lista en su cuenta de MailChimp."
-
-#: .././classes/class.yksemeBase.php:900
-msgid "All Lists"
-msgstr "Sus Listas"
-
-#: .././classes/class.yksemeBase.php:1046
-#: .././classes/class.yksemeBase.php:1072
-msgid " subscribers"
-msgstr "Notas del suscriptor"
-
-#: .././classes/class.yksemeBase.php:1047
-msgid "Click on a subscriber to see further information"
-msgstr "Haga clic en un suscriptor para ver más información"
-
-#: .././classes/class.yksemeBase.php:1052
-#: .././classes/class.yksemeBase.php:1696
-#: .././classes/class.yksemeBase.php:1880
-#: .././classes/class.yksemeBase.php:1983
-#: .././classes/class.yksemeBase.php:2085
-msgid "E-Mail"
-msgstr "Email"
-
-#: .././classes/class.yksemeBase.php:1053
-msgid "Date Subscribed"
-msgstr "Fecha Suscrito"
-
-#: .././classes/class.yksemeBase.php:1074
-msgid "Sorry You Don't Currently Have Any Subscribers In This List!"
-msgstr "Lo siento No actualidad no tienen ninguna suscriptores en esta lista!"
-
-#: .././classes/class.yksemeBase.php:1131
-msgid "Back to Subscriber List"
-msgstr "Volver a la lista de suscriptores"
-
-#: .././classes/class.yksemeBase.php:1132
-msgid "Subscriber Details"
-msgstr "Detalles del suscriptor"
-
-#: .././classes/class.yksemeBase.php:1143
-#: .././templates/mailChimp-campaign-report.php:335
-msgid "Overview"
-msgstr "Sinopsis"
-
-#: .././classes/class.yksemeBase.php:1148
-#: .././classes/class.yksemeBase.php:1697
-#: .././classes/class.yksemeBase.php:1882
-#: .././classes/class.yksemeBase.php:1984
-#: .././classes/class.yksemeBase.php:2086
-msgid "First Name"
-msgstr "Nombre"
-
-#: .././classes/class.yksemeBase.php:1151
-msgid "Last Updated"
-msgstr "Última actualización"
-
-#: .././classes/class.yksemeBase.php:1154
-msgid "Preferred Email Type"
-msgstr "Preferido Tipo Email"
-
-#: .././classes/class.yksemeBase.php:1161
-#: .././classes/class.yksemeBase.php:1698
-#: .././classes/class.yksemeBase.php:1883
-#: .././classes/class.yksemeBase.php:1985
-#: .././classes/class.yksemeBase.php:2087
-msgid "Last Name"
-msgstr "Apellido"
-
-#: .././classes/class.yksemeBase.php:1164
-msgid "Language"
-msgstr "Idioma"
-
-#: .././classes/class.yksemeBase.php:1191
-msgid "Groups Subscribed To"
-msgstr "Grupos Suscriptor a"
-
-#: .././classes/class.yksemeBase.php:1241
-msgid "Subscriber Notes"
-msgstr "Notas del suscriptor"
-
-#: .././classes/class.yksemeBase.php:1246
-msgid "Written by"
-msgstr "Escrito por"
-
-#: .././classes/class.yksemeBase.php:1246
-msgid "Created on"
-msgstr "Creada el"
-
-#: .././classes/class.yksemeBase.php:1409
-#: .././classes/class.yksemeBase.php:1411
-msgid "MailChimp Forms"
-msgstr "Formas MailChimp"
-
-#: .././classes/class.yksemeBase.php:1411
-msgid "MailChimp Settings"
-msgstr "Ajustes MailChimp"
-
-#: .././classes/class.yksemeBase.php:1414 .././pages/myMailChimp.php:77
-msgid "My MailChimp"
-msgstr "Formas MailChimp"
-
-#: .././classes/class.yksemeBase.php:1416
-msgid "Manage List Forms"
-msgstr "Administrar Lista de Formularios"
-
-#: .././classes/class.yksemeBase.php:1417 .././pages/about.php:5
-msgid "About YIKES, Inc."
-msgstr "Acerca YIKES, Inc."
-
-#: .././classes/class.yksemeBase.php:1699
-#: .././classes/class.yksemeBase.php:1884
-#: .././classes/class.yksemeBase.php:1986
-#: .././classes/class.yksemeBase.php:2088
-msgid "Member Rating"
-msgstr "Categoría del socio"
-
-#: .././classes/class.yksemeBase.php:1700
-msgid "Last Changed"
-msgstr "Última actualización"
-
-#: .././classes/class.yksemeBase.php:1856
-#: .././templates/mailChimp-campaign-report.php:515
-msgid "Unique Opens"
-msgstr "Abre únicos"
-
-#: .././classes/class.yksemeBase.php:1858
-#: .././templates/mailChimp-campaign-stats-template.php:369
-msgid "Total Opens"
-msgstr "Abre totales"
-
-#: .././classes/class.yksemeBase.php:1881
-#: .././templates/mailChimp-campaign-click-geo-map.php:134
-msgid "Opens"
-msgstr "Abre"
-
-#: .././classes/class.yksemeBase.php:1961
-msgid "Total Bounced Emails"
-msgstr "Total de mensajes devueltos"
-
-#: .././classes/class.yksemeBase.php:2063
-msgid "Total Unsubscribes"
-msgstr "Fecha Suscrito"
-
-#: .././classes/class.yksemeBase.php:2089
-msgid "Reason"
-msgstr "Motivo"
-
-#: .././classes/class.yksemeBase.php:2438
-msgid "One or more fields are empty"
-msgstr "Uno o más campos están vacíos"
-
-#: .././classes/class.yksemeBase.php:2490
-msgid "Your List Was Successfully Saved!"
-msgstr "Su lista de éxito se salvó!"
-
-#: .././classes/class.yksemeBase.php:2493
-msgid "Your settings were not saved (or you did not change them)."
-msgstr "Los ajustes no se guardan (o que no cambiaron ellos)."
-
-#: .././classes/class.yksemeBase.php:2495
-msgid "I'm sorry there was an error with your request."
-msgstr "Siento que había un error con su pedido."
-
-#: .././classes/class.yksemeBase.php:2501
-msgid "MailChimp List name"
-msgstr "Nombre de la lista MailChimp"
-
-#: .././classes/class.yksemeBase.php:2507
-#: .././classes/class.yksemeBase.php:2517
-#, php-format
-msgid "%1$s"
+"Enter your custom messages for this form below. Leave the field blank to use "
+"the default global error message."
 msgstr ""
 
-#: .././classes/class.yksemeBase.php:2525
-msgid "MailChimp List ID"
-msgstr "MailChimp Lista ID"
+#: admin/partials/edit-form.php:277 admin/partials/edit-form.php:310
+msgid "Success Message"
+msgstr ""
 
-#: .././classes/class.yksemeBase.php:2531
+#: admin/partials/edit-form.php:281 admin/partials/edit-form.php:311
+msgid "General Error Message"
+msgstr ""
+
+#: admin/partials/edit-form.php:285 admin/partials/edit-form.php:312
+msgid "Invalid Email"
+msgstr ""
+
+#: admin/partials/edit-form.php:289 admin/partials/edit-form.php:313
+msgid "Email Already Subscribed"
+msgstr ""
+
+#: admin/partials/edit-form.php:306
+msgid "Error Message Explanation"
+msgstr ""
+
+#: admin/partials/edit-form.php:310
+msgid ""
+"The message displayed to the user after they have submitted the form and the "
+"data has been successfully sent to MailChimp."
+msgstr ""
+
+#: admin/partials/edit-form.php:311
+msgid "The message displayed to the user after a generic error has occurred."
+msgstr ""
+
+#: admin/partials/edit-form.php:312
+msgid ""
+"The message displayed to the user after they have entered a non-valid email "
+"address."
+msgstr ""
+
+#: admin/partials/edit-form.php:313
+msgid ""
+"The message displayed to the user after they attempt to sign up for a "
+"mailing list using an email address that is already subscribed."
+msgstr ""
+
+#: admin/partials/edit-form.php:347
+msgid "Form Settings"
+msgstr ""
+
+#: admin/partials/edit-form.php:351
+msgid "Edit Another Form"
+msgstr ""
+
+#: admin/partials/edit-form.php:361 admin/partials/menu/manage-forms.php:133
 msgid "Shortcode"
-msgstr "Shortcode"
+msgstr ""
 
-#: .././classes/class.yksemeBase.php:2534
+#: admin/partials/edit-form.php:368
+msgid "Associated List Settings"
+msgstr ""
+
+#: admin/partials/edit-form.php:383
+msgid "No Lists Found"
+msgstr ""
+
+#: admin/partials/edit-form.php:390
 msgid ""
-"Paste this shortcode into whatever page or post you want to add this form to"
+"Users who sign up via this form will be added to the list selected above."
 msgstr ""
-"Pega este código corto en cualquier página o post que quiere agregar este "
-"formulario para"
 
-#: .././classes/class.yksemeBase.php:2539
-msgid "PHP Snippet"
-msgstr "PHP fragmento"
-
-#: .././classes/class.yksemeBase.php:2543
-msgid "Use this code to add this form to a template file"
-msgstr ""
-"Utilice este código para agregar este formulario a un archivo de plantilla"
-
-#: .././classes/class.yksemeBase.php:2548
-msgid "Number of Subscribers"
-msgstr "Número de suscriptores"
-
-#: .././classes/class.yksemeBase.php:2557
-msgid "Form Fields"
-msgstr "Los campos de formulario"
-
-#: .././classes/class.yksemeBase.php:2559
+#: admin/partials/edit-form.php:394
 msgid ""
-"Check the fields you want included in your form (Email Address is required)."
+"It looks like you first need to create a list to assign this form to. Head "
+"over to"
 msgstr ""
-"Revisa los campos que desea incluir en el formulario (es necesario E-mail)."
 
-#: .././classes/class.yksemeBase.php:2562
+#: admin/partials/edit-form.php:394
+msgid "Create a new list"
+msgstr ""
+
+#: admin/partials/edit-form.php:394
+msgid "to create your first list"
+msgstr ""
+
+#: admin/partials/edit-form.php:401
+msgid "Optin Settings"
+msgstr ""
+
+#: admin/partials/edit-form.php:411
+msgid "Single or Double Opt-in"
+msgstr ""
+
+#: admin/partials/edit-form.php:413
+msgid "Single"
+msgstr ""
+
+#: admin/partials/edit-form.php:414
+msgid "Double"
+msgstr ""
+
+#: admin/partials/edit-form.php:416
 msgid ""
-"Use the green arrows to drag-and-drop the fields and rearrange their order."
+"Double opt-in requires users to confirm their email address before being "
+"added to a list (recommended)"
 msgstr ""
-"Utilice las flechas verdes para arrastrar y soltar los campos y cambiar su "
-"orden."
 
-#: .././classes/class.yksemeBase.php:2568
-msgid "Active Fields"
-msgstr "Los campos activos"
-
-#: .././classes/class.yksemeBase.php:2577
-msgid "Drag"
-msgstr "Resistencia aerodinámica"
-
-#: .././classes/class.yksemeBase.php:2577
-msgid "drop"
-msgstr "dejar"
-
-#: .././classes/class.yksemeBase.php:2582
-msgid "Merge field"
-msgstr "Campo de combinación"
-
-#: .././classes/class.yksemeBase.php:2583
-msgid "Placeholder"
-msgstr "Marcador de posición"
-
-#: .././classes/class.yksemeBase.php:2591
-msgid "Redirect User On Submission"
-msgstr "Redireccionar usuario sobre la exposición"
-
-#: .././classes/class.yksemeBase.php:2595
-msgid "choose a page to redirect the user to after they submit the form."
+#: admin/partials/edit-form.php:425
+msgid "Send Welcome Email"
 msgstr ""
-"elegir una página para redirigir al usuario después de enviar el formulario."
 
-#: .././classes/class.yksemeBase.php:2598
-msgid "Select A Post/Page"
-msgstr "Seleccione un mensaje / Página"
+#: admin/partials/edit-form.php:427 admin/partials/edit-form.php:441
+#: admin/partials/edit-form.php:461 admin/partials/edit-form.php:476
+#: admin/partials/edit-form.php:491
+#: admin/partials/menu/options-sections/integration-settings.php:160
+#: public/classes/checkbox-integrations/class.contact_form_7-checkbox.php:54
+msgid "Yes"
+msgstr ""
 
-#: .././classes/class.yksemeBase.php:2655
-msgid "Save Form Settings"
-msgstr "Guardar la configuración de formularios"
+#: admin/partials/edit-form.php:428 admin/partials/edit-form.php:442
+#: admin/partials/edit-form.php:462 admin/partials/edit-form.php:477
+#: admin/partials/edit-form.php:492
+#: admin/partials/menu/options-sections/integration-settings.php:161
+#: public/classes/checkbox-integrations/class.contact_form_7-checkbox.php:54
+msgid "No"
+msgstr ""
 
-#: .././classes/class.yksemeBase.php:2656
+#: admin/partials/edit-form.php:430
+msgid "When the user signs up, should they receive the default welcome email?"
+msgstr ""
+
+#: admin/partials/edit-form.php:439
+msgid "Update Existing Subscriber"
+msgstr ""
+
+#: admin/partials/edit-form.php:444
+#, php-format
+msgid ""
+"Update an existing subscriber's info when they attempt to re-subscribe "
+"instead of displaying an %s message."
+msgstr ""
+
+#: admin/partials/edit-form.php:450
+msgid "Submission Settings"
+msgstr ""
+
+#: admin/partials/edit-form.php:459
+msgid "Enable AJAX Submission"
+msgstr ""
+
+#: admin/partials/edit-form.php:464
+msgid ""
+"AJAX form submissions transmit data without requiring the page to refresh."
+msgstr ""
+
+#: admin/partials/edit-form.php:474
+msgid "Redirect On Submission"
+msgstr ""
+
+#: admin/partials/edit-form.php:480
+msgid "When the user signs up would you like to redirect them to another page?"
+msgstr ""
+
+#: admin/partials/edit-form.php:489
+msgid "Hide Form After Sign Up"
+msgstr ""
+
+#: admin/partials/edit-form.php:494
+msgid "Should the form be hidden after the user successfully signs up?"
+msgstr ""
+
+#: admin/partials/edit-form.php:506
+msgid "Update Form"
+msgstr ""
+
+#: admin/partials/edit-form.php:508
+msgid "Are you sure you want to delete this form? This cannot be undone."
+msgstr ""
+
+#: admin/partials/edit-form.php:508
 msgid "Delete Form"
-msgstr "Eliminar Form"
-
-#: .././classes/class.yksemeBase.php:2657
-msgid "Re-Import Form Fields from MailChimp"
-msgstr "Formulario de Re-Import campos de MailChimp"
-
-#: .././classes/class.yksemeBase.php:2862
-#: .././classes/class.yksemeBase.php:2976
-msgid "reCAPTCHA API Key Error. Please double check your API Keys."
 msgstr ""
-"API reCAPTCHA Key Error. Por favor, vuelva a comprobar sus claves de API."
 
-#: .././classes/class.yksemeBase.php:3252
-msgid "Sign Me Up For MAILCHIMP-REPLACE-THIS-TEXT's Newsletter"
-msgstr "Registrarme en el Boletín de MailChimp-REPLACE-ESTE-TEXT"
+#: admin/partials/front-end-widgets/front-end-widget-form.php:15
+msgid "Easy MailChimp Forms"
+msgstr ""
 
-#: .././pages/about.php:42
-msgid "YIKES, Inc. Web Design and Development"
-msgstr "¡Ay, Inc. Diseño y Desarrollo Web"
+#: admin/partials/front-end-widgets/front-end-widget-form.php:17
+msgid "MailChimp opt-in widget for your sidebar."
+msgstr ""
 
-#: .././pages/about.php:44
-msgid "Smart, effective, beautifully designed web solutions"
-msgstr ", Soluciones web inteligentes efectivos, de bonito diseño"
+#: admin/partials/front-end-widgets/front-end-widget-form.php:30
+#: admin/partials/front-end-widgets/front-end-widget-form.php:88
+msgid "MailChimp Signup Form"
+msgstr ""
 
-#: .././pages/about.php:47
+#: admin/partials/front-end-widgets/front-end-widget-form.php:33
+#: admin/partials/front-end-widgets/front-end-widget-form.php:102
+msgid "Submit"
+msgstr ""
+
+#: admin/partials/front-end-widgets/front-end-widget-form.php:78
+#, php-format
 msgid ""
-"YIKES is located in the Fishtown neighborhood of Philadelphia where we build "
-"custom WordPress themes and plugins every day."
+"No forms found. It looks like you need to <a href=\"%s\" title=\"%s\">%s</a>."
 msgstr ""
-"¡Ay está situado en el barrio de Fishtown Philadelphia donde construimos a "
-"medida temas de WordPress y plugins todos los días."
 
-#: .././pages/about.php:51
+#: admin/partials/front-end-widgets/front-end-widget-form.php:78
+msgid "create a form"
+msgstr ""
+
+#: admin/partials/front-end-widgets/front-end-widget-form.php:107
 msgid ""
-"At YIKES we love WordPress! Co-Owner, Tracy Levesque has presented at "
-"WordCamps"
+"Please enter a valid MailChimp API key to connect your site to MailChimp."
 msgstr ""
-"En YIKES amamos WordPress! Co-propietario, Tracy Levesque ha presentado en "
-"WordCamps"
 
-#: .././pages/about.php:51
-msgid "and"
-msgstr "Y"
+#: admin/partials/front-end-widgets/front-end-widget-form.php:115
+msgid "Title:"
+msgstr ""
 
-#: .././pages/about.php:51
-msgid "She also teaches WordPress classes for"
-msgstr "También imparte clases de WordPress para"
+#: admin/partials/front-end-widgets/front-end-widget-form.php:120
+msgid "Form:"
+msgstr ""
 
-#: .././pages/about.php:55
+#: admin/partials/front-end-widgets/front-end-widget-form.php:134
+msgid "Display Form Description:"
+msgstr ""
+
+#: admin/partials/front-end-widgets/front-end-widget-form.php:139
+msgid "Submit Button Text:"
+msgstr ""
+
+#: admin/partials/helpers/fields/yikes-mailchimp-file-field.php:26
+msgid "Upload File"
+msgstr ""
+
+#: admin/partials/helpers/fields/yikes-mailchimp-file-field.php:29
+msgid "Remove File"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:28 admin/partials/menu/lists.php:14
 msgid ""
-"In addition to making great WordPress sites we are also committed to the "
-"sustainable business movement. We observe the triple bottom line: people, "
-"planet, profit and work to help build a more socially, environmentally and "
-"financially sustainable local economy. We even have a"
+"It looks like you need to re-validate your MailChimp API key before you can "
+"continue."
 msgstr ""
-"Además de hacer grandes sitios de WordPress también estamos comprometidos "
-"con el movimiento empresarial sostenible. Observamos la triple cuenta de "
-"resultados: las personas, el planeta, la ganancia y el trabajo para ayudar a "
-"construir una economía local más sostenible social, ambiental y "
-"económicamente. Incluso tenemos un"
 
-#: .././pages/about.php:55
-msgid "LEED Platinum office"
-msgstr "Oficina LEED Platinum"
-
-#: .././pages/about.php:59
-msgid ""
-"If you're interested in hiring us for WordPress development, or just want to "
-"learn more about us, please visit"
-msgstr ""
-"Si usted está interesado en contratarnos para el desarrollo de WordPress, o "
-"simplemente quieres saber más sobre nosotros, por favor visite"
-
-#: .././pages/lists.php:56
-msgid "Oops.. The list ID you entered appears to be incorrect."
-msgstr "Vaya .. El ID de lista introducido no es válida."
-
-#: .././pages/lists.php:70
-msgid "There was an error!"
-msgstr "Se produjo un error!"
-
-#: .././pages/lists.php:161
-msgid "You need to select a Mailchimp list in order to create a form for it"
-msgstr ""
-"Es necesario seleccionar una lista Mailchimp con el fin de crear un "
-"formulario para que"
-
-#: .././pages/lists.php:220
-msgid "Are you sure you want to delete this form?"
-msgstr "¿Está seguro de que desea eliminar esta forma?"
-
-#: .././pages/lists.php:263
-msgid ""
-"Are you sure you want to re-import this form and its fields from MailChimp?"
-msgstr ""
-"¿Está seguro de que desea volver a importar este formulario y sus campos de "
-"MailChimp?"
-
-#: .././pages/lists.php:284
-msgid "Your MailChimp form"
-msgstr "Formas MailChimp"
-
-#: .././pages/lists.php:284
-msgid " was successfully updated"
-msgstr " fue actualizado correctamente"
-
-#: .././pages/lists.php:298
-msgid "It looks like this form is already up to date!"
-msgstr "Parece que este formulario ya está al día!"
-
-#: .././pages/lists.php:423
-msgid "Are you sure you want to unsubscribe"
-msgstr "¿Está seguro de que desea anular su suscripción"
-
-#: .././pages/lists.php:423
-msgid "from this list?"
-msgstr "en esta lista?"
-
-#: .././pages/lists.php:439
-msgid "was successfully unsubscribed from this list."
-msgstr "fue darme de baja con éxito de esta lista."
-
-#: .././pages/lists.php:549 .././pages/myMailChimp.php:74
-#: .././pages/options.php:354 .././pages/options.php:707
-msgid "Easy Mailchimp Forms by YIKES, Inc."
-msgstr "Fácil MailChimp Formas de YIKES, Inc."
-
-#: .././pages/lists.php:555
-msgid "Before you can add MailChimp forms to your site, you need to"
-msgstr "Antes de agregar formas MailChimp a su sitio, es necesario"
-
-#: .././pages/lists.php:555
-msgid "go to the MailChimp Settings page"
-msgstr "ir a la página de configuración de MailChimp"
-
-#: .././pages/lists.php:555 .././templates/yikes-mailchimp-widget.php:156
-msgid "and add your API Key."
-msgstr "y añadir la clave de API."
-
-#: .././pages/lists.php:563
-msgid "You must enter a valid API key to import and manage your lists."
-msgstr ""
-"Debe introducir una clave de API válida para importar y administrar sus "
-"listas."
-
-#: .././pages/lists.php:574
-msgid "Your Lists"
-msgstr "Sus Listas"
-
-#: .././pages/lists.php:583
-msgid "Manage Forms"
-msgstr "Administrar formularios"
-
-#: .././pages/myMailChimp.php:48 .././pages/options.php:326
-msgid "Need Help?"
-msgstr "¿ Necesita Ayuda ?"
-
-#: .././pages/myMailChimp.php:49 .././pages/options.php:327
-msgid "Get In Contact!"
-msgstr "Contacta con nosotros!"
-
-#: .././pages/myMailChimp.php:57 .././pages/options.php:335
-msgid "Loving the plugin?"
-msgstr "Amar al plugin?"
-
-#: .././pages/myMailChimp.php:58 .././pages/options.php:336
-msgid "Leave us a nice review"
-msgstr "Déjanos un comentario positivo"
-
-#: .././pages/myMailChimp.php:78
-msgid ""
-"Here you will find recent activity for your MailChimp account, as well as "
-"statistics for lists and campaigns."
-msgstr ""
-"Aquí encontrará la actividad reciente de su cuenta de MailChimp, así como "
-"las estadísticas de las listas y campañas."
-
-#: .././pages/myMailChimp.php:83
+#: admin/partials/menu/account-details.php:35
 msgid "Account Overview"
-msgstr "Sinopsis"
+msgstr ""
 
-#: .././pages/myMailChimp.php:84
-msgid "Account Activity"
-msgstr "Actividad de la cuenta"
-
-#: .././pages/myMailChimp.php:85
-msgid "List Statistics"
-msgstr "Estadísticas Lista"
-
-#: .././pages/myMailChimp.php:173
-msgid "Recent Activity"
-msgstr "Actividad reciente"
-
-#: .././pages/myMailChimp.php:207
-msgid "Growth History"
-msgstr "Historia Crecimiento"
-
-#: .././pages/myMailChimp.php:208
-msgid "Campaign Stats"
-msgstr "Estadísticas de Campaña"
-
-#: .././pages/options.php:54 .././pages/options.php:86
-#: .././pages/options.php:118
-msgid "The options were saved successfully!"
-msgstr "Las opciones se han guardado correctamente!"
-
-#: .././pages/options.php:57 .././pages/options.php:89
-#: .././pages/options.php:121
-msgid "The options could not be saved (or you did not change them)."
-msgstr "Las opciones no se podrían salvar (o no cambiaron ellos)."
-
-#: .././pages/options.php:176
-msgid "Valid API Key"
-msgstr "API Key Válido"
-
-#: .././pages/options.php:182
-msgid "Sorry, that is an invalid MailChimp API key."
-msgstr "Lo siento, eso es una clave no válida API MailChimp."
-
-#: .././pages/options.php:189
+#: admin/partials/menu/account-details.php:37
 msgid ""
-"Sorry, that is an invalid MailChimp API key. Please check the console for "
-"further information."
+"Below you'll find a brief overview of account activity as well as some "
+"account and profile info."
 msgstr ""
-"Lo siento, eso es una clave no válida API MailChimp. Por favor, consulte la "
-"consola para obtener más información."
 
-#: .././pages/options.php:199
-msgid "Error: Please enter a valid Mail Chimp API Key."
-msgstr "Error: Por favor ingrese el correo Chimp API Key válida."
+#: admin/partials/menu/account-details.php:47
+msgid "Chimp Chatter"
+msgstr ""
 
-#: .././pages/options.php:217
+#: admin/partials/menu/account-details.php:114
+msgid "View All Activity"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:134
+#: admin/partials/menu/account-details.php:135
+msgid "MailChimp Site"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:145
+msgid "Account Active"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:145
+msgid "Account Inactive"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:147
+msgid "MailChimp avatar"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:153
+msgid "Company"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:161
+msgid "Industry"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:169
+msgid "Member Since"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:177
+msgid "Plan Type"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:186
+msgid "Emails Left"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:195
+msgid "Affiliate Link"
+msgstr ""
+
+#: admin/partials/menu/account-details.php:198
+msgid "View Link"
+msgstr ""
+
+#: admin/partials/menu/add-ons.php:13
+msgid "View All Add-Ons"
+msgstr ""
+
+#: admin/partials/menu/add-ons.php:16
 msgid ""
-"Are you sure you want to reset your MailChimp settings? This cannot be "
-"undone."
+"Below you'll find a list of add-ons available for YIKES Easy Forms for "
+"MailChimp. Each add-on extends the base functionality of the free plugin."
 msgstr ""
-"¿Está seguro de que desea restablecer la configuración de MailChimp? Esto no "
-"se puede deshacer."
 
-#: .././pages/options.php:230
-msgid "MailChimp settings have successfully been reset"
-msgstr "Ajustes MailChimp con éxito se han restablecido"
+#: admin/partials/menu/add-ons.php:72
+msgid "Add-on Title"
+msgstr ""
 
-#: .././pages/options.php:348
-msgid "Form Options"
-msgstr "Opciones de formulario"
+#: admin/partials/menu/add-ons.php:86
+msgid "View Add-on"
+msgstr ""
 
-#: .././pages/options.php:349
-msgid "ReCaptcha Options"
-msgstr "Opciones ReCaptcha"
+#: admin/partials/menu/lists.php:32
+msgid "Manage Lists"
+msgstr ""
 
-#: .././pages/options.php:350
-msgid "Debug Options"
-msgstr "Opciones de depuración"
-
-#: .././pages/options.php:361
-msgid "Manage Mailchimp Forms Settings"
-msgstr "Gestione MailChimp Forms Configuración"
-
-#: .././pages/options.php:367
-msgid "WordPress Version Number Error"
-msgstr "WordPress Numero Versión Error"
-
-#: .././pages/options.php:368
+#: admin/partials/menu/lists.php:35 admin/partials/menu/manage-lists.php:22
 msgid ""
-"We're sorry, but it looks like your using an outdated version of WordPress. "
-"You won't be able to access the tinyMCE button to insert forms into pages "
-"and posts unless you update to 3.9 or later."
+"Make edits to your MailChimp lists on the following page. Select a list to "
+"make edits to it."
 msgstr ""
-"Lo sentimos, pero parece que el uso de una versión antigua de WordPress. "
-"Usted no será capaz de acceder al botón de TinyMCE para insertar formularios "
-"en las páginas y los mensajes a menos que actualice a 3.9 o posterior."
 
-#: .././pages/options.php:377
-msgid "LocalHost Detected :"
-msgstr "LocalHost Detectado:"
+#: admin/partials/menu/lists.php:55 admin/partials/menu/manage-lists.php:48
+#: admin/partials/menu/manage-lists.php:57
+msgid "List Name"
+msgstr ""
 
-#: .././pages/options.php:378
+#: admin/partials/menu/lists.php:56 admin/partials/menu/lists.php:66
+#: admin/partials/menu/manage-lists.php:49
+#: admin/partials/menu/manage-lists.php:58 admin/partials/view-list.php:235
+msgid "Subscriber Count"
+msgstr ""
+
+#: admin/partials/menu/lists.php:81 admin/partials/menu/manage-lists.php:72
+msgid "View"
+msgstr ""
+
+#: admin/partials/menu/lists.php:82
+msgid "Edit Fields"
+msgstr ""
+
+#: admin/partials/menu/lists.php:83 admin/partials/menu/manage-forms.php:142
+msgid "Delete"
+msgstr ""
+
+#: admin/partials/menu/lists.php:84
+msgid "List Info."
+msgstr ""
+
+#: admin/partials/menu/lists.php:94
+msgid "No MailChimp lists found. Head over to"
+msgstr ""
+
+#: admin/partials/menu/manage-forms.php:31
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:15
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:9
+msgid "Manage Forms"
+msgstr ""
+
+#: admin/partials/menu/manage-forms.php:34
 msgid ""
-"It looks like your using Easy MailChimp Forms by YIKES Inc. on localhost."
+"Create and manage your MailChimp opt-in forms on the following page. Select "
+"a form to make edits to it."
 msgstr ""
-"Parece que tu uso de formularios Fácil MailChimp por YIKES Inc. en localhost."
 
-#: .././pages/options.php:379
+#: admin/partials/menu/manage-forms.php:41
 msgid ""
-"If you are unable to validate your API key, and receive the error message"
-msgstr "Si usted no puede validar la clave de la API, y el mensaje de error"
-
-#: .././pages/options.php:379
-msgid "SSL certificate problem: unable to get local issuer certificate"
+"It looks like the forms table is missing. Please de-activate and re-activate "
+"the plugin to attempt to create the table. If the error persists, please get "
+"in touch with the YIKES Inc. support team."
 msgstr ""
-"\"Problema de certificado SSL: no se puede obtener el certificado emisor "
-"local\" "
 
-#: .././pages/options.php:379
-msgid "follow the tutorial located "
-msgstr "seguir el tutorial localizado "
-
-#: .././pages/options.php:389
-msgid "Your Mailchimp API Key"
-msgstr "Su MailChimp API Key"
-
-#: .././pages/options.php:406
+#: admin/partials/menu/manage-forms.php:46
+#: admin/partials/menu/manage-lists.php:27
+#, php-format
 msgid ""
-"Please enter your MailChimp API Key above. The API Key allows your WordPress "
-"site to communicate with your MailChimp account."
+"You need to connect to MailChimp before you can start creating forms. Head "
+"over to the <a href=\"%s\" title=\"Settings Page\">Settings Page</a> and "
+"enter your API key."
 msgstr ""
-"Introduzca su clave de API de MailChimp arriba. La clave de API permite a su "
-"sitio de WordPress para comunicarse con su cuenta de MailChimp."
 
-#: .././pages/options.php:407
-msgid "For more help, visit the MailChimp Support article"
-msgstr "Para obtener más ayuda, visite el artículo MailChimp Soporte"
-
-#: .././pages/options.php:407
-msgid "Where can I find my API Key?"
-msgstr "¿Dónde puedo encontrar mi clave de API?"
-
-#: .././pages/options.php:412
-msgid "Preferred Form Layout"
-msgstr "Forma preferente Disposición"
-
-#: .././pages/options.php:415
-msgid "table"
-msgstr "tabla"
-
-#: .././pages/options.php:416
-msgid "div"
-msgstr "div"
-
-#: .././pages/options.php:424
-msgid "Choose whether you want your forms to use a table or div layout."
+#: admin/partials/menu/manage-forms.php:54
+msgid "Opt-in form successfully deleted."
 msgstr ""
-"Seleccione si desea que sus formas de utilizar una mesa o el diseño div."
 
-#: .././pages/options.php:432
-msgid "Single Opt-In"
-msgstr "Soltero Opt-In"
+#: admin/partials/menu/manage-forms.php:62
+msgid "MailChimp Form successfully cloned."
+msgstr ""
 
-#: .././pages/options.php:433
-msgid "Double Opt-In"
-msgstr "Doble Opt-In"
-
-#: .././pages/options.php:441
+#: admin/partials/menu/manage-forms.php:70
 msgid ""
-"A single opt-in will add the user to your list without any further "
-"interaction."
+"There was an error trying to clone your form. Please try again. If this "
+"error persists, please contact the YIKES Inc. support team."
 msgstr ""
-"Un solo opt-in se agregue el usuario a la lista sin ninguna interacción "
-"adicional."
 
-#: .././pages/options.php:442
+#: admin/partials/menu/manage-forms.php:94
+#: admin/partials/menu/manage-forms.php:109
+msgid "ID"
+msgstr ""
+
+#: admin/partials/menu/manage-forms.php:97
+#: admin/partials/menu/manage-forms.php:112
+msgid "List"
+msgstr ""
+
+#: admin/partials/menu/manage-forms.php:98
+#: admin/partials/menu/manage-forms.php:113
+#: admin/partials/menu/manage-forms.php:152
+msgid "Impressions"
+msgstr ""
+
+#: admin/partials/menu/manage-forms.php:99
+#: admin/partials/menu/manage-forms.php:114
+#: admin/partials/menu/manage-forms.php:158
+msgid "Submissions"
+msgstr ""
+
+#: admin/partials/menu/manage-forms.php:100
+#: admin/partials/menu/manage-forms.php:115
+msgid "Conversion Rate"
+msgstr ""
+
+#: admin/partials/menu/manage-forms.php:132
+msgid "Duplicate"
+msgstr ""
+
+#: admin/partials/menu/manage-forms.php:133
+msgid "Stats"
+msgstr ""
+
+#: admin/partials/menu/manage-forms.php:142
+#, php-format
+msgid "Are you sure you want to delete the %s form? This cannot be undone."
+msgstr ""
+
+#: admin/partials/menu/manage-forms.php:147
+msgid "List Not Found"
+msgstr ""
+
+#: admin/partials/menu/manage-forms.php:191
 msgid ""
-"A double opt-in will send an email to the user asking them to confirm their "
-"subscription."
+"No MailChimp forms found. Use the form to the right to create a new one."
 msgstr ""
-"Un doble opt-in le enviará un correo electrónico al usuario pidiéndole que "
-"confirme su suscripción."
 
-#: .././pages/options.php:443
-msgid "This will also dictate the opt-in settings for people leaving comments."
+#: admin/partials/menu/manage-lists.php:19
+msgid "Manage Mailing Lists"
 msgstr ""
-"Esto también determinará la configuración de opt-in para la gente dejando "
-"comentarios."
 
-#: .././pages/options.php:448
-msgid "Custom Opt-In Message"
-msgstr "Custom Opt-In Mensaje"
-
-#: .././pages/options.php:450
-msgid "Double Opt-In Message"
-msgstr "Doble Mensaje Opt-In"
-
-#: .././pages/options.php:454
-msgid "Single Opt-In Message"
-msgstr "Soltero Opt-In Mensaje"
-
-#: .././pages/options.php:464
-msgid "Note: You can include html markup in your confirmation message."
-msgstr "Nota: Puede incluir formato HTML en el mensaje de confirmación."
-
-#: .././pages/options.php:469
-msgid "Interest Group Label"
-msgstr "Grupo de Interés Label"
-
-#: .././pages/options.php:478
+#: admin/partials/menu/manage-lists.php:82
+#, php-format
 msgid ""
-"Text to display above interest groups. Leave blank to use MailChimp interest "
-"group names."
+"No MailChimp lists found. Head over to <a href=\"%s\" title=\"MailChimp.com"
+"\">MailChimp.com</a> to setup your first mailing list. Once thats done you "
+"can head back here to customize it!"
 msgstr ""
-"Texto para mostrar por encima de los grupos de interés. Dejar en blanco para "
-"usar los nombres de grupos de interés MailChimp."
 
-#: .././pages/options.php:483
-msgid "Display opt-in checkbox on comment forms?"
-msgstr "Display opt-in casilla de verificación en formularios de comentarios?"
-
-#: .././pages/options.php:486
-msgid "Hide"
-msgstr "Esconder"
-
-#: .././pages/options.php:487
-msgid "Show"
-msgstr "Mostrar"
-
-#: .././pages/options.php:495
+#: admin/partials/menu/options-sections/api-cache-settings.php:12
 msgid ""
-"This will display a checkbox just above the submit button on all comment "
-"forms. If selected, any users leaving comments will also be added to the "
-"mailing list."
+"Delete all MailChimp data stored in your sites cache. Most data is stored in "
+"the cache for 1 hour."
 msgstr ""
-"Esto mostrará una casilla justo encima del botón de envío en todos los "
-"formularios de comentarios. Si se selecciona, se añadirán también a "
-"cualquier usuario que dejan comentarios a la lista de correo."
 
-#: .././pages/options.php:500
-msgid "Custom Comment Checkbox Text"
-msgstr "Custom comentario a Casilla de texto"
+#: admin/partials/menu/options-sections/api-cache-settings.php:15
+msgid "No MailChimp data found in temporary cache storage."
+msgstr ""
 
-#: .././pages/options.php:507
-msgid "Default List"
-msgstr "Lista defecto"
+#: admin/partials/menu/options-sections/api-cache-settings.php:15
+#: admin/partials/menu/options-sections/api-cache-settings.php:17
+msgid "Clear MailChimp API Cache"
+msgstr ""
 
-#: .././pages/options.php:522
+#: admin/partials/menu/options-sections/debug-settings.php:19
 msgid ""
-"This is the default list users will be subscribed to when submitting a "
-"comment."
+"If you encounter an issue with Easy Forms for MailChimp you can toggle on "
+"debugging to display advanced error messages and start logging errors."
 msgstr ""
-"Se trata de los usuarios de la lista por defecto serán suscritas a la hora "
-"de presentar un comentario."
 
-#: .././pages/options.php:523
+#: admin/partials/menu/options-sections/debug-settings.php:38
+msgid "Debug Log"
+msgstr ""
+
+#: admin/partials/menu/options-sections/debug-settings.php:38
+msgid "Clear Log"
+msgstr ""
+
+#: admin/partials/menu/options-sections/debug-settings.php:43
+#, fuzzy
+msgid "Error Message"
+msgstr "Errores"
+
+#: admin/partials/menu/options-sections/debug-settings.php:44
+#, fuzzy
+msgid "Error Details"
+msgstr "Errores"
+
+#: admin/partials/menu/options-sections/general-settings.php:18
 msgid ""
-"It is best to select a form where only the email , first name and/or last "
-"name are required or you may run into issues."
+"Enter your API key in the field below to connect your site to your MailChimp "
+"account."
 msgstr ""
-"Lo mejor es seleccionar un formulario donde sólo el correo electrónico, "
-"nombre y / o apellido se requiere o puede que tenga problemas."
 
-#: .././pages/options.php:528
-msgid "Save Settings"
-msgstr "Guardar Configuración"
+#: admin/partials/menu/options-sections/general-settings.php:26
+msgid "Get your API key here"
+msgstr ""
 
-#: .././pages/options.php:528
-msgid "Reset Plugin Settings"
-msgstr "Restablecer ajustes de Programas"
+#: admin/partials/menu/options-sections/import-export-forms.php:8
+msgid "Import/Export Forms & Settings"
+msgstr ""
 
-#: .././pages/options.php:539
-msgid "ReCaptcha Settings"
-msgstr "Ajustes ReCaptcha"
+#: admin/partials/menu/options-sections/import-export-forms.php:15
+#, fuzzy
+msgid "Export Forms"
+msgstr "Editar Formulario"
 
-#: .././pages/options.php:540
+#: admin/partials/menu/options-sections/import-export-forms.php:17
 msgid ""
-"reCAPTCHA is a free service to protect your website from spam and abuse. "
-"reCAPTCHA uses an advanced risk analysis engine and adaptive CAPTCHAs to "
-"keep automated software from engaging in abusive activities on your site. It "
-"does this while letting your valid users pass through with ease."
+"Select the forms you would like to export. When you click the download "
+"button below, Easy Forms for MailChimp will create a CSV file for you to "
+"save to your computer. Once you've saved the download file, you can use the "
+"Import tool to import the forms to this or any other site."
 msgstr ""
-"reCAPTCHA es un servicio gratuito para proteger su sitio web contra el spam "
-"y el abuso. reCAPTCHA usa un avanzado motor de análisis de riesgos y de "
-"adaptación CAPTCHAs para mantener el software automatizado de participar en "
-"actividades abusivas en su sitio. Lo hace mientras deja que sus usuarios "
-"válidos atraviesan con facilidad."
 
-#: .././pages/options.php:542
+#: admin/partials/menu/options-sections/import-export-forms.php:22
+msgid "Select Forms"
+msgstr ""
+
+#: admin/partials/menu/options-sections/import-export-forms.php:24
+msgid ""
+"Select which forms to export. Leave all checkboxes unchecked to export all "
+"of your forms."
+msgstr ""
+
+#: admin/partials/menu/options-sections/import-export-forms.php:30
+msgid "It looks like you haven't created any forms yet."
+msgstr ""
+
+#: admin/partials/menu/options-sections/import-export-forms.php:33
+msgid "Export Opt-in Forms"
+msgstr ""
+
+#: admin/partials/menu/options-sections/import-export-forms.php:42
+msgid "Export Settings"
+msgstr ""
+
+#: admin/partials/menu/options-sections/import-export-forms.php:44
+msgid "Export YIKES Easy Forms for MailChimp plugin settings."
+msgstr ""
+
+#: admin/partials/menu/options-sections/import-export-forms.php:48
+msgid "Export Plugin Settings"
+msgstr ""
+
+#: admin/partials/menu/options-sections/import-export-forms.php:57
+#: admin/partials/menu/options-sections/import-export-forms.php:66
+msgid "Import"
+msgstr ""
+
+#: admin/partials/menu/options-sections/import-export-forms.php:59
+msgid ""
+"Select the Easy Forms for MailChimp export file you would like to import. "
+"You can use this field to import your optin forms or settings. "
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:40
+msgid "WordPress Comment Form"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:41
+msgid "WordPress Registration Form"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:45
+#: admin/partials/menu/options-sections/integration-settings.php:46
+msgid "WordPress"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:45
+msgid ""
+"Enabling the WordPress core comment form opt-in checkbox will display a "
+"checkbox to your current users when leaving a comment (if they are not "
+"currently subscribed)."
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:46
+msgid ""
+"Enabling the WordPress core registration form opt-in checkbox will display a "
+"checkbox to new users when registering for your site."
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:47
+msgid "WooCommerce Store"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:47
+msgid ""
+"Enabling the WooCommerce checkout opt-in form allows you to capture email "
+"addresses from users who make purchases in your store. This option will add "
+"an opt-in checkbox to the checkout page."
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:48
+msgid "Easy Digital Downloads"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:48
+msgid ""
+"Enabling the Easy Digital Downloads checkout opt-in allows users who make a "
+"purchase to opt-in to your mailing list during checkout."
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:49
+msgid "BuddyPress"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:49
+msgid ""
+"Enabling the BuddyPress opt-in allows users who register for your site to be "
+"automatically added to the mailing list of your choice."
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:50
+#: admin/partials/menu/options-sections/integration-settings.php:68
+msgid "bbPress"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:50
+msgid ""
+"Enabling the bbPress opt-in enables users who register to use the forums on "
+"your site to be automatically added to the mailing list of your choice."
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:51
+#: admin/partials/menu/options-sections/integration-settings.php:72
+msgid "Contact Form 7"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:51
+msgid ""
+"Once the Contact Form 7 integration is active you can use our custom "
+"[yikes_mailchimp_checkbox label=\"Custom Label Text\"] in your contact forms "
+"to subscribe users to a pre-selected list."
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:56
+msgid "Easy Digital Downloads Checkout"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:60
+msgid "WooCommerce Checkout"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:64
+msgid "BuddyPress Registration"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:97
+#, php-format
+msgid "Please %s to setup your integrations."
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:97
+msgid "enter a valid MailChimp API key"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:108
+msgid ""
+"Select which plugins or features Easy Forms for MailChimp by Yikes Inc. "
+"should integrate with. Depending on which plugins or features you choose to "
+"integrate with, an optin checkbox will be generated. For example, the "
+"comment form checkbox will generate a checkbox below the standard WordPress "
+"comment form to add any new commenters to a pre-determined MailChimp mailing "
+"list."
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:142
+msgid "Select a List"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:149
+msgid ""
+"You have not setup any lists. You should head over to MailChimp and setup "
+"your first list."
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:154
+msgid "Checkbox Label"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:158
+msgid "Precheck Checkbox"
+msgstr ""
+
+#: admin/partials/menu/options-sections/integration-settings.php:172
+msgid "Nothing is active."
+msgstr ""
+
+#: admin/partials/menu/options-sections/recaptcha-settings.php:15
+msgid "reCAPTCHA Settings"
+msgstr ""
+
+#: admin/partials/menu/options-sections/recaptcha-settings.php:20
+msgid ""
+"reCAPTCHA is a free CAPTCHA service, from Google, that helps protect your "
+"site against spam, malicious registrations and other forms of attacks where "
+"computers try to disguise themselves as a human. reCAPTCHA will help prevent "
+"spammers and bots from submitting data through your MailChimp forms."
+msgstr ""
+
+#: admin/partials/menu/options-sections/recaptcha-settings.php:24
+msgid "Get your reCAPTCHA API Key"
+msgstr ""
+
+#: admin/partials/menu/options-sections/recaptcha-settings.php:24
+msgid "Get Your reCAPTCHA API Key"
+msgstr ""
+
+#: admin/partials/menu/options-sections/recaptcha-settings.php:32
+msgid "Enable reCAPTCHA Protection"
+msgstr ""
+
+#: admin/partials/menu/options-sections/recaptcha-settings.php:36
+msgid "reCAPTCHA Site Key"
+msgstr ""
+
+#: admin/partials/menu/options-sections/recaptcha-settings.php:40
+msgid "reCAPTCHA Secret Key"
+msgstr ""
+
+#: admin/partials/menu/options-sections/recaptcha-settings.php:44
+msgid "View reCAPTCHA Preview"
+msgstr ""
+
+#: admin/partials/menu/options-sections/recaptcha-settings.php:46
+msgid "reCAPTCHA Preview"
+msgstr ""
+
+#: admin/partials/menu/options.php:9
+msgid "Your site is currently connected to the MailChimp API"
+msgstr ""
+
+#: admin/partials/menu/options.php:9
+msgid "Connected"
+msgstr ""
+
+#: admin/partials/menu/options.php:12
+msgid "Not Connected"
+msgstr ""
+
+#: admin/partials/menu/options.php:33
+msgid ""
+"Easy Forms for MailChimp allows you to painlessly add MailChimp sign up "
+"forms to your WordPress site and track user activity with interactive "
+"reports."
+msgstr ""
+
+#: admin/partials/menu/options.php:39
+msgid "Settings successfully updated."
+msgstr ""
+
+#: admin/partials/menu/options.php:47
+msgid "MailChimp API Cache successfully cleared."
+msgstr ""
+
+#: admin/partials/menu/options.php:56
+msgid "Error log successfully cleared."
+msgstr ""
+
+#: admin/partials/menu/options.php:64
+msgid ""
+"Whoops! We've encountered an error while trying to clear the error log. "
+"Please refresh the page and try again. If the error persists please get in "
+"touch with the YIKES Inc. support team."
+msgstr ""
+
+#: admin/partials/menu/options.php:73
+msgid "Error log successfully created. You may now start logging errors."
+msgstr ""
+
+#: admin/partials/menu/options.php:88
+#, php-format
+msgid ""
+"Opt-in forms successfully imported. <a href=\"%s\" title=\"View Forms\">View "
+"Forms</a>"
+msgstr ""
+
+#: admin/partials/menu/options.php:94
+msgid "YIKES Easy Forms for MailChimp settings successfully imported."
+msgstr ""
+
+#: admin/partials/menu/support.php:12
+msgid "You've got questions? We have answers!"
+msgstr ""
+
+#: admin/partials/menu/support.php:14
+msgid ""
+"Users of the free version of YIKES Inc. Easy Forms for MailChimp are limited "
+"to two methods of support. We respond to support requests for the free "
+"version of the plugin once a week."
+msgstr ""
+
+#: admin/partials/menu/support.php:15
+msgid "check them out"
+msgstr ""
+
+#: admin/partials/menu/support.php:15
+#, php-format
+msgid ""
+"Purchasers of our paid add-ons qualify for premium support, <a href=\"%s\" "
+"target=\"_blank\" title=\""
+msgstr ""
+
+#: admin/partials/menu/support.php:17
+msgid ""
+"It looks like you are one of our premium users! Scroll down and fill out the "
+"form at the bottom of the page to submit a priority support request."
+msgstr ""
+
+#: admin/partials/menu/support.php:20
+#, php-format
+msgid ""
+"For full YIKES Inc. Easy Forms for MailChimp documentation, visit our %s."
+msgstr ""
+
+#: admin/partials/menu/support.php:20
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:62
+msgid "Knowledge Base"
+msgstr ""
+
+#: admin/partials/menu/support.php:20
+msgid "knowledge base"
+msgstr ""
+
+#: admin/partials/menu/support.php:29
+#, fuzzy
+msgid "Github Issue Tracker"
+msgstr "GitHub Seguimiento de Incidentes"
+
+#: admin/partials/menu/support.php:31
+msgid ""
+"The fastest way to receive free support is to submit a new issue to our "
+"GitHub issue tracker. "
+msgstr ""
+
+#: admin/partials/menu/support.php:33
+msgid "Submit New Github.org Issue"
+msgstr ""
+
+#: admin/partials/menu/support.php:44
+msgid "WordPress.org Plugin Directory"
+msgstr "WordPress Repositorio de Plugin"
+
+#: admin/partials/menu/support.php:46
+msgid ""
+"Use your WordPress.org username to submit support requests on the WordPress "
+"Directory support forum."
+msgstr ""
+
+#: admin/partials/menu/support.php:48
+msgid "Submit New WordPress.org Support Request"
+msgstr ""
+
+#: admin/partials/upgrade-helpers/upgrade-migrate-options.php:34
+msgid "Migrating old plugin options"
+msgstr ""
+
+#: admin/partials/upgrade-helpers/upgrade-migrate-options.php:35
+msgid ""
+"please be patient while your options are updated and the process has "
+"completed"
+msgstr ""
+
+#: admin/partials/upgrade-helpers/upgrade-migrate-options.php:141
+#: admin/partials/upgrade-helpers/upgrade-migrate-options.php:206
+msgid "successfully imported."
+msgstr ""
+
+#: admin/partials/upgrade-helpers/upgrade-migrate-options.php:145
+msgid "Settings Successfuly Imported"
+msgstr ""
+
+#: admin/partials/upgrade-helpers/upgrade-migrate-options.php:150
+msgid "Migration Complete. Please wait..."
+msgstr ""
+
+#: admin/partials/upgrade-helpers/upgrade-migrate-options.php:230
+msgid "Old plugin options do not exist. Redirecting you..."
+msgstr ""
+
+#: admin/partials/view-list.php:24
+msgid "No segments set up for this list."
+msgstr ""
+
+#: admin/partials/view-list.php:80
+msgid ""
+"View all subscribers below. View additional subscriber info, or add "
+"additional fields to this list."
+msgstr ""
+
+#: admin/partials/view-list.php:81
+msgid "New Subscriber"
+msgstr ""
+
+#: admin/partials/view-list.php:89
+msgid "User successfully unsubscribed."
+msgstr ""
+
+#: admin/partials/view-list.php:96
+msgid ""
+"We've encountered an error trying to remove the subscriber. Please try "
+"again. If the error persists please get in contact with the YIKES Inc. "
+"support staff."
+msgstr ""
+
+#: admin/partials/view-list.php:103
+msgid "Add New Subscriber"
+msgstr ""
+
+#: admin/partials/view-list.php:105
+msgid "User Email Address"
+msgstr ""
+
+#: admin/partials/view-list.php:127 admin/partials/view-list.php:136
+msgid "User Email"
+msgstr ""
+
+#: admin/partials/view-list.php:128 admin/partials/view-list.php:137
+msgid "Email Client"
+msgstr ""
+
+#: admin/partials/view-list.php:154
+msgid "not set"
+msgstr ""
+
+#: admin/partials/view-list.php:162
+msgid "View Info."
+msgstr ""
+
+#: admin/partials/view-list.php:164
+msgid "Are you sure you want to unsubscribe"
+msgstr ""
+
+#: admin/partials/view-list.php:164
+msgid "from this mailing list?"
+msgstr ""
+
+#: admin/partials/view-list.php:164
+msgid "Unsubscribe"
+msgstr ""
+
+#: admin/partials/view-list.php:174
+msgid "No one is currently subscribed to this list."
+msgstr ""
+
+#: admin/partials/view-list.php:186
+msgid "Go to the first page"
+msgstr ""
+
+#: admin/partials/view-list.php:187
+msgid "Go to the previous page"
+msgstr ""
+
+#: admin/partials/view-list.php:188
+msgid "Current page"
+msgstr ""
+
+#: admin/partials/view-list.php:188
+msgid "of"
+msgstr ""
+
+#: admin/partials/view-list.php:189
+msgid "Go to the next page"
+msgstr ""
+
+#: admin/partials/view-list.php:190
+msgid "Go to the last page"
+msgstr ""
+
+#: admin/partials/view-list.php:205
+msgid "List Overview"
+msgstr ""
+
+#: admin/partials/view-list.php:227
+msgid "List Rating"
+msgstr ""
+
+#: admin/partials/view-list.php:231
+msgid "Average Subscribers"
+msgstr ""
+
+#: admin/partials/view-list.php:232
+msgid "month"
+msgstr ""
+
+#: admin/partials/view-list.php:239
+msgid "New Since Last Campaign"
+msgstr ""
+
+#: admin/partials/view-list.php:243
+msgid "Created"
+msgstr ""
+
+#: admin/partials/view-list.php:247
+msgid "List Fields"
+msgstr ""
+
+#: admin/partials/view-list.php:251
+msgid "Short Signup URL"
+msgstr ""
+
+#: admin/partials/view-list.php:255
+msgid "Default From Email"
+msgstr ""
+
+#: admin/partials/view-list.php:259
+msgid "Default From Name"
+msgstr ""
+
+#: admin/partials/view-list.php:274
+#, php-format
+msgid "%d Field"
+msgstr ""
+
+#: admin/partials/view-list.php:288
+msgid "Interest Groups Overview"
+msgstr ""
+
+#: admin/partials/view-list.php:292
+#, php-format
+msgid "%d Merge Variable"
+msgstr ""
+
+#: admin/partials/view-list.php:294
+msgid "subscribers assigned to this group"
+msgstr ""
+
+#: admin/partials/view-list.php:312
+msgid "Segments Overview"
+msgstr ""
+
+#: admin/partials/view-list.php:317
+#, php-format
+msgid "%d Segment"
+msgstr ""
+
+#: admin/partials/view-list.php:319
+msgid "hide conditions"
+msgstr ""
+
+#: admin/partials/view-list.php:319
+msgid "view conditions"
+msgstr ""
+
+#: admin/partials/view-list.php:322
+#, php-format
+msgid "condition #%s : If %s %s %s"
+msgstr ""
+
+#: admin/partials/view-list.php:337
+msgid "Edit Segments"
+msgstr ""
+
+#: admin/partials/view-list.php:339
+msgid "To edit this lists segments, head over to"
+msgstr ""
+
+#: admin/partials/view-user.php:26
+msgid "We encountered an error:"
+msgstr ""
+
+#: admin/partials/view-user.php:116 admin/partials/view-user.php:277
+msgid "Subscriber Details"
+msgstr ""
+
+#: admin/partials/view-user.php:119
+#, php-format
+msgid "View %s subscriber details below."
+msgstr ""
+
+#: admin/partials/view-user.php:123
+msgid "Optin Forms"
+msgstr ""
+
+#: admin/partials/view-user.php:140
+#, php-format
+msgid "Member Rating: %s star"
+msgstr ""
+
+#: admin/partials/view-user.php:142
+msgid "Subscribed:"
+msgstr ""
+
+#: admin/partials/view-user.php:147 admin/partials/view-user.php:151
+msgid "Location:"
+msgstr ""
+
+#: admin/partials/view-user.php:165
+msgid "Fields:"
+msgstr ""
+
+#: admin/partials/view-user.php:179
+msgid "No Subscriber Data Found"
+msgstr ""
+
+#: admin/partials/view-user.php:186
+msgid "Signup IP"
+msgstr ""
+
+#: admin/partials/view-user.php:206
+msgid "Additional Subscriptions:"
+msgstr ""
+
+#: admin/partials/view-user.php:216
+msgid "No Other Subscriptions Found."
+msgstr ""
+
+#: admin/partials/view-user.php:231
+#, php-format
+msgid ""
+"Deleting this subscriber will completely remove %s from the \"%s\" MailChimp "
+"list."
+msgstr ""
+
+#: admin/partials/view-user.php:236
+#, php-format
+msgid "Are you sure you want to delete \"%s\" from \"%s?\""
+msgstr ""
+
+#: admin/partials/view-user.php:238 admin/partials/view-user.php:297
+msgid "Delete Subscriber"
+msgstr ""
+
+#: admin/partials/view-user.php:287
+msgid "Additional Subscriptions"
+msgstr ""
+
+#: admin/partials/view-user.php:327
+msgid "View Google Map"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/credits-section.php:43
+#, php-format
+msgid ""
+"YIKES Easy Forms for MailChimp is a free plugin licensed under GPL v2, and "
+"was meticulously constructed with a whole lot of love by the folks at <a "
+"href=\"%s\" target=\"_blank\" title=\"YIKES Inc.\">YIKES Inc.</a> in "
+"Philadelphia, PA."
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/credits-section.php:47
+msgid "Developers"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/credits-section.php:68
+msgid ""
+"There was an error retrieving the contributors list. Please try again later."
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/credits-section.php:76
+msgid "Translators"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:3
+#, php-format
+msgid ""
+"Before you can create any opt-in forms, you'll first need to enter your "
+"MailChimp API key into the <a href='%s' title='Yikes Easy MailChimp "
+"Settings'>settings page</a>"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:9
+msgid "Creating Your First Opt-In Form"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:13
+msgid "Create first optin form screenshot"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:16
+msgid ""
+"Before you can start collecting users email addresses and building your "
+"mailing list, you'll need to create your first form. You can create as many "
+"forms as you'd like and assign each form to the same or different mailing "
+"lists."
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:20
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:11
+msgid "Additional Options"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:21
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:12
+msgid ""
+"Once you create a form, you can choose which fields you want to add to it "
+"and customize the success and error messages returned by MailChimp."
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:27
+msgid "Optin settings screenshot"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:29
+msgid "Customize the Form"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:30
+msgid ""
+"Once created, you can customize the form. This includes editing the success "
+"and error messages displayed to the user, choosing which fields or interest "
+"groups are displayed, adding CSS classes to fields, assigning default values "
+"amp; placeholders and tons more!"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:34
+msgid ""
+"Quickly and easily switch which list the form is associated with, toggle "
+"single or double optin, whether the welcome email should be sent, toggle "
+"AJAX form submissions and more. Get customizing!"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:38
+msgid "Add field to form screenshot"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:40
+#, fuzzy
+msgid "Add Form to Page/Post"
+msgstr "Agregar el formulario a la página"
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:41
+msgid ""
+"When you're ready to add your MailChimp opt-in form to a page or post, you "
+"can click on the small MailChimp button in the content editor toolbar."
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:45
+#, fuzzy
+msgid "Add Form to Widget"
+msgstr "Agregar formulario de widget"
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:46
+msgid ""
+"We've created a MailChimp widget to easily add forms to any sidebar or "
+"widgetized area on your site. The widget allows you to select from any "
+"created forms."
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:50
+#, fuzzy
+msgid "Need Support?"
+msgstr "Necesitan apoyo"
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:52
+msgid "Free Support"
+msgstr "Asistencia gratuita"
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:53
+#, fuzzy
+msgid ""
+"If you need help using the free version of the plugin, you can post support "
+"inquiries to one of two locations."
+msgstr ""
+"Si necesita ayuda pueden escribir sus consultas de soporte en dos "
+"ubicaciones distintas."
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:55
+msgid "WordPress Plugin Directory"
+msgstr "WordPress Repositorio de Plugin"
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:56
+msgid "GitHub Issue Tracker"
+msgstr "GitHub Seguimiento de Incidentes"
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:59
+msgid "Priority Support"
+msgstr "Soporte prioritario"
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:60
+#, fuzzy
+msgid ""
+"If you want immediate support, please consider purchasing an add-on or "
+"developer License. Not only will you get 1 full year of automatic updates "
+"and priority support, you will enjoy the tons of features packed into our "
+"add-ons that are not available in the free version."
+msgstr ""
+"Si buscas apoyo inmediato, por que no comprando la versión pro. Con la "
+"versión pro, no sólo obtendrá 1 año completo de actualizaciones automáticas "
+"y soporte prioritario, pero hay un montón de características en la versión "
+"pro que solo no podía hacerlo en el libre. Échale un vistazo!"
+
+#: admin/partials/welcome-page/welcome-sections/getting-started-section.php:63
+#, php-format
+msgid ""
+"For plugin documentation, visit our <a href=\"%s\" title=\"Knowledge Base\" "
+"target=\"_blank\">knowledge base</a>."
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:5
+msgid "Form Management Re-Imagined"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:7
+#, fuzzy
+msgid "Edit Form Screenshot"
+msgstr "Editar Formulario"
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:10
+msgid ""
+"Before you can start collecting form submissions to build your mailing list, "
+"you'll need to create your first form. You can create as many forms as you "
+"like and assign each form to one or multiple mailing lists."
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:18
+msgid "Fully Extensible"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:20
+msgid ""
+"YIKES Easy Forms for MailChimp was fully reconstructed from the ground up. "
+"From the get go we had extensibility in mind, and built in a ton of hooks "
+"and filters for our users to take advantage of. This allows for full control "
+"over your forms, the data begin submitted to MailChimp and tons of new add-"
+"ons to be built alongside the base plugin."
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:22
+msgid ""
+"Check out the documentation for a complete list of the available hooks and "
+"filters."
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:24
+msgid "Documentation | Hooks and Filters"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:29
+msgid "Form Setting Toggles"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:31
+msgid "Form Toggles"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:33
+msgid ""
+"Now you can toggle single/double optins, trigger sending welcome emails or "
+"updating an existing subscriber on a per form basis and directly from within "
+"the plugin!"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:35
+msgid ""
+"Along with the opt-in toggles, you have the ability to toggle ajax form "
+"submissions, redirecting users after a successful sign up and more!"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:41
+msgid "Intuitive Settings Page"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:43
+msgid "Settings Page"
+msgstr ""
+
+#: admin/partials/welcome-page/welcome-sections/whats-new-section.php:45
+msgid ""
+"We've re-laid out the settings page to allow for a more intuitive workflow. "
+"All of your settings are neatly tucked away in their respective setting tab."
+msgstr ""
+
+#: admin/partials/welcome-page/welcome.php:14
+msgid "Getting Started"
+msgstr "Cómo comenzar"
+
+#: admin/partials/welcome-page/welcome.php:17
+msgid "What's New"
+msgstr "Que hay de Nuevo"
+
+#: admin/partials/welcome-page/welcome.php:20
+msgid "Credits"
+msgstr "Cr&eacute;ditos"
+
+#: admin/partials/welcome-page/welcome.php:41
+msgid "MailChimp Done Right"
+msgstr "MailChimp Hecha Correctamente"
+
+#: admin/partials/welcome-page/welcome.php:45
+#, php-format
+msgid ""
+"Thank you for updating to the latest version! YIKES Easy Forms for MailChimp "
+"%s is ready to help take your mailing lists to the next level!"
+msgstr ""
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:67
+msgid "Admin"
+msgstr ""
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:69
+msgid "Front End"
+msgstr ""
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:82
+msgid "Page:"
+msgstr "Página:"
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:82
+msgid "Type:"
+msgstr "Tipo:"
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:82
+msgid "Time:"
+msgstr "Hora:"
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:110
+msgid "File get contents not available"
+msgstr ""
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:120
+msgid "No errors logged."
+msgstr "No hay errores registrados."
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:123
+msgid "To start logging errors toggle on the 'Enable Debugging' option above."
+msgstr ""
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:134
+msgid "Error Log Missing"
+msgstr ""
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:136
+msgid ""
+"It looks like your error log file is missing. You can attempt to create one "
+"by clicking the button below."
+msgstr ""
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:149
+msgid "Attempt to Create Error Log"
+msgstr "Intento de crear el registro de errores"
+
+#: includes/error_log/class-yikes-inc-easy-mailchimp-error-logging.php:162
+msgid ""
+"It looks like the function file_get_contents() is disabled on your server. "
+"We cannot retrieve the contents of the error log."
+msgstr ""
+"Parece que la función file_get_contents () está deshabitado en el servidor. "
+"No podemos recuperar el contenido del registro de errores."
+
+#: includes/import-export/yikes-easy-mailchimp-import.class.php:88
+msgid ""
+"There was an error during import. If you continue to run into issues, please "
+"reach out to the Yikes Inc. support team."
+msgstr ""
+
+#: public/classes/checkbox-integrations.php:8
+#: public/classes/checkbox-integrations/class.bbpress_forms-checkbox.php:9
+#: public/classes/checkbox-integrations/class.buddypress_form-checkbox.php:9
+#: public/classes/checkbox-integrations/class.comment_form-checkbox.php:9
+#: public/classes/checkbox-integrations/class.contact_form_7-checkbox.php:14
+#: public/classes/checkbox-integrations/class.easy_digital_downloads_checkout_form-checkbox.php:10
+#: public/classes/checkbox-integrations/class.registration_form-checkbox.php:11
+#: public/classes/checkbox-integrations/class.woocommerce_checkout_form-checkbox.php:11
+msgid "Whoops, you shouldn't be accessing this file directly. Abort!"
+msgstr "Vaya, que no se acceder a este archivo directamente. Abortar!"
+
+#: public/classes/checkbox-integrations.php:196
 msgid "Note"
 msgstr "Nota"
 
-#: .././pages/options.php:542
+#: public/classes/checkbox-integrations/class.registration_form-checkbox.php:60
+#, fuzzy, php-format
 msgid ""
-"if you're displaying multiple forms on a single page, reCAPTCHA will only "
-"display on one form at a time."
-msgstr ""
-"si usted está mostrando las múltiples formas en una sola página, reCAPTCHA "
-"sólo se mostrará en una forma a la vez."
+"You have not been subscribed to our mailing list. %s is already subscribed "
+"to this list."
+msgstr "Usted no se ha suscrito a nuestra lista de correo."
 
-#: .././pages/options.php:549
-msgid "ReCaptcha Spam Protection"
-msgstr "Reconocer texto no deseados de protección"
-
-#: .././pages/options.php:552 .././pages/options.php:635
-msgid "Disabled"
-msgstr "Inhabilitar"
-
-#: .././pages/options.php:553 .././pages/options.php:636
-msgid "Enabled"
-msgstr "Permite"
-
-#: .././pages/options.php:561
-msgid "ReCaptcha prevents excessive form entires from spammers and bots."
-msgstr "ReCAPTCHA impide entires forma excesivas de los spammers y bots."
-
-#: .././pages/options.php:569
-msgid "ReCaptcha Public API Key"
-msgstr "ReCAPTCHA Public Key API"
-
-#: .././pages/options.php:577
-msgid "ReCaptcha Private API Key"
-msgstr "ReCAPTCHA Private Key API"
-
-#: .././pages/options.php:586
-msgid "to retreive a recaptcha API key, sign up for an account"
-msgstr ""
-"es posible recuperar una clave de API recaptcha, registrarse para obtener "
-"una cuenta"
-
-#: .././pages/options.php:586
-msgid "here"
-msgstr "porque dentro de tu corazon, tu sabes quien eres"
-
-#: .././pages/options.php:591
-msgid "ReCaptcha Style"
-msgstr "ReCAPTCHA Estilo"
-
-#: .././pages/options.php:594
-msgid "Default"
-msgstr "Por Defecto"
-
-#: .././pages/options.php:595
-msgid "White"
-msgstr "Blanco"
-
-#: .././pages/options.php:596
-msgid "Black Glass"
-msgstr "Negro Cristal"
-
-#: .././pages/options.php:597
-msgid "Clean"
-msgstr "Limpio"
-
-#: .././pages/options.php:605
-msgid "reCAPTCHA Preview"
-msgstr "reCAPTCHA Prevista"
-
-#: .././pages/options.php:624
-msgid "Debug Settings"
-msgstr "Configuración de la depuración"
-
-#: .././pages/options.php:632
-msgid "Advanced Error Messaging"
-msgstr "Mensajería Error Avanzada"
-
-#: .././pages/options.php:644
+#: public/partials/shortcodes/process/process_form_submission.php:6
 msgid ""
-"Enable if you're having problems with your forms sending data to MailChimp. "
-"Enabling Advanced Error Messaging will show you the exact error codes "
-"MailChimp is returning."
+"Error : Sorry, the nonce security check didn't pass. Please reload the page "
+"and try again. You may want to try clearing your browser cache as a last "
+"attempt."
 msgstr ""
-"Habilitar si usted está teniendo problemas con sus formas de enviar datos a "
-"MailChimp. Habilitar Mensajería Error avanzada le mostrará los códigos de "
-"error exactos MailChimp está volviendo."
 
-#: .././pages/options.php:651
-msgid "Plugin Information"
-msgstr "Información Plugin"
-
-#: .././pages/options.php:654
-msgid "If you experience any issues with our plugin, please"
-msgstr "Si experimenta cualquier problema con nuestro plugin, por favor"
-
-#: .././pages/options.php:654
-msgid "submit a New Issue on our Github Issue Tracker"
-msgstr "Enviar un nuevo asunto en nuestro Rastreador Github Issue"
-
-#: .././pages/options.php:654
+#: public/partials/shortcodes/process/process_form_submission.php:15
+#: public/partials/shortcodes/process/process_form_submission_ajax.php:33
 msgid ""
-"Please include the information below to help us troubleshoot your problem."
+"Error: It looks like the honeypot was filled out and the form was not "
+"properly be submitted."
 msgstr ""
-"Por favor, incluya la siguiente información para ayudarnos a solucionar su "
-"problema."
 
-#: .././pages/options.php:659
-msgid "Plugin Version"
-msgstr "Version Plugin"
-
-#: .././pages/options.php:663
-msgid "Wordpress Version"
-msgstr "Versión Wordpress"
-
-#: .././pages/options.php:667
-msgid "Browser Information"
-msgstr "Informacion del navegador"
-
-#: .././pages/options.php:676
-msgid "Server Information"
-msgstr "Information Server"
-
-#: .././pages/options.php:711
-msgid "Error"
-msgstr "&Error"
-
-#: .././pages/options.php:712
+#: public/partials/shortcodes/process/process_form_submission.php:31
 msgid ""
-"We're sorry, but cURL is disabled on your server. The MailChimp API utilizes "
-"cURL to send and retrieve data."
+"It looks like we've run into a reCaptcha error. Please refresh the page and "
+"try again."
 msgstr ""
-"Lo sentimos, pero CURL está deshabilitado en tu servidor. La API de "
-"MailChimp utiliza cURL para enviar y recuperar datos."
+"Parece que nos hemos topado un error de código de imagen. Por favor "
+"actualice la página y vuelva a intentarlo."
 
-#: .././pages/options.php:717
-msgid "Help!"
-msgstr "Ayuda!!"
+#: public/partials/shortcodes/process/process_form_submission.php:32
+msgid "Errors"
+msgstr "Errores"
 
-#: .././pages/options.php:717
-msgid "What is cURL?"
-msgstr "¿Qué es cURL?"
+#: public/partials/shortcodes/process/process_form_submission.php:100
+msgid "Thank you for subscribing!"
+msgstr ""
 
-#: .././pages/options.php:717
-msgid "Check phpinfo()"
-msgstr "Compruebe phpinfo ()"
+#: public/partials/shortcodes/process/process_form_submission.php:183
+#: public/partials/shortcodes/process/process_form_submission_ajax.php:177
+msgid "Please enter a valid email address."
+msgstr ""
 
-#: .././pages/options.php:719
-msgid "Steps To Resolve The Issue"
-msgstr "Pasos para resolver el problema"
+#: public/partials/shortcodes/process/process_form_submission.php:185
+#: public/partials/shortcodes/process/process_form_submission_ajax.php:179
+msgid "It looks like you're already subscribed to this list."
+msgstr ""
 
-#: .././pages/options.php:723
+#: public/partials/shortcodes/process/process_form_submission.php:187
+#: public/partials/shortcodes/process/process_form_submission_ajax.php:181
+msgid "Whoops, something went wrong! Please try again."
+msgstr ""
+
+#: public/partials/shortcodes/process/process_form_submission_ajax.php:51
+msgid "Please refresh the page and try again."
+msgstr ""
+
+#: public/partials/shortcodes/process/process_form_submission_ajax.php:57
+msgid "It looks like we've run into a reCaptcha error."
+msgstr ""
+
+#: public/partials/shortcodes/process/process_form_submission_ajax.php:144
 msgid ""
-"You can enable cURL by turning on the cURL module within your php.ini file"
-msgstr "Puede activar cURL activando el módulo cURL en su archivo php.ini"
+"Thank you for subscribing! Check your email for the confirmation message."
+msgstr ""
 
-#: .././pages/options.php:723
-msgid "You should find the php.ini file located here : "
-msgstr "Usted debe encontrar el archivo php.ini se encuentra aquí: "
-
-#: .././pages/options.php:724
+#: public/partials/shortcodes/process_form_shortcode.php:19
 msgid ""
-"Once found, open up php.ini and locate the line \";extension=php_curl.dll\"."
+"Whoops, you're not connected to MailChimp. You need to enter a valid "
+"MailChimp API key."
 msgstr ""
-"Una vez encontrado, abrir php.ini y busque la línea \"la ampliación = "
-"php_curl.dll\"."
 
-#: .././pages/options.php:725
+#: public/partials/shortcodes/process_form_shortcode.php:24
+msgid "Whoops, it looks like you forgot to specify a form to display."
+msgstr ""
+
+#: public/partials/shortcodes/process_form_shortcode.php:33
 msgid ""
-"Remove the semi colon before the line, to un-comment it and make the cURL "
-"module active."
+"Oh no...This form doesn't exist. Head back to the manage forms page and "
+"select a different form."
 msgstr ""
-"Quite el punto y coma antes de la línea, a un-comentarlo y hacer que el "
-"módulo cURL activo."
 
-#: .././pages/options.php:726
-msgid "Re-save and close the file."
-msgstr "Vuelva a guardar y cerrar el archivo."
-
-#: .././pages/options.php:727
-msgid "Restart your Apache and MySQL services and re-load this page."
-msgstr "Reinicie los servicios de Apache y MySQL y re-carga de la página."
-
-#: .././templates/mailChimp-account-overview.php:32
-#: .././templates/mailChimp-account-overview.php:79
-msgid "Free Forever"
-msgstr "Libres para siempre"
-
-#: .././templates/mailChimp-account-overview.php:37
-#: .././templates/mailChimp-account-overview.php:79
-msgid "Pay As You Go"
-msgstr "Pague por uso"
-
-#: .././templates/mailChimp-account-overview.php:42
-msgid "Premium Chimp"
-msgstr "Prima Chimp"
-
-#: .././templates/mailChimp-account-overview.php:70
-msgid "Account Not Yet Activated"
-msgstr "Cuenta no está aún activada"
-
-#: .././templates/mailChimp-account-overview.php:70
-msgid "Account Active"
-msgstr "Cuenta activa"
-
-#: .././templates/mailChimp-account-overview.php:73
-msgid "Company"
-msgstr "Empresa"
-
-#: .././templates/mailChimp-account-overview.php:74
-msgid "Member Since"
-msgstr "Usuario desde"
-
-#: .././templates/mailChimp-account-overview.php:76
-msgid "Account Type"
-msgstr "Tipo de cuenta"
-
-#: .././templates/mailChimp-account-overview.php:82
-msgid "Emails Left"
-msgstr "Emails Izquierda"
-
-#: .././templates/mailChimp-account-overview.php:83
-msgid "Emails will reset on"
-msgstr "Los correos electrónicos se restablecerán en"
-
-#: .././templates/mailChimp-account-overview.php:89
-msgid "Industry"
-msgstr "Industria"
-
-#: .././templates/mailChimp-campaign-click-geo-map.php:97
-msgid "Number of Campaign Opens"
-msgstr "Número de Opens de Campaña"
-
-#: .././templates/mailChimp-campaign-click-geo-map.php:121
-msgid "Campaign Activity Geo Map"
-msgstr "Campaña Actividad Geomapa"
-
-#: .././templates/mailChimp-campaign-click-geo-map.php:127
-msgid "Top Opens By Country"
-msgstr "Top Abre por país"
-
-#: .././templates/mailChimp-campaign-click-geo-map.php:133
-msgid "Country"
-msgstr "País"
-
-#: .././templates/mailChimp-campaign-click-report.php:59
-#: .././templates/mailChimp-campaign-click-report.php:71
-msgid "Visualize Me"
-msgstr "Visualizar mí"
-
-#: .././templates/mailChimp-campaign-click-report.php:62
-#: .././templates/mailChimp-campaign-click-report.php:74
-msgid "URL"
-msgstr "URL áéíóú"
-
-#: .././templates/mailChimp-campaign-click-report.php:63
-#: .././templates/mailChimp-campaign-click-report.php:75
-msgid "Clicks"
-msgstr "Clicks"
-
-#: .././templates/mailChimp-campaign-click-report.php:64
-#: .././templates/mailChimp-campaign-click-report.php:76
-msgid "Click Percent"
-msgstr "Haga clic en Porcentaje"
-
-#: .././templates/mailChimp-campaign-click-report.php:65
-#: .././templates/mailChimp-campaign-click-report.php:77
-#: .././templates/mailChimp-campaign-report.php:518
-msgid "Unique Clicks"
-msgstr "Clics únicos"
-
-#: .././templates/mailChimp-campaign-click-report.php:66
-#: .././templates/mailChimp-campaign-click-report.php:78
-msgid "Unique Percent"
-msgstr "Porcentaje de Unique"
-
-#: .././templates/mailChimp-campaign-click-report.php:81
-msgid "No Links Clicked"
-msgstr "No Enlace de llamamientos"
-
-#: .././templates/mailChimp-campaign-clicks-pie-chart.php:15
-msgid "Link Click Percentage - Pie Chart"
-msgstr "Enlace Click Porcentaje - Pie Chart"
-
-#: .././templates/mailChimp-campaign-report.php:306
-#: .././templates/mailChimp-campaign-report.php:307
-msgid "Back to Campaigns"
-msgstr "Volver a las campañas"
-
-#: .././templates/mailChimp-campaign-report.php:321
-msgid "Campaign Statistics Report"
-msgstr "Campaña Informe de Estadísticas"
-
-#: .././templates/mailChimp-campaign-report.php:328
-msgid "Open tracking was disabled on this campaign"
-msgstr "Abrir seguimiento fue desactivado en esta campaña"
-
-#: .././templates/mailChimp-campaign-report.php:329
+#: public/partials/shortcodes/process_form_shortcode.php:42
 msgid ""
-"You did not enable open tracking for this campaign, so the data in this "
-"report will be incomplete."
+"Whoops! It looks like you enabled reCAPTCHA but forgot to enter the "
+"reCAPTCHA site key!"
 msgstr ""
-"Usted no ha habilitado el seguimiento abierto para esta campaña, por lo que "
-"los datos de este informe será incompleta."
 
-#: .././templates/mailChimp-campaign-report.php:329
-msgid "about open tracking"
-msgstr "seguimiento sobre abierto"
-
-#: .././templates/mailChimp-campaign-report.php:336
-msgid "Recipients"
-msgstr "Destinatarios"
-
-#: .././templates/mailChimp-campaign-report.php:347
-msgid "Subject"
-msgstr "Asunto"
-
-#: .././templates/mailChimp-campaign-report.php:348
-msgid "Delivered"
-msgstr "Entregado"
-
-#: .././templates/mailChimp-campaign-report.php:353
-msgid "View Email"
-msgstr "Ver Email"
-
-#: .././templates/mailChimp-campaign-report.php:354
-msgid "Download Report"
-msgstr "Informe Descarga"
-
-#: .././templates/mailChimp-campaign-report.php:355
-msgid "Print Report"
-msgstr "Imprimir el Iforme"
-
-#: .././templates/mailChimp-campaign-report.php:363
-msgid "Open Rate"
-msgstr "Tarifa abierta"
-
-#: .././templates/mailChimp-campaign-report.php:369
-#: .././templates/mailChimp-campaign-report.php:381
-msgid "Industry Avg"
-msgstr "Industria Promedio"
-
-#: .././templates/mailChimp-campaign-report.php:374
-msgid "Click Rate"
-msgstr "Haga clic en Cambio"
-
-#: .././templates/mailChimp-campaign-report.php:389
-msgid "Opened"
-msgstr "Abierto"
-
-#: .././templates/mailChimp-campaign-report.php:394
-msgid "Clicked"
-msgstr "Clicado"
-
-#: .././templates/mailChimp-campaign-report.php:399
-msgid "Bounced"
-msgstr "Rebotados"
-
-#: .././templates/mailChimp-campaign-report.php:405
-msgid "Unsubscribed"
-msgstr "Fecha Suscrito"
-
-#: .././templates/mailChimp-campaign-report.php:413
-msgid "Successful deliveries"
-msgstr "Entregas exitosas"
-
-#: .././templates/mailChimp-campaign-report.php:414
-msgid "Total opens"
-msgstr "Total se abre"
-
-#: .././templates/mailChimp-campaign-report.php:415
-msgid "Last opened"
-msgstr "Última actualización"
-
-#: .././templates/mailChimp-campaign-report.php:416
-msgid "Forwarded"
-msgstr "Remitió"
-
-#: .././templates/mailChimp-campaign-report.php:420
-msgid "Clicks per unique opens"
-msgstr "Clics por única abre"
-
-#: .././templates/mailChimp-campaign-report.php:421
-msgid "Total clicks"
-msgstr "Clics totales"
-
-#: .././templates/mailChimp-campaign-report.php:422
-msgid "Last clicked"
-msgstr "Última hecho clic"
-
-#: .././templates/mailChimp-campaign-report.php:423
-msgid "Abuse reports"
-msgstr "Informes de Abuso"
-
-#: .././templates/mailChimp-campaign-report.php:430
-msgid "Campaign Link Performance"
-msgstr "Campaña de rendimiento del enlace"
-
-#: .././templates/mailChimp-campaign-report.php:488
-msgid "24 Hour Campaign Performance"
-msgstr "Rendimiento de la campaña 24 horas"
-
-#: .././templates/mailChimp-campaign-report.php:491
-msgid "begins from the time your campaign is sent"
-msgstr "comienza desde el momento en que su campaña se envía"
-
-#: .././templates/mailChimp-campaign-report.php:499
-msgid "Number of Opens/Clicks"
-msgstr "Número de suscriptores"
-
-#: .././templates/mailChimp-campaign-stats-template.php:92
-msgid "Previous Campaigns"
-msgstr "Campañas anteriores"
-
-#: .././templates/mailChimp-campaign-stats-template.php:158
-#: .././templates/mailChimp-campaign-stats-template.php:249
-msgid "Sent"
-msgstr "Enviado"
-
-#: .././templates/mailChimp-campaign-stats-template.php:158
-msgid "on "
-msgstr "el "
-
-#: .././templates/mailChimp-campaign-stats-template.php:158
-msgid "at "
-msgstr "a las "
-
-#: .././templates/mailChimp-campaign-stats-template.php:161
-#: .././templates/mailChimp-campaign-stats-template.php:252
-msgid "Recurring Campaign"
-msgstr "Campaña Recurrente"
-
-#: .././templates/mailChimp-campaign-stats-template.php:163
-#: .././templates/mailChimp-campaign-stats-template.php:192
-#: .././templates/mailChimp-campaign-stats-template.php:254
-#: .././templates/mailChimp-campaign-stats-template.php:275
-msgid "Not Yet Sent"
-msgstr "No se ha enviado"
-
-#: .././templates/mailChimp-campaign-stats-template.php:173
-#: .././templates/mailChimp-campaign-stats-template.php:263
-msgid " Subscriber"
-msgstr "Fecha Suscrito"
-
-#: .././templates/mailChimp-campaign-stats-template.php:173
-#: .././templates/mailChimp-campaign-stats-template.php:263
-msgid " Subscribers"
-msgstr "Notas del suscriptor"
-
-#: .././templates/mailChimp-campaign-stats-template.php:174
-#: .././templates/mailChimp-campaign-stats-template.php:264
-#: .././templates/mailChimp-campaign-stats-template.php:332
-msgid " Open"
-msgstr " Abrir"
-
-#: .././templates/mailChimp-campaign-stats-template.php:174
-#: .././templates/mailChimp-campaign-stats-template.php:180
-#: .././templates/mailChimp-campaign-stats-template.php:264
-#: .././templates/mailChimp-campaign-stats-template.php:332
-msgid " Opens"
-msgstr " Abre"
-
-#: .././templates/mailChimp-campaign-stats-template.php:175
-#: .././templates/mailChimp-campaign-stats-template.php:265
-#: .././templates/mailChimp-campaign-stats-template.php:333
-msgid " Click"
-msgstr " Clic "
-
-#: .././templates/mailChimp-campaign-stats-template.php:175
-#: .././templates/mailChimp-campaign-stats-template.php:181
-#: .././templates/mailChimp-campaign-stats-template.php:265
-#: .././templates/mailChimp-campaign-stats-template.php:333
-msgid " Clicks"
-msgstr " Clicks"
-
-#: .././templates/mailChimp-campaign-stats-template.php:179
-msgid " Campaigns Sent"
-msgstr " Campañas enviados"
-
-#: .././templates/mailChimp-campaign-stats-template.php:302
-msgid "It looks like you haven't sent any campaigns yet."
-msgstr "Parece que usted no ha enviado ninguna campaña todavía."
-
-#: .././templates/mailChimp-campaign-stats-template.php:323
-msgid "Campaigns Sent"
-msgstr "Campañas enviados"
-
-#: .././templates/mailChimp-campaign-stats-template.php:370
-msgid "Total Clicks"
-msgstr "Clicks totales"
-
-#: .././templates/mailChimp-list-growth-template.php:371
-msgid "Total Subscribers"
-msgstr "Fecha Suscrito"
-
-#: .././templates/mailChimp-list-growth-template.php:376
-msgid "Imported Subscribers"
-msgstr "Fecha Suscrito"
-
-#: .././templates/mailChimp-list-growth-template.php:381
-msgid "Opt-in Subscribers"
-msgstr "Fecha Suscrito"
-
-#: .././templates/mailChimp-list-growth-template.php:390
-msgid "There is no growth data for"
-msgstr "No hay datos de crecimiento para"
-
-#: .././templates/mailChimp-list-growth-template.php:390
-msgid " yet"
-msgstr " aún"
-
-#: .././templates/mailChimp-list-growth-template.php:397
-msgid "No growth data found yet. Please try again at a later time."
+#: public/partials/shortcodes/process_form_shortcode.php:42
+#: public/partials/shortcodes/process_form_shortcode.php:45
+msgid "Edit ReCaptcha Settings"
 msgstr ""
-"No hay datos de crecimiento encontrado. Por favor, inténtelo de nuevo más "
-"tarde."
 
-#: .././templates/mailChimp-profile-template.php:10
-msgid "MailChimp Account Overview"
-msgstr "MailChimp Descripción de cuenta"
-
-#: .././templates/mailChimp-profile-template.php:14
-msgid "Username"
-msgstr "Nombre de usuario"
-
-#: .././templates/mailChimp-profile-template.php:15
-msgid "Name"
-msgstr "Apellido"
-
-#: .././templates/mailChimp-profile-template.php:16
-msgid "Email"
-msgstr "Correo electrónico "
-
-#: .././templates/mailChimp-profile-template.php:17
-msgid "Account Role"
-msgstr "Cuenta Papel"
-
-#: .././templates/mailChimpChatter-template.php:72
-msgid "No recent account activity. Check back again later."
-msgstr "No hay actividad reciente de la cuenta. Vuelve de nuevo más tarde."
-
-#: .././templates/shortcode_error.php:1
-msgid "There was an error calling the mailchimp list."
-msgstr "Hubo un error al llamar a la lista de MailChimp."
-
-#: .././templates/shortcode_error_data.php:1
+#: public/partials/shortcodes/process_form_shortcode.php:45
 msgid ""
-"The list doesn't exist! Make sure you have imported the list on the 'Manage "
-"List Forms' page."
+"Whoops! It looks like you enabled reCAPTCHA but forgot to enter the "
+"reCAPTCHA secret key!"
 msgstr ""
-"La lista no existe! Asegúrese de que ha importado la lista de la "
-"\"Administrar Lista Forms\" página."
 
-#: .././templates/shortcode_error_exists.php:2
-msgid "This list was already placed on this page!"
-msgstr "Esta lista ya fue colocado en esta página!"
-
-#: .././templates/shortcode_error_no_API_key.php:2
-msgid "Woops! No Valid API Key Found. Double check your settings."
-msgstr "Woops! No API Key Válido encontrado. Vuelva a comprobar los ajustes."
-
-#: .././templates/shortcode_form.php:13
-msgid "Error - The following fields are required, and may not be left blank "
-msgstr ""
-"Error - Los siguientes campos son obligatorios y no pueden dejarse en blanco "
-
-#: .././templates/shortcode_form.php:121
-msgid "required field"
-msgstr "campo obligatorio"
-
-#: .././templates/yikes-mailchimp-widget.php:15
-#: .././templates/yikes-mailchimp-widget.php:18
-msgid "MailChimp Signup Form"
-msgstr "MailChimp Solicitud de Admisión"
-
-#: .././templates/yikes-mailchimp-widget.php:27
-msgid "Select Which Form You Would Like To Display:"
-msgstr "Seleccionar qué formulario que desea mostrar:"
-
-#: .././templates/yikes-mailchimp-widget.php:30
-msgid "Select a Form to Display"
-msgstr "Seleccione un formulario para mostrar"
-
-#: .././templates/yikes-mailchimp-widget.php:47
-msgid "Please import MailChimp forms"
-msgstr "Por favor, importar formularios MailChimp"
-
-#: .././templates/yikes-mailchimp-widget.php:49
-msgid "Please import some lists from MailChimp"
-msgstr "Favor de importar algunas listas de MailChimp"
-
-#: .././templates/yikes-mailchimp-widget.php:52
-msgid "Import Lists Now"
-msgstr "Importar listas ahora"
-
-#: .././templates/yikes-mailchimp-widget.php:73
+#: public/partials/shortcodes/process_form_shortcode.php:109
 msgid ""
-"Oops! It looks like you haven't imported any lists yet. You must import at "
-"least one list to use the Easy MailChimp widget."
+"An email field is required for all MailChimp forms. Please add an email "
+"field to this form."
 msgstr ""
-"¡Huy! Parece que no ha importado ninguna lista todavía. Debe importar al "
-"menos una lista de usar el widget Fácil MailChimp."
 
-#: .././templates/yikes-mailchimp-widget.php:80
+#: public/partials/shortcodes/process_form_shortcode.php:112
+msgid "Whoops, it looks like you forgot to assign fields to this form."
+msgstr ""
+
+#: public/partials/shortcodes/process_form_shortcode.php:303
+msgid "Please enter a valid URL to the website."
+msgstr "Por favor, introduzca una URL válida para el sitio Web."
+
+#: public/partials/shortcodes/process_form_shortcode.php:303
+msgid "Please enter a valid URL to the image."
+msgstr "Por favor, introduzca una URL válida a la imagen."
+
+#: public/partials/shortcodes/process_form_shortcode.php:335
+#, fuzzy
+msgid "International Phone number (eg: #-###-###-####)"
+msgstr "Número de teléfono internacional (por ejemplo: 1-541-754-3010)"
+
+#: public/partials/shortcodes/process_form_shortcode.php:335
+msgid "US Phone Number (###) ### - ####"
+msgstr ""
+
+#: public/partials/shortcodes/process_form_shortcode.php:356
+#: public/partials/shortcodes/process_form_shortcode.php:403
+msgid "5 digit zip code, numbers only"
+msgstr "Código postal de 5 dígitos, sólo números"
+
+#: public/partials/shortcodes/process_form_shortcode_depracated.php:21
 msgid ""
-"Oops! It looks like you forgot to select a form to display here. Go to "
-"'Appearance > Widgets' and select a form to display."
+"This MailChimp shortcode is now deprecated. Please insert the new shortcode "
+"to display this form."
 msgstr ""
-"¡Huy! Parece que ha olvidado de seleccionar un formulario para mostrar aquí. "
-"Ir a \"Apariencia > Widgets\" y seleccione un formulario para mostrar."
 
-#: .././templates/yikes-mailchimp-widget.php:117
-msgid "Sign Up For Our Newsletter"
-msgstr "Reciba Nuestro Boletin"
+#, fuzzy
+#~ msgid "Easy MailChimp"
+#~ msgstr "Easy Forms for MailChimp"
 
-#: .././templates/yikes-mailchimp-widget.php:129
-msgid "Sign Me Up"
-msgstr "Sign Me Up"
+#~ msgid "All New Form Management"
+#~ msgstr "Toda nueva administración de forma"
 
-#: .././templates/yikes-mailchimp-widget.php:133
-msgid "Title:"
-msgstr "Cargo:"
-
-#: .././templates/yikes-mailchimp-widget.php:138
-msgid "Form Text:"
-msgstr "Formulario de Texto:"
-
-#: .././templates/yikes-mailchimp-widget.php:146
-msgid "Submit Button Text:"
-msgstr "Enviar Texto del botón:"
-
-#: .././templates/yikes-mailchimp-widget.php:156
-msgid "Oops! It looks like you haven't added your API key! Head over to the"
-msgstr "¡Huy! Parece que no has añadido tu clave de API! Pásate por el"
-
-#: .././templates/yikes-mailchimp-widget.php:156
-msgid "Settings page"
-msgstr "Página Configuración"
-
-#~ msgid "to retreive your recaptcha API keys, you must sign up for an account"
+#~ msgid ""
+#~ "Thank you for updating to the latest version! Easy Forms for MailChimp by "
+#~ "YIKES Inc. %s is ready to help take your mailing lists to the next level!"
 #~ msgstr ""
-#~ "es posible recuperar sus claves API recaptcha, debe registrarse para "
-#~ "obtener una cuenta"
+#~ "Gracias por actualizar a la última versión! Easy Forms for MailChimp por "
+#~ "YIKES Inc. %s está listo para ayudar a tus listas de correo al siguiente "
+#~ "nivel!"
 
-#~ msgid "Loaded Server Modules"
-#~ msgstr "Módulos de servidor cargados"
-
-#~ msgid "The following modules are active at the server level, on this site"
+#~ msgid "US Phone Number (ie: 123-456-7890)"
 #~ msgstr ""
-#~ "Los siguientes módulos están activos a nivel de servidor, en este sitio"
+#~ "Numero de teléfono de los Estados Unidos (por ejemplo: 123-456-7890)"
 
-#~ msgid "Oops.. Don't forget to fill-in the following fields"
-#~ msgstr "Uy .. No te olvides de rellenar los siguientes campos"
+#~ msgid "is already subscribed to this list."
+#~ msgstr "ya está suscrito a esta lista."
+
+#~ msgid "If"
+#~ msgstr "Si se"
