@@ -676,7 +676,8 @@ class Yikes_Inc_Easy_Mailchimp_Forms_Admin {
 			wp_register_script( 'edit-form-js' , YIKES_MC_URL . 'admin/js/min/yikes-inc-easy-mailchimp-extender-edit-form.min.js' , array( 'jquery' ) , $this->version, false );
 			$localized_data = array(
 				'ajax_url' => esc_url_raw( admin_url( 'admin-ajax.php' ) ),
-				'no_fields_assigned' => 'No fields assigned to this form. Select some fields to add to this form from the right hand column.',
+				'no_fields_assigned' => __( 'No fields assigned to this form. Select some fields to add to this form from the right hand column.', 'yikes-inc-easy-mailchimp-extender' ),
+				'bulk_delete_alert' => __( 'Are you sure you want to delete all of the fields assigned to this form?', 'yikes-inc-easy-mailchimp-extender' ),
 			);
 			wp_localize_script( 'edit-form-js' , 'object' , $localized_data );
 			wp_enqueue_script( 'edit-form-js' );
@@ -1761,7 +1762,7 @@ class Yikes_Inc_Easy_Mailchimp_Forms_Admin {
 											</td>
 											<td>
 												<input type="text" class="widefat" name="field[<?php echo $field['merge']; ?>][additional-classes]" value="<?php echo isset( $field['additional-classes'] ) ? stripslashes( wp_strip_all_tags( $field['additional-classes'] ) ) : '' ; ?>" />
-												<p class="description"><small><?php _e( "Assign additional classes to this field.", 'yikes-inc-easy-mailchimp-extender' );?></small></p>
+												<p class="description"><small><?php printf( __( "Assign additional classes to this field. %s.", 'yikes-inc-easy-mailchimp-extender' ), '<a target="_blank" href="' . esc_url( 'https://yikesinc.freshdesk.com/solution/articles/6000077895' ) . '">' . __( 'View bundled classes', 'yikes-inc-easy-mailchimp-extender' ) . '</a>' );?></small></p>
 											</td>
 										</tr>
 										<!-- Required Toggle -->
@@ -1905,6 +1906,7 @@ class Yikes_Inc_Easy_Mailchimp_Forms_Admin {
 										<!-- Default Value -->
 										<?php switch( $field['type'] ) { 
 											
+											default:
 											case 'radio':
 											case 'checkboxes':
 											?>
@@ -1924,7 +1926,7 @@ class Yikes_Inc_Easy_Mailchimp_Forms_Admin {
 														$i = 0; 
 														foreach( json_decode( stripslashes( $field['groups'] ) , true ) as $group ) { ?>
 															<label for="<?php echo $field['group_id'].'-'.$i; ?>">
-																<input id="<?php echo $field['group_id'].'-'.$i; ?>" type="<?php if( $field['type'] == 'radio' ) { ?>radio<?php } else if( $field['type'] == 'checkboxes' ) { ?>checkbox<?php } ?>" name="field[<?php echo $field['group_id']; ?>][default_choice]<?php if( $field['type'] == 'checkboxes' ) {echo '[]';}?>" value="<?php echo $i; ?>" <?php if( $field['type'] == 'radio' ) { checked( $field['default_choice'][0] , $i ); } else if( $field['type'] == 'checkboxes' ) { if( in_array( $i , $field['default_choice'] ) ) { echo 'checked="checked"'; } }?>><?php echo stripslashes( str_replace( '~' , '\'' , $group['name'] ) ); ?>
+																<input id="<?php echo $field['group_id'].'-'.$i; ?>" type="<?php if( $field['type'] == 'radio' || $field['type'] == 'hidden' ) { ?>radio<?php } else if( $field['type'] == 'checkboxes' ) { ?>checkbox<?php } ?>" name="field[<?php echo $field['group_id']; ?>][default_choice]<?php if( $field['type'] == 'checkboxes' ) {echo '[]';}?>" value="<?php echo $i; ?>" <?php if( $field['type'] == 'radio' || $field['type'] == 'hidden' ) { checked( $field['default_choice'][0] , $i ); } else if( $field['type'] == 'checkboxes' ) { if( in_array( $i , $field['default_choice'] ) ) { echo 'checked="checked"'; } }?>><?php echo stripslashes( str_replace( '~' , '\'' , $group['name'] ) ); ?>
 															</label>
 														<?php 
 															$i++;
@@ -1983,7 +1985,7 @@ class Yikes_Inc_Easy_Mailchimp_Forms_Admin {
 											</td>
 											<td>
 												<input type="text" class="widefat" name="field[<?php echo $field['group_id']; ?>][additional-classes]" value="<?php echo isset( $field['additional-classes'] ) ? stripslashes( wp_strip_all_tags( $field['additional-classes'] ) ) : '' ; ?>" />
-												<p class="description"><small><?php _e( "Assign additional classes to this field.", 'yikes-inc-easy-mailchimp-extender' );?></small></p>
+												<p class="description"><small><?php printf( __( "Assign additional classes to this field. %s.", 'yikes-inc-easy-mailchimp-extender' ), '<a target="_blank" href="' . esc_url( 'https://yikesinc.freshdesk.com/solution/articles/6000077895' ) . '">' . __( 'View bundled classes', 'yikes-inc-easy-mailchimp-extender' ) . '</a>' );?></small></p>
 											</td>
 										</tr>
 										<!-- Required Toggle -->
@@ -2432,7 +2434,8 @@ class Yikes_Inc_Easy_Mailchimp_Forms_Admin {
 					'ajax' => $_POST['form-ajax-submission'],
 					'redirect_on_submission' => $_POST['redirect-user-on-submission'],
 					'redirect_page' => $_POST['redirect-user-to-selection'],
-					'hide_form_post_signup' => $_POST['hide-form-post-signup']
+					'hide_form_post_signup' => $_POST['hide-form-post-signup'],
+					'replace_interests' => $_POST['replace-interest-groups'],
 				)
 			);
 			

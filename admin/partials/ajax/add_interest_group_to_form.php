@@ -34,10 +34,8 @@
 			<input type="hidden" name="field[<?php echo $form_data_array['group_id']; ?>][label]" value="<?php echo $form_data_array['field_name']; ?>" />
 			<input type="hidden" name="field[<?php echo $form_data_array['group_id']; ?>][type]" value="<?php echo $form_data_array['field_type']; ?>" />
 			<input type="hidden" name="field[<?php echo $form_data_array['group_id']; ?>][group_id]" value="<?php echo $form_data_array['group_id']; ?>" />
-			
-			<?php if ( $form_data_array['field_type'] == 'radio' || $form_data_array['field_type'] == 'dropdown' || $form_data_array['field_type'] == 'checkboxes' ) { ?>
-				<input type="hidden" name="field[<?php echo $form_data_array['group_id']; ?>][groups]" value='<?php echo str_replace( '\'' , '~' , json_encode( $merge_field_data['groups'] ) ); ?>' />
-			<?php } ?>
+			<input type="hidden" name="field[<?php echo $form_data_array['group_id']; ?>][groups]" value='<?php echo str_replace( '\'' , '~' , json_encode( $merge_field_data['groups'] ) ); ?>' />
+	
 				
 			<table class="form-table form-field-container">
 			
@@ -141,7 +139,7 @@
 					</td>
 					<td>
 						<input type="text" class="widefat" name="field[<?php echo $form_data_array['group_id']; ?>][additional-classes]" value="<?php echo isset( $form_data_array['classes'] ) ? stripslashes( wp_strip_all_tags( $form_data_array['classes'] ) ) : '' ; ?>" />
-						<p class="description"><small><?php _e( "Assign additional classes to this field.", 'yikes-inc-easy-mailchimp-extender' );?></small></p>
+						<p class="description"><small><?php printf( __( "Assign additional classes to this field. %s.", 'yikes-inc-easy-mailchimp-extender' ), '<a target="_blank" href="' . esc_url( 'https://yikesinc.freshdesk.com/solution/articles/6000077895' ) . '">' . __( 'View bundled classes', 'yikes-inc-easy-mailchimp-extender' ) . '</a>' );?></small></p>
 					</td>
 					</tr>
 					<!-- Required Toggle -->
